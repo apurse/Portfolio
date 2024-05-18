@@ -1,0 +1,73 @@
+{
+    "projects": [
+        {
+            "title": "Cormoran",
+            "startDate": "2022",
+            "endDate": "2023",
+            "information": "Cormoran is the title of one of the video games I helped produce in my first year of university. In GAM190, the name given to this module, we as a team were tasked with creating a video game with the constraint: Local history. Cormoran is a game based on the legend of Jack the Giant Slayer, a Cornish legend turned global. The premise for this game is that the player (Jack) needs to find a way to kill Cormoran, seeking revenge for his father. The player navigates around St Micheals Mount, locating objects and eventually digging a hole for Cormoran to fall into, all while avoiding him. For this project, I was the developer behind the AI for the giant. This included navMesh pathfinding, raycasting, waypoint management, and player tracking. This was a very enjoyable game to work on and I would love to continue with it at somepoint later on.",
+            "link": "https://fugii.itch.io/cormoran",
+            "picture": "../../pics/Cormoran.png",
+            "popup_pics": [
+                "../../pics/Cormoran_popup1.png",
+                "../../pics/Cormoran_popup2.png",
+                "../../pics/Cormoran_popup3.png",
+                "../../pics/Cormoran_popup4.png"
+            ]
+        },
+        {
+            "title": "Delivery Drone Robot Simulation",
+            "startDate": "2022",
+            "endDate": "2023",
+            "information": "This was one of my first year projects. I was tasked with integrating an Arduino system into Unity, and creating an educational piece of software that works alongside a custom built controller. For this project, I based my idea off of the company Zipline and their delivery drones. My Controller was a gyroscopic input that reacted to 2 axes of rotation. Up and down rotation affects the falling speed of the delivery, while left and right affects the position of the delivery. As the user progresses through the story, text popups appear, explaining the process and benefits. The user was challenged with placing the delivery on a cross outside the recipients door.",
+            "picture": "../../pics/Drone.png",
+            "link": "",
+            "popup_pics": [
+                "../../pics/Drone_popup_1.png",
+                "../../pics/Drone_popup_2.png",
+                "../../pics/Drone_popup_3.png"
+            ]
+        },
+        {
+            "title": "AI Face Detection Paper",
+            "startDate": "2024",
+            "endDate": "2024",
+            "information": "This project was a comparison of five face detection algorithms against the effects of lighting quality. This project was implemented in Python using five different libraries for face detection. To test these algorithms, a dataset was used with each subject exposed to three lighting angles: left, right, and central, then these images were dimmed or brightened for a more accurate test.",
+            "link": "https://fugii.itch.io/cormoran",
+            "picture": "../../pics/Cormoran.png",
+            "popup_pics": [
+                "../../pics/Cormoran_popup1.png",
+                "../../pics/Cormoran_popup2.png",
+                "../../pics/Cormoran_popup3.png",
+                "../../pics/Cormoran_popup4.png"
+            ]
+        },
+        {
+            "title": "Optimised multi-file word occurrence counter",
+            "startDate": "2024",
+            "endDate": "2024",
+            "information": "For a module at University, I undertook the challenge of implementing and optimising a multi-file word occurrence counter. This project is a C++ implementation using optimisations such as multithreading and text parsing through memory management. The end result was an optimised program which counts for a certain word / phrase across multiple files.",
+            "link": "https://fugii.itch.io/cormoran",
+            "picture": "../../pics/Cormoran.png",
+            "popup_pics": [
+                "../../pics/Cormoran_popup1.png",
+                "../../pics/Cormoran_popup2.png",
+                "../../pics/Cormoran_popup3.png",
+                "../../pics/Cormoran_popup4.png"
+            ]
+        },
+        {
+            "title": "Plant Environment Monitoring System",
+            "startDate": "2024",
+            "endDate": "2024",
+            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
+            "link": "https://fugii.itch.io/cormoran",
+            "picture": "",
+            "popup_pics": [
+                "../../pics/Cormoran_popup1.png",
+                "../../pics/Cormoran_popup2.png",
+                "../../pics/Cormoran_popup3.png",
+                "../../pics/Cormoran_popup4.png"
+            ]
+        }
+    ]
+}

@@ -32,7 +32,7 @@
             "startDate": "2024",
             "endDate": "2024",
             "information": "This project was a comparison of five face detection algorithms against the effects of lighting quality. This project was implemented in Python using five different libraries for face detection. To test these algorithms, a dataset was used with each subject exposed to three lighting angles: left, right, and central, then these images were dimmed or brightened for a more accurate test.",
-            "link": "https://fugii.itch.io/cormoran",
+            "link": "https://github.com/apurse/AI-Face-Detection-Comparison",
             "picture": "../../pics/Cormoran.png",
             "popup_pics": [
                 "../../pics/Cormoran_popup1.png",
@@ -46,7 +46,7 @@
             "startDate": "2024",
             "endDate": "2024",
             "information": "For a module at University, I undertook the challenge of implementing and optimising a multi-file word occurrence counter. This project is a C++ implementation using optimisations such as multithreading and text parsing through memory management. The end result was an optimised program which counts for a certain word / phrase across multiple files.",
-            "link": "https://fugii.itch.io/cormoran",
+            "link": "https://github.com/apurse/Multi-File-Word-Counter",
             "picture": "../../pics/Cormoran.png",
             "popup_pics": [
                 "../../pics/Cormoran_popup1.png",
@@ -60,7 +60,7 @@
             "startDate": "2024",
             "endDate": "2024",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
-            "link": "https://fugii.itch.io/cormoran",
+            "link": "https://github.com/apurse/Environment-Monitoring-System",
             "picture": "",
             "popup_pics": [
                 "../../pics/Cormoran_popup1.png",

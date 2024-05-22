@@ -8,6 +8,7 @@
             "link": "https://fugii.itch.io/cormoran",
             "picture": "../../pics/Cormoran.png",
             "popup_pics": [
+                "../../pics/Cormoran.png",
                 "../../pics/Cormoran_popup1.png",
                 "../../pics/Cormoran_popup2.png",
                 "../../pics/Cormoran_popup3.png",
@@ -22,6 +23,7 @@
             "picture": "../../pics/Drone.png",
             "link": "",
             "popup_pics": [
+                "../../pics/Drone.png",
                 "../../pics/Drone_popup_1.png",
                 "../../pics/Drone_popup_2.png",
                 "../../pics/Drone_popup_3.png"
@@ -33,12 +35,11 @@
             "endDate": "2024",
             "information": "This project was a comparison of five face detection algorithms against the effects of lighting quality. This project was implemented in Python using five different libraries for face detection. To test these algorithms, a dataset was used with each subject exposed to three lighting angles: left, right, and central, then these images were dimmed or brightened for a more accurate test.",
             "link": "https://github.com/apurse/AI-Face-Detection-Comparison",
-            "picture": "../../pics/Cormoran.png",
+            "picture": "../../pics/AI/AI_paper.png",
             "popup_pics": [
-                "../../pics/Cormoran_popup1.png",
-                "../../pics/Cormoran_popup2.png",
-                "../../pics/Cormoran_popup3.png",
-                "../../pics/Cormoran_popup4.png"
+                "../../pics/AI/AI_paper.png",
+                "../../pics/AI/AI_figures.png",
+                "../../pics/AI/AI_code.png"
             ]
         },
         {
@@ -47,12 +48,12 @@
             "endDate": "2024",
             "information": "For a module at University, I undertook the challenge of implementing and optimising a multi-file word occurrence counter. This project is a C++ implementation using optimisations such as multithreading and text parsing through memory management. The end result was an optimised program which counts for a certain word / phrase across multiple files.",
             "link": "https://github.com/apurse/Multi-File-Word-Counter",
-            "picture": "../../pics/Cormoran.png",
+            "picture": "../../pics/threading/results.png",
             "popup_pics": [
-                "../../pics/Cormoran_popup1.png",
-                "../../pics/Cormoran_popup2.png",
-                "../../pics/Cormoran_popup3.png",
-                "../../pics/Cormoran_popup4.png"
+                "../../pics/threading/results.png",
+                "../../pics/threading/counting.png",
+                "../../pics/threading/setup.png",
+                "../../pics/threading/posterimage.png"
             ]
         },
         {
@@ -61,12 +62,12 @@
             "endDate": "2024",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
             "link": "https://github.com/apurse/Environment-Monitoring-System",
-            "picture": "",
+            "picture": "../../pics/plant/hardware.png",
             "popup_pics": [
-                "../../pics/Cormoran_popup1.png",
-                "../../pics/Cormoran_popup2.png",
-                "../../pics/Cormoran_popup3.png",
-                "../../pics/Cormoran_popup4.png"
+                "../../pics/plant/hardware.png",
+                "../../pics/plant/api.png",
+                "../../pics/plant/Circuit_diagram_horizontal.png",
+                "../../pics/plant/poster.png"
             ]
         }
     ]

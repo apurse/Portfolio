@@ -1,18 +1,77 @@
 $header-primary: #ffffff;
 $header-hover: #B3B3B3;
 
+// Light mode
+$text-light: black;
+$background-light: rgb(106, 206, 252);
+$header-light: white;
+$background-anim-light: linear-gradient(-60deg, rgb(31, 209, 253) 50%, rgb(32, 106, 218)50%);
+
+
+// Dark mode
+$text-dark: white;
+$background-dark: #09316e;
+$header-dark: black;
+$background-anim-dark: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 84) 50%);
+
 // ---------------------- All pages ---------------------- //
 
+.dark_mode {
+    color: $text-dark;
+    background-color: $background-dark;
+
+    .Header {
+        background-color: $background-dark;
+
+        .Logo {
+            a {
+                span {
+                    color: $text-dark;
+                }
+            }
+        }
+
+        .socials_container {
+            .socials {
+                a {
+                    color: $text-dark;
+                }
+            }
+        }
+
+        .Nav_buttons {
+            a {
+
+                color: $text-dark;
+
+            }
+        }
+    }
+    .about_me_container{
+        background-color: $background-dark;
+    }
+
+    .background {
+        .bg {
+            background-image: $background-anim-dark;
+        }
+    }
+}
+
 body {
+    overflow-y: auto;
     margin: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: #09316e;
-    color: white;
+    background-color: $background-light;
+    color: $text-light;
 
     a {
-        //color: #00B7FF;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    p h1 h2 h3 {
+        color: $text-light;
     }
 
 }
@@ -21,7 +80,7 @@ body {
     margin: 0;
     overflow: hidden;
     padding: 12px 10px;
-    background-color: black;
+    background-color: $background-light;
 
     .Logo {
         float: left;
@@ -29,7 +88,7 @@ body {
 
         a {
             span {
-                color: $header-primary;
+                color: $text-light;
                 text-align: center;
                 padding: 12px;
                 font-size: 25px;
@@ -40,7 +99,7 @@ body {
 
         :hover {
             background-color: $header-hover;
-            color: black;
+            color: $text-dark;
         }
     }
 
@@ -52,9 +111,9 @@ body {
 
         .socials {
             a {
+                color: $text-light;
                 font-size: 28px;
                 padding: 5px;
-                color: white;
             }
 
             :hover {
@@ -68,8 +127,8 @@ body {
         float: right;
 
         a {
+            color: $text-light;
             float: left;
-            color: $header-primary;
             text-align: center;
             text-decoration: none;
             padding: 12px;
@@ -80,7 +139,6 @@ body {
 
         :hover {
             background-color: $header-hover;
-            color: black;
         }
     }
 }
@@ -91,7 +149,7 @@ body {
 
     i {
         font-size: 40px;
-        color: white;
+        color: $text-light;
     }
 }
 
@@ -103,7 +161,7 @@ body {
     width: 25%;
     min-width: 200px;
     z-index: 1000;
-    background-color: #141414;
+    background-color: $background-light;
 
     .burger_socials {
         display: none;
@@ -113,7 +171,7 @@ body {
             margin: auto;
             font-size: 28px;
             padding: 5px;
-            color: white;
+            color: $text-light;
         }
     }
 
@@ -121,7 +179,7 @@ body {
         font-size: 20px;
         display: block;
         width: 100%;
-        color: white;
+        color: $text-light;
         padding: 10px 20px;
     }
 
@@ -195,33 +253,49 @@ body {
 // ---------------------- Index ---------------------- //
 
 .intro {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin-top: 50px;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 20px;
-    height: 500px;
 
     img {
-        margin-top: 30px;
-        width: 160px;
+        margin-top: -10%;
+        width: 12%;
+        height: auto;
         aspect-ratio: 1;
         border-radius: 50%;
     }
 
-    h2 {
-        color: white;
+    h1 {
+        margin-top: 20px;
         padding: 20px;
+        font-size: 44px;
+    }
+
+    h2 {
+        margin-top: 10px;
+        padding: 20px;
+        font-size: 28px;
     }
 }
 
 .about_me_container {
     width: 100%;
-    background-color: #09316e;
+    background-color: $background-light;
     padding: 40px 0px;
 
     .about_me {
         margin: auto;
         padding: 0px 20px;
         text-align: center;
+
+        a{
+            text-decoration: underline;
+        }
 
         p {
             padding: 20px 0px;
@@ -232,7 +306,7 @@ body {
 .background {
     .bg {
         animation: slide 5s ease-in-out infinite alternate;
-        background-image: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 84) 50%);
+        background-image: $background-anim-light;
         bottom: 0;
         left: -50%;
         opacity: .5;
@@ -272,6 +346,7 @@ body {
     border-radius: 16px;
     background-color: #121212;
     padding: 30px 20px;
+    color: white;
 }
 
 .contact_form {
@@ -286,6 +361,7 @@ body {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 24px;
             padding: 10px 0px;
+            color: white;
         }
 
         input {
@@ -315,7 +391,7 @@ body {
             border-color: goldenrod;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             width: 100%;
-            font-size: 20px;
+            font-size: 24px;
             text-align: center;
             color: black;
             border-radius: 12px;
@@ -453,6 +529,7 @@ body {
         font-size: 28px;
         width: 100%;
         padding: 5px 0px;
+        color: white;
     }
 
     p {
@@ -530,6 +607,7 @@ body {
         box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
         transition: 600ms;
         overflow: hidden;
+        color: white;
 
         .card_image_content {
             display: flex;
@@ -673,10 +751,11 @@ body {
             color: white;
             text-decoration: underline;
         }
-        .link:hover{
+
+        .link:hover {
             opacity: 70%;
         }
-        
+
     }
 
     @media only screen and (max-width: 1000px) {

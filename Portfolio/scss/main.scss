@@ -6,6 +6,9 @@ $text-light: black;
 $background-light: rgb(106, 206, 252);
 $header-light: white;
 $background-anim-light: linear-gradient(-60deg, rgb(31, 209, 253) 50%, rgb(32, 106, 218)50%);
+$card-background-light: #f8f8f8;
+$read-more-light: #1e208d;
+$input-background-light: #ededed;
 
 
 // Dark mode
@@ -13,6 +16,9 @@ $text-dark: white;
 $background-dark: #09316e;
 $header-dark: black;
 $background-anim-dark: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 84) 50%);
+$card-background-dark: #121212;
+$read-more-dark: #66B7C7;
+$input-background-dark: #232323;
 
 // ---------------------- All pages ---------------------- //
 
@@ -20,6 +26,7 @@ $background-anim-dark: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 
     color: $text-dark;
     background-color: $background-dark;
 
+    // ------------- Layout ------------- //
     .Header {
         background-color: $background-dark;
 
@@ -41,13 +48,26 @@ $background-anim-dark: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 
 
         .Nav_buttons {
             a {
-
                 color: $text-dark;
+            }
 
+            .bulb_icon {
+
+                .line {
+                    display: inline-block;
+                }
             }
         }
+
     }
-    .about_me_container{
+
+    .readMore {
+        color: $read-more-dark;
+    }
+
+    // ------------- Index ------------- //
+
+    .about_me_container {
         background-color: $background-dark;
     }
 
@@ -56,6 +76,82 @@ $background-anim-dark: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 
             background-image: $background-anim-dark;
         }
     }
+
+    // ------------- Employment ------------- //
+
+    .employment_container {
+        .event_info_container {
+            background-color: $card-background-dark;
+            color: $text-dark;
+        }
+
+        .timeline_container {
+            ul {
+                background-color: $background-light;
+
+                li {
+                    background-color: $background-light;
+                    //border-color: $background-light;
+
+                }
+            }
+
+        }
+    }
+
+    // ------------- Projects ------------- //
+
+    .projects_layout {
+        .card_container {
+            background-color: $card-background-dark;
+        }
+    }
+
+    .popup_box {
+        background-color: $card-background-dark;
+        border-color: $card-background-dark;
+
+        .popup_content {
+            .link {
+                color: $text-dark;
+            }
+        }
+
+    }
+
+    .slide_dot {
+        background-color: $read-more-dark;
+    }
+
+    .active_dot,
+    .slide_dot:hover {
+        background-color: $text-dark;
+    }
+
+    // ------------- Contact Me ------------- //
+
+    .contact_form {
+        color: $text-dark;
+
+        .input_field {
+            input {
+                background-color: $input-background-dark;
+            }
+
+            textarea {
+                background-color: $input-background-dark;
+            }
+
+        }
+
+    }
+
+    .contact_form_container {
+        color: $text-dark;
+        background-color: $card-background-dark;
+    }
+
+
 }
 
 body {
@@ -109,24 +205,12 @@ body {
         width: 50%;
         text-align: center;
 
-        .socials {
-            a {
-                color: $text-light;
-                font-size: 28px;
-                padding: 5px;
-            }
-
-            :hover {
-                opacity: 0.7;
-
-            }
         }
-    }
+        
+        .Nav_buttons {
+            float: right;
 
-    .Nav_buttons {
-        float: right;
-
-        a {
+            a {
             color: $text-light;
             float: left;
             text-align: center;
@@ -135,21 +219,37 @@ body {
             font-size: 18px;
             line-height: 25px;
             border-radius: 4px;
-        }
-
+            }
+            
         :hover {
             background-color: $header-hover;
         }
     }
-}
+    }
 
-.burger_button {
-    display: none;
+    .burger_button {
+        display: none;
     float: right;
-
+    
     i {
         font-size: 40px;
         color: $text-light;
+    }
+}
+
+.socials {
+    a {
+        color: $text-light;
+        padding: 5px;
+    }
+
+    i {
+        font-size: 28px;
+    }
+
+    :hover {
+        opacity: 0.7;
+
     }
 }
 
@@ -211,6 +311,24 @@ body {
     padding-top: 20px;
 }
 
+.bulb_icon {
+    display: inline-block;
+    position: relative;
+
+    .line {
+        display: none;
+        width: 2em;
+        height: 2px;
+        background-color: white;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center center;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+
 // header width, take out navigation
 @media only screen and (max-width: 870px) {
     .Header {
@@ -265,6 +383,8 @@ body {
     img {
         margin-top: -10%;
         width: 12%;
+        max-width: 500px;
+        min-width: 140px;
         height: auto;
         aspect-ratio: 1;
         border-radius: 50%;
@@ -293,7 +413,7 @@ body {
         padding: 0px 20px;
         text-align: center;
 
-        a{
+        a {
             text-decoration: underline;
         }
 
@@ -344,12 +464,14 @@ body {
     min-width: 50%;
     margin: auto;
     border-radius: 16px;
-    background-color: #121212;
+    background-color: $card-background-light;
     padding: 30px 20px;
-    color: white;
+    color: $text-light;
 }
 
 .contact_form {
+    color: $text-light;
+
     .input_field {
         display: block;
         margin: 10px 0px;
@@ -361,29 +483,26 @@ body {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 24px;
             padding: 10px 0px;
-            color: white;
         }
 
         input {
             border: none;
             border-radius: 12px;
-            color: white;
             width: calc(100% - 20px); // 20px = 2 * padding
             padding: 10px;
             font-size: 20px;
-            background-color: #232323;
+            background-color: $input-background-light;
         }
 
         textarea {
             border: none;
             margin-top: 10px;
             font-size: 16px;
-            background-color: #232323;
-            color: white;
             min-height: 200px;
-            max-height: 300px;
+            max-height: 500px;
             min-width: 100%;
             max-width: 100%;
+            background-color: $input-background-light;
         }
 
         .submit_button {
@@ -412,7 +531,7 @@ body {
 
     .event_info_container {
         float: right;
-        background-color: rgb(18, 18, 18);
+        background-color: $card-background-light;
         padding: 24px;
         border-radius: 16px;
         width: 35%;
@@ -458,7 +577,7 @@ body {
                 display: block;
                 width: calc(100% - 50px); // 50px = 2 * padding + 10px buffer
                 height: 5px;
-                background-color: #81ecec;
+                background-color: $background-dark;
                 position: absolute;
                 top: 50%;
                 left: 0;
@@ -478,8 +597,9 @@ body {
                     width: 20px;
                     height: 20px;
                     border-radius: 50%;
-                    background-color: #81ecec;
-                    border: 4px solid #81ecec;
+                    background-color: $background-dark;
+                    border: 4px solid;
+                    border-color: $background-dark;
                     transition: background-color .2s ease;
                 }
 
@@ -529,14 +649,12 @@ body {
         font-size: 28px;
         width: 100%;
         padding: 5px 0px;
-        color: white;
     }
 
     p {
         float: left;
         //display: block;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: white;
         font-size: 20px;
         width: 100%;
     }
@@ -602,12 +720,11 @@ body {
     margin: 5%;
 
     .card_container {
-        background-color: #1b1b1b;
+        background-color: $card-background-light;
         border-radius: 16px;
         box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
         transition: 600ms;
         overflow: hidden;
-        color: white;
 
         .card_image_content {
             display: flex;
@@ -655,7 +772,6 @@ body {
 
             .card_info {
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                color: white;
                 font-size: 20px;
                 overflow: hidden;
                 width: 100%;
@@ -666,6 +782,10 @@ body {
                 -webkit-box-orient: vertical;
             }
         }
+    }
+
+    .card_container:hover {
+        transform: scale(1.05, 1.05);
     }
 
     @media only screen and (max-width: 1100px) {
@@ -683,10 +803,6 @@ body {
 
 }
 
-.card_container:hover {
-    transform: scale(1.05, 1.05);
-}
-
 .readMore {
     float: left;
     text-align: center;
@@ -694,7 +810,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
-    color: #66B7C7;
+    color: $read-more-light;
     cursor: pointer;
 }
 
@@ -708,8 +824,8 @@ body {
     height: 70%;
     padding: 20px;
     border-radius: 16px;
-    color: white;
-    background-color: rgb(18, 18, 18);
+    background-color: $card-background-light;
+    border-color: $card-background-light;
     box-shadow: 38px 38px 31px #070a0f, -38px -38px 31px #1d2a3d;
     overflow: hidden;
 
@@ -740,15 +856,14 @@ body {
 
         p {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: white;
             padding-left: 2.5%;
             max-width: 95%;
             font-size: 20px;
         }
 
         .link {
+            color: $text-light;
             padding-bottom: 10px;
-            color: white;
             text-decoration: underline;
         }
 
@@ -803,14 +918,14 @@ body {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: white;
+    background-color: $text-light;
     border-radius: 50%;
 
 }
 
 .active_dot,
 .slide_dot:hover {
-    background-color: #656565;
+    background-color: $background-light;
 }
 
 .active_popup_pic {

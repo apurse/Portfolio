@@ -1,19 +1,19 @@
 {{!-- References
 <div>
   ***************************************************************************************/
-  *    Title: CSS horizontal timeline
-  *    Author: Arne Decant
-  *    Date: 2023
-  *    Code version: n/a
-  *    Availability: https://codepen.io/arnedecant/pen/JvpRjW
+  * Title: CSS horizontal timeline
+  * Author: Arne Decant
+  * Date: 2023
+  * Code version: n/a
+  * Availability: https://codepen.io/arnedecant/pen/JvpRjW
   *
   ***************************************************************************************/
   ***************************************************************************************/
-  *    Title: Sliding diagonals background effect
-  *    Author: Chris Smith
-  *    Date: 2023
-  *    Code version: n/a
-  *    Availability: https://codepen.io/chris22smith/details/RZogMa
+  * Title: Sliding diagonals background effect
+  * Author: Chris Smith
+  * Date: 2023
+  * Code version: n/a
+  * Availability: https://codepen.io/chris22smith/details/RZogMa
   *
   ***************************************************************************************/
 </div>
@@ -21,6 +21,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>{{title}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,7 +29,6 @@
   <script type="text/javascript" src="../../javascripts/readmore.js"></script>
   <script type="text/javascript" src="../../javascripts/job.js"></script>
   <script type="text/javascript" src="../../javascripts/burgerMenu.js"></script>
-  <script type="text/javascript" src="../../javascripts/darkMode.js"></script>
   <link rel='stylesheet' href='/stylesheets/main.css' type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -40,25 +40,37 @@
     </a>
   </div>
   <div class="Nav_buttons">
+    <a id="colour_button" onclick="darkMode()" class="bulb_icon socials">
+      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      <span class="line"></span>
+    </a>
     <a href="/projects">Projects</a>
     <a href="/employment">Employment</a>
     <a href="/cvDownload" download="Alex_Purser_CV.pdf">CV</a>
     <a href="/contact">Contact Me</a>
-    <a id="colour_button" onclick="darkMode()">Dark Mode</a>
   </div>
   <div class="socials_container">
     <div class="socials">
-      <a href="https://www.facebook.com/alex.purser.796/" target="_blank" class="fa fa-facebook-official"
-        aria-label="facebook"></a>
+      <a href="https://www.facebook.com/alex.purser.796/" target="_blank" aria-label="Facebook">
+        <i class="fa fa-facebook-official"></i>
+      </a>
       <a href="mailto:ajpurser32@gmail.com" target="_blank" aria-label="Gmail">
         <i class="material-icons">contact_mail</i>
       </a>
-      <a href="https://www.instagram.com/a_purse_/" target="_blank" class="fa fa-instagram" aria-label="Instagram"></a>
-      <a href="https://www.linkedin.com/in/alex-purser-b9a010272/" target="_blank" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-      <a href="https://app.joinhandshake.co.uk/stu/users/876004" target="_blank" class="fa fa-handshake-o"
-        aria-label="HandShake"></a>
-      <a href="https://github.falmouth.ac.uk/AP276620" target="_blank" class="fa fa-github" aria-label="Github"></a>
+      <a href="https://www.instagram.com/a_purse_/" target="_blank" aria-label="Instagram">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/alex-purser-b9a010272/" target="_blank" aria-label="LinkedIn">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="https://app.joinhandshake.co.uk/stu/users/876004" target="_blank" aria-label="HandShake">
+        <i class="fa fa-handshake-o"></i>
+      </a>
+      <a href="https://github.falmouth.ac.uk/AP276620" target="_blank" aria-label="Github">
+        <i class="fa fa-github"></i>
+      </a>
     </div>
+
   </div>
   <div class="burger_button">
     <i class="fa fa-bars" onclick="burgerToggle()"></i>
@@ -75,7 +87,8 @@
         <i class="material-icons">contact_mail</i>
       </a>
       <a href="https://www.instagram.com/a_purse_/" target="_blank" class="fa fa-instagram" aria-label="Instagram"></a>
-      <a href="https://www.linkedin.com/in/alex-purser-b9a010272/" target="_blank" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+      <a href="https://www.linkedin.com/in/alex-purser-b9a010272/" target="_blank" class="fa fa-linkedin"
+        aria-label="LinkedIn"></a>
       <a href="https://app.joinhandshake.co.uk/stu/users/876004" target="_blank" class="fa fa-handshake-o"
         aria-label="HandShake"></a>
       <a href="https://github.falmouth.ac.uk/AP276620" target="_blank" class="fa fa-github" aria-label="Github"></a>
@@ -85,6 +98,7 @@
 
 <body>
   {{{body}}}
+  <script type="text/javascript" src="../../javascripts/darkMode.js"></script>
 </body>
 
 </html>

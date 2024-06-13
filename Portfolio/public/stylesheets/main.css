@@ -5,11 +5,11 @@
     background-color: #09316e; }
     .dark_mode .Header .Logo a span {
       color: white; }
-    .dark_mode .Header .socials_container .socials a {
-      color: white; }
     .dark_mode .Header .Nav_buttons a {
       color: white; }
-    .dark_mode .Header .Nav_buttons .bulb_icon .line {
+    .dark_mode .Header .icon i {
+      color: white; }
+    .dark_mode .Header .icon .line {
       display: inline-block; }
   .dark_mode .readMore {
     color: #66B7C7; }
@@ -51,7 +51,8 @@ body {
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #6acefc;
-  color: black; }
+  color: black;
+  transition: 800ms; }
   body a {
     text-decoration: none;
     cursor: pointer; }
@@ -59,10 +60,10 @@ body {
     color: black; }
 
 .Header {
-  margin: 0;
   overflow: hidden;
   padding: 12px 10px;
-  background-color: #6acefc; }
+  background-color: #6acefc;
+  transition: 800ms; }
   .Header .Logo {
     float: left;
     padding: 10px; }
@@ -94,6 +95,33 @@ body {
       border-radius: 4px; }
     .Header .Nav_buttons :hover {
       background-color: #B3B3B3; }
+  .Header .icon {
+    position: relative;
+    display: inline-block; }
+    .Header .icon a {
+      padding: 5px; }
+    .Header .icon i {
+      color: black;
+      font-size: 28px; }
+    .Header .icon .line {
+      display: none;
+      width: 3em;
+      height: 3px;
+      background-color: white;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform-origin: left center;
+      animation: drawLine 800ms ease-out forwards; }
+    .Header .icon :hover {
+      opacity: 0.7; }
+
+@keyframes drawLine {
+  0% {
+    width: 0; }
+  100% {
+    width: 2em; } }
 
 .burger_button {
   display: none;
@@ -101,16 +129,6 @@ body {
   .burger_button i {
     font-size: 40px;
     color: black; }
-
-.socials a {
-  color: black;
-  padding: 5px; }
-
-.socials i {
-  font-size: 28px; }
-
-.socials :hover {
-  opacity: 0.7; }
 
 .burger_contents {
   display: none;
@@ -155,21 +173,6 @@ body {
   text-align: center;
   padding-bottom: 60px;
   padding-top: 20px; }
-
-.bulb_icon {
-  display: inline-block;
-  position: relative; }
-  .bulb_icon .line {
-    display: none;
-    width: 2em;
-    height: 2px;
-    background-color: white;
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: center center;
-    transform: translate(-50%, -50%) rotate(45deg); }
 
 @media only screen and (max-width: 870px) {
   .Header .socials_container {
@@ -434,7 +437,6 @@ body {
     background-color: #f8f8f8;
     border-radius: 16px;
     box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
-    transition: 600ms;
     overflow: hidden; }
     .projects_layout .card_container .card_image_content {
       display: flex;

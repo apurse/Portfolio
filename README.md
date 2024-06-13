@@ -8,6 +8,8 @@ cd portfolio
 
 npm start
 
+npm run sass
+
 ## References
 
 ### Icons used 

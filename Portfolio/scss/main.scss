@@ -1,6 +1,8 @@
 $header-primary: #ffffff;
 $header-hover: #B3B3B3;
 
+$transition-speed: 800ms;
+
 // Light mode
 $text-light: black;
 $background-light: rgb(106, 206, 252);
@@ -38,27 +40,21 @@ $input-background-dark: #232323;
             }
         }
 
-        .socials_container {
-            .socials {
-                a {
-                    color: $text-dark;
-                }
-            }
-        }
-
         .Nav_buttons {
             a {
                 color: $text-dark;
             }
-
-            .bulb_icon {
-
-                .line {
-                    display: inline-block;
-                }
-            }
         }
 
+        .icon {
+            i {
+                color: $text-dark;
+            }
+
+            .line {
+                display: inline-block;
+            }
+        }
     }
 
     .readMore {
@@ -160,23 +156,24 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: $background-light;
     color: $text-light;
-
+    transition: $transition-speed;
+    
     a {
         text-decoration: none;
         cursor: pointer;
-    }
-
-    p h1 h2 h3 {
-        color: $text-light;
-    }
-
+        }
+        
+        p h1 h2 h3 {
+            color: $text-light;
+            }
+            
 }
 
 .Header {
-    margin: 0;
     overflow: hidden;
     padding: 12px 10px;
     background-color: $background-light;
+    transition: $transition-speed;
 
     .Logo {
         float: left;
@@ -204,13 +201,12 @@ body {
         margin: auto;
         width: 50%;
         text-align: center;
+    }
 
-        }
-        
-        .Nav_buttons {
-            float: right;
+    .Nav_buttons {
+        float: right;
 
-            a {
+        a {
             color: $text-light;
             float: left;
             text-align: center;
@@ -219,37 +215,66 @@ body {
             font-size: 18px;
             line-height: 25px;
             border-radius: 4px;
-            }
-            
+        }
+
         :hover {
             background-color: $header-hover;
         }
     }
-    }
 
-    .burger_button {
-        display: none;
-    float: right;
-    
-    i {
-        font-size: 40px;
-        color: $text-light;
+    .icon {
+        position: relative;
+        display: inline-block;
+
+        a {
+            padding: 5px; // gap
+        }
+
+        i {
+            color: $text-light;
+            font-size: 28px;
+        }
+
+        .line {
+            display: none;
+            width: 3em;
+            height: 3px; // thickness
+            background-color: $text-dark;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform-origin: left center;
+            animation: drawLine $transition-speed ease-out forwards;
+        }
+
+
+        :hover {
+            opacity: 0.7;
+
+        }
+
+        @keyframes drawLine {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 2em;
+            }
+        }
+
     }
 }
 
-.socials {
-    a {
-        color: $text-light;
-        padding: 5px;
-    }
+
+.burger_button {
+    display: none;
+    float: right;
 
     i {
-        font-size: 28px;
-    }
-
-    :hover {
-        opacity: 0.7;
-
+        font-size: 40px;
+        color: $text-light;
     }
 }
 
@@ -311,23 +336,6 @@ body {
     padding-top: 20px;
 }
 
-.bulb_icon {
-    display: inline-block;
-    position: relative;
-
-    .line {
-        display: none;
-        width: 2em;
-        height: 2px;
-        background-color: white;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform-origin: center center;
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-}
 
 // header width, take out navigation
 @media only screen and (max-width: 870px) {
@@ -723,7 +731,6 @@ body {
         background-color: $card-background-light;
         border-radius: 16px;
         box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
-        transition: 600ms;
         overflow: hidden;
 
         .card_image_content {

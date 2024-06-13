@@ -53,7 +53,21 @@ $input-background-dark: #232323;
 
             .line {
                 display: inline-block;
+                background-color: $text-dark;
+                transform-origin: left center;
+                animation: drawLine $transition-speed ease-out forwards;
             }
+
+            @keyframes drawLine {
+                0% {
+                    width: 0;
+                }
+    
+                100% {
+                    width: 2em;
+                }
+            }
+
         }
     }
 
@@ -157,16 +171,16 @@ body {
     background-color: $background-light;
     color: $text-light;
     transition: $transition-speed;
-    
+
     a {
         text-decoration: none;
         cursor: pointer;
-        }
-        
-        p h1 h2 h3 {
-            color: $text-light;
-            }
-            
+    }
+
+    p h1 h2 h3 {
+        color: $text-light;
+    }
+
 }
 
 .Header {
@@ -236,16 +250,15 @@ body {
         }
 
         .line {
-            display: none;
             width: 3em;
             height: 3px; // thickness
-            background-color: $text-dark;
+            background-color: $text-light;
             transform: rotate(45deg);
             position: absolute;
             top: 20%;
             left: 20%;
             transform-origin: left center;
-            animation: drawLine $transition-speed ease-out forwards;
+            animation: removeLine $transition-speed ease-out forwards;
         }
 
 
@@ -254,19 +267,19 @@ body {
 
         }
 
-        @keyframes drawLine {
+        @keyframes removeLine {
             0% {
-                width: 0;
+                width: 2em;
             }
 
             100% {
-                width: 2em;
+                width: 0;
             }
+
         }
 
     }
 }
-
 
 .burger_button {
     display: none;
@@ -732,6 +745,7 @@ body {
         border-radius: 16px;
         box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
         overflow: hidden;
+        transition: 600ms;
 
         .card_image_content {
             display: flex;
@@ -792,7 +806,7 @@ body {
     }
 
     .card_container:hover {
-        transform: scale(1.05, 1.05);
+        transform: scale(1.08, 1.08);
     }
 
     @media only screen and (max-width: 1100px) {
@@ -927,7 +941,6 @@ body {
     margin: 0 2px;
     background-color: $text-light;
     border-radius: 50%;
-
 }
 
 .active_dot,

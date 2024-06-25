@@ -55,18 +55,8 @@ $input-background-dark: #232323;
                 display: inline-block;
                 background-color: $text-dark;
                 transform-origin: left center;
-                animation: drawLine $transition-speed ease-out forwards;
             }
 
-            @keyframes drawLine {
-                0% {
-                    width: 0;
-                }
-    
-                100% {
-                    width: 2em;
-                }
-            }
 
         }
     }
@@ -250,7 +240,8 @@ body {
         }
 
         .line {
-            width: 3em;
+            display: none;
+            width: 0;
             height: 3px; // thickness
             background-color: $text-light;
             transform: rotate(45deg);
@@ -258,7 +249,6 @@ body {
             top: 20%;
             left: 20%;
             transform-origin: left center;
-            animation: removeLine $transition-speed ease-out forwards;
         }
 
 
@@ -267,19 +257,43 @@ body {
 
         }
 
-        @keyframes removeLine {
-            0% {
-                width: 2em;
-            }
-
-            100% {
-                width: 0;
-            }
-
-        }
 
     }
 }
+
+.remove_line {
+    display: block;
+    animation: removeLine $transition-speed ease-out forwards;
+}
+
+@keyframes removeLine {
+    0% {
+        width: 2em;
+    }
+
+    100% {
+        width: 0em;
+    }
+}
+
+.add_line {
+    display: block;
+    animation: drawLine $transition-speed ease-out forwards;
+}
+
+@keyframes drawLine {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 2em;
+    }
+}
+
+
+
+
 
 .burger_button {
     display: none;
@@ -748,8 +762,8 @@ body {
         transition: 600ms;
 
         .card_image_content {
-            display: flex;
-            flex-direction: column;
+            //display: flex;
+            //flex-direction: column;
 
             figure {
                 margin: 0;
@@ -759,11 +773,12 @@ body {
                 overflow: hidden;
                 flex-shrink: 0;
 
-                .card_pic {
+                img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     display: block;
+                    background-color: $background-light;
                 }
             }
         }
@@ -842,7 +857,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
-    height: 70%;
+    height: 75%;
     padding: 20px;
     border-radius: 16px;
     background-color: $card-background-light;
@@ -927,9 +942,11 @@ body {
         transition: 600ms;
         display: inline-block;
         width: 100%;
+        height: 100%;
         aspect-ratio: 16/9;
-        overflow: hidden;
-        transform-origin: center;
+        object-fit: contain;
+        background-color: lightgray;
+
     }
 }
 

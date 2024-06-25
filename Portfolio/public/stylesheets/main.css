@@ -12,14 +12,7 @@
     .dark_mode .Header .icon .line {
       display: inline-block;
       background-color: white;
-      transform-origin: left center;
-      animation: drawLine 800ms ease-out forwards; }
-
-@keyframes drawLine {
-  0% {
-    width: 0; }
-  100% {
-    width: 2em; } }
+      transform-origin: left center; }
   .dark_mode .readMore {
     color: #66B7C7; }
   .dark_mode .about_me_container {
@@ -113,23 +106,37 @@ body {
       color: black;
       font-size: 28px; }
     .Header .icon .line {
-      width: 3em;
+      display: none;
+      width: 0;
       height: 3px;
       background-color: black;
       transform: rotate(45deg);
       position: absolute;
       top: 20%;
       left: 20%;
-      transform-origin: left center;
-      animation: removeLine 800ms ease-out forwards; }
+      transform-origin: left center; }
     .Header .icon :hover {
       opacity: 0.7; }
+
+.remove_line {
+  display: block;
+  animation: removeLine 800ms ease-out forwards; }
 
 @keyframes removeLine {
   0% {
     width: 2em; }
   100% {
-    width: 0; } }
+    width: 0em; } }
+
+.add_line {
+  display: block;
+  animation: drawLine 800ms ease-out forwards; }
+
+@keyframes drawLine {
+  0% {
+    width: 0; }
+  100% {
+    width: 2em; } }
 
 .burger_button {
   display: none;
@@ -447,21 +454,19 @@ body {
     box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
     overflow: hidden;
     transition: 600ms; }
-    .projects_layout .card_container .card_image_content {
-      display: flex;
-      flex-direction: column; }
-      .projects_layout .card_container .card_image_content figure {
-        margin: 0;
-        padding: 0;
+    .projects_layout .card_container .card_image_content figure {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      flex-shrink: 0; }
+      .projects_layout .card_container .card_image_content figure img {
         width: 100%;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        flex-shrink: 0; }
-        .projects_layout .card_container .card_image_content figure .card_pic {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block; }
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        background-color: #6acefc; }
     .projects_layout .card_container .card_content {
       padding: 0px 12px; }
       .projects_layout .card_container .card_content .card_header {
@@ -515,7 +520,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  height: 70%;
+  height: 75%;
   padding: 20px;
   border-radius: 16px;
   background-color: #f8f8f8;
@@ -574,9 +579,10 @@ body {
     transition: 600ms;
     display: inline-block;
     width: 100%;
+    height: 100%;
     aspect-ratio: 16/9;
-    overflow: hidden;
-    transform-origin: center; }
+    object-fit: contain;
+    background-color: lightgray; }
 
 .slide_dot {
   display: inline-block;

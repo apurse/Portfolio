@@ -16,6 +16,20 @@
             ]
         },
         {
+            "title": "Data Analysis of VR Medical Training",
+            "startDate": "2023",
+            "endDate": "2023",
+            "information": "Another project from my first year of University was data analysis of the effectiveness and uses of VR for training within the healthcare industry. In this project, I interpreted multiple datasets from Kaggle.com and utilised multiple python libraries such as Pandas to generate graphs and visuals. From this, I generated a html based report covering and evaluating my findings, documenting them in an accessible and organised manner.",
+            "link": "https://github.com/apurse/Medical-VR-Data-Analysis",
+            "picture": "../pics/data_analysis/graph1.png",
+            "popup_pics": [
+                "../pics/data_analysis/paper.png",
+                "../pics/data_analysis/graph2.png",
+                "../pics/data_analysis/graph3.png",
+                "../pics/data_analysis/data_code.png"
+            ]
+        },
+        {
             "title": "Delivery Drone Robot Simulation",
             "startDate": "2022",
             "endDate": "2023",
@@ -43,7 +57,7 @@
             ]
         },
         {
-            "title": "Optimised multi-file word occurrence counter",
+            "title": "Optimised multi-file word counter",
             "startDate": "2024",
             "endDate": "2024",
             "information": "For a module at University, I undertook the challenge of implementing and optimising a multi-file word occurrence counter. This project is a C++ implementation using optimisations such as multithreading and text parsing through memory management. The end result was an optimised program which counts for a certain word / phrase across multiple files.",

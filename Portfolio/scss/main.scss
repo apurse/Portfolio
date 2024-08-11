@@ -20,159 +20,43 @@ $background-dark: #09316e;
 $header-dark: black;
 $background-anim-dark: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 84) 50%);
 $card-background-dark: #121212;
-$box-shadow-light: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
+$box-shadow-dark: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
 $read-more-dark: #66B7C7;
 $input-background-dark: #232323;
+
+
+// Active variables
+$text-active: $text-light;
+$background-active: $background-light;
+$header-active: $header-light;
+$background-anim-active: $background-anim-light;
+$card-background-active: $card-background-light;
+$box-shadow-active: $box-shadow-light;
+$read-more-active: $read-more-light;
+$input-background-active: $input-background-light;
+
 
 // ---------------------- All pages ---------------------- //
 
 .dark_mode {
     color: $text-dark;
     background-color: $background-dark;
-
-    // ------------- Layout ------------- //
-    .Header {
-        background-color: $background-dark;
-
-        .Logo {
-            a {
-                span {
-                    color: $text-dark;
-                }
-            }
-        }
-
-        .Nav_buttons {
-
-            .nav-button {
-
-                a {
-                    color: $text-dark;
-                }
-
-                ::before {
-                    background-color: $text-dark;
-                }
-            }
-
-
-            .lightbulb {
-                .line {
-                    display: inline-block;
-                    background-color: $text-dark;
-                    transform-origin: left center;
-                }
-
-            }
-        }
-
-        .icon {
-            i {
-                color: $text-dark;
-            }
-        }
-    }
-
-    .readMore {
-        color: $read-more-dark;
-    }
-
-    // ------------- Index ------------- //
-
-    .about_me_container {
-        background-color: $background-dark;
-    }
-
-    .background {
-        .bg {
-            background-image: $background-anim-dark;
-        }
-    }
-
-    // ------------- Employment ------------- //
-
-    .employment_container {
-        .event_info_container {
-            background-color: $card-background-dark;
-            color: $text-dark;
-        }
-
-        .timeline_container {
-            ul {
-                background-color: $background-light;
-
-                li {
-                    background-color: $background-light;
-                    //border-color: $background-light;
-
-                }
-            }
-
-        }
-    }
-
-    // ------------- Projects ------------- //
-
-    .projects_layout {
-        .card_container {
-            background-color: $card-background-dark;
-            box-shadow: $box-shadow-light;
-        }
-    }
-
-    .popup_box {
-        background-color: $card-background-dark;
-        border-color: $card-background-dark;
-
-        .popup_content {
-            .link {
-                color: $text-dark;
-            }
-        }
-
-    }
-
-    .slide_dot {
-        background-color: $read-more-dark;
-    }
-
-    .active_dot,
-    .slide_dot:hover {
-        background-color: $text-dark;
-    }
-
-    // ------------- Contact Me ------------- //
-
-    .contact_form {
-        color: $text-dark;
-
-        .input_field {
-            input {
-                background-color: $input-background-dark;
-            }
-
-            textarea {
-                background-color: $input-background-dark;
-            }
-
-        }
-
-    }
-
-    .contact_form_container {
-        color: $text-dark;
-        background-color: $card-background-dark;
-    }
-
-
+    $text-active: $text-dark;
+    $background-active: $background-dark;
+    $header-active: $header-dark;
+    $background-anim-active: $background-anim-dark;
+    $card-background-active: $card-background-dark;
+    $box-shadow-active: $box-shadow-dark;
+    $read-more-active: $read-more-dark;
+    $input-background-active: $input-background-dark;
 }
 
 body {
     overflow-y: auto;
     margin: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: $background-light;
-    color: $text-light;
+    background-color: $background-active;
+    color: $text-active;
     transition: $transition-speed;
 
     a {
@@ -181,7 +65,7 @@ body {
     }
 
     p h1 h2 h3 {
-        color: $text-light;
+        color: $text-active;
     }
 
 }
@@ -189,7 +73,7 @@ body {
 .Header {
     overflow: hidden;
     padding: 12px 10px;
-    background-color: $background-light;
+    background-color: $background-active;
     transition: $transition-speed;
 
     .Logo {
@@ -198,7 +82,7 @@ body {
 
         a {
             span {
-                color: $text-light;
+                color: $text-active;
                 text-align: center;
                 padding: 12px;
                 font-size: 25px;
@@ -233,7 +117,7 @@ body {
                 display: none;
                 width: 0;
                 height: 3px; // thickness
-                background-color: $text-light;
+                background-color: $text-active;
                 transform: rotate(45deg);
                 position: absolute;
                 top: 15%;
@@ -250,7 +134,7 @@ body {
             float: left;
 
             a {
-                color: $text-light;
+                color: $text-active;
                 text-align: center;
                 text-decoration: none;
                 position: relative;
@@ -262,7 +146,7 @@ body {
                 content: '';
                 position: absolute;
                 height: 2px;
-                background-color: $text-light;
+                background-color: $text-active;
                 width: 0%;
                 bottom: -5px;
                 left: 0;
@@ -285,7 +169,7 @@ body {
         }
 
         i {
-            color: $text-light;
+            color: $text-active;
             font-size: 28px;
         }
 
@@ -331,7 +215,7 @@ body {
 
     i {
         font-size: 40px;
-        color: $text-light;
+        color: $text-active;
     }
 }
 
@@ -343,7 +227,7 @@ body {
     width: 25%;
     min-width: 200px;
     z-index: 1000;
-    background-color: $background-light;
+    background-color: $background-active;
 
     .burger_socials {
         display: none;
@@ -353,7 +237,7 @@ body {
             margin: auto;
             font-size: 28px;
             padding: 5px;
-            color: $text-light;
+            color: $text-active;
         }
     }
 
@@ -361,7 +245,7 @@ body {
         font-size: 20px;
         display: block;
         width: 100%;
-        color: $text-light;
+        color: $text-active;
         padding: 10px 20px;
     }
 
@@ -470,16 +354,16 @@ body {
 
 .about_me_container {
     width: 100%;
-    background-color: $background-light;
+    background-color: $background-active;
     padding: 20px 0px;
     text-align: center;
 
-    .about_me_image{
+    .about_me_image {
         position: relative;
         display: inline-block;
         width: 30%;
-        
-        img{
+
+        img {
             height: 550px;
         }
     }
@@ -506,7 +390,7 @@ body {
 .background {
     .bg {
         animation: slide 5s ease-in-out infinite alternate;
-        background-image: $background-anim-light;
+        background-image: $background-anim-active;
         bottom: 0;
         left: -50%;
         opacity: .5;
@@ -544,13 +428,13 @@ body {
     min-width: 50%;
     margin: auto;
     border-radius: 16px;
-    background-color: $card-background-light;
+    background-color: $card-background-active;
     padding: 30px 20px;
-    color: $text-light;
+    color: $text-active;
 }
 
 .contact_form {
-    color: $text-light;
+    color: $text-active;
 
     .input_field {
         display: block;
@@ -571,7 +455,7 @@ body {
             width: calc(100% - 20px); // 20px = 2 * padding
             padding: 10px;
             font-size: 20px;
-            background-color: $input-background-light;
+            background-color: $input-background-active;
         }
 
         textarea {
@@ -582,7 +466,7 @@ body {
             max-height: 500px;
             min-width: 100%;
             max-width: 100%;
-            background-color: $input-background-light;
+            background-color: $input-background-active;
         }
 
         .submit_button {
@@ -611,7 +495,7 @@ body {
 
     .event_info_container {
         float: right;
-        background-color: $card-background-light;
+        background-color: $card-background-active;
         padding: 24px;
         border-radius: 16px;
         width: 35%;
@@ -800,9 +684,9 @@ body {
     margin: 5%;
 
     .card_container {
-        background-color: $card-background-light;
+        background-color: $card-background-active;
         border-radius: 16px;
-        box-shadow: $box-shadow-light;
+        box-shadow: $box-shadow-active;
         overflow: hidden;
         transition: 600ms;
 
@@ -823,7 +707,7 @@ body {
                     height: 100%;
                     object-fit: cover;
                     display: block;
-                    background-color: $background-light;
+                    background-color: $background-active;
                 }
             }
         }
@@ -891,7 +775,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
-    color: $read-more-light;
+    color: $read-more-active;
     cursor: pointer;
 }
 
@@ -905,8 +789,8 @@ body {
     height: 75%;
     padding: 20px;
     border-radius: 16px;
-    background-color: $card-background-light;
-    border-color: $card-background-light;
+    background-color: $card-background-active;
+    border-color: $card-background-active;
     box-shadow: 38px 38px 31px #070a0f, -38px -38px 31px #1d2a3d;
     overflow: hidden;
 
@@ -943,7 +827,7 @@ body {
         }
 
         .link {
-            color: $text-light;
+            color: $text-active;
             padding-bottom: 10px;
             text-decoration: underline;
         }
@@ -1001,13 +885,13 @@ body {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: $text-light;
+    background-color: $text-active;
     border-radius: 50%;
 }
 
 .active_dot,
 .slide_dot:hover {
-    background-color: $background-light;
+    background-color: $background-active;
 }
 
 .active_popup_pic {

@@ -9,6 +9,7 @@ $background-light: rgb(106, 206, 252);
 $header-light: white;
 $background-anim-light: linear-gradient(-60deg, rgb(31, 209, 253) 50%, rgb(32, 106, 218)50%);
 $card-background-light: #f8f8f8;
+$box-shadow-light: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
 $read-more-light: #1e208d;
 $input-background-light: #ededed;
 
@@ -19,6 +20,7 @@ $background-dark: #09316e;
 $header-dark: black;
 $background-anim-dark: linear-gradient(-60deg, rgb(52, 76, 235) 50%, rgb(8, 15, 84) 50%);
 $card-background-dark: #121212;
+$box-shadow-light: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
 $read-more-dark: #66B7C7;
 $input-background-dark: #232323;
 
@@ -41,8 +43,26 @@ $input-background-dark: #232323;
         }
 
         .Nav_buttons {
-            a {
-                color: $text-dark;
+
+            .nav-button {
+
+                a {
+                    color: $text-dark;
+                }
+
+                ::before {
+                    background-color: $text-dark;
+                }
+            }
+
+
+            .lightbulb {
+                .line {
+                    display: inline-block;
+                    background-color: $text-dark;
+                    transform-origin: left center;
+                }
+
             }
         }
 
@@ -50,14 +70,6 @@ $input-background-dark: #232323;
             i {
                 color: $text-dark;
             }
-
-            .line {
-                display: inline-block;
-                background-color: $text-dark;
-                transform-origin: left center;
-            }
-
-
         }
     }
 
@@ -104,6 +116,7 @@ $input-background-dark: #232323;
     .projects_layout {
         .card_container {
             background-color: $card-background-dark;
+            box-shadow: $box-shadow-light;
         }
     }
 
@@ -210,19 +223,56 @@ body {
     .Nav_buttons {
         float: right;
 
-        a {
-            color: $text-light;
+        .lightbulb {
+            display: block;
             float: left;
-            text-align: center;
-            text-decoration: none;
+            position: relative;
+            padding: 8px 16px;
+
+            .line {
+                display: none;
+                width: 0;
+                height: 3px; // thickness
+                background-color: $text-light;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 15%;
+                left: 20%;
+                transform-origin: left center;
+            }
+        }
+
+        .nav-button {
             padding: 12px;
             font-size: 18px;
             line-height: 25px;
             border-radius: 4px;
-        }
+            float: left;
 
-        :hover {
-            background-color: $header-hover;
+            a {
+                color: $text-light;
+                text-align: center;
+                text-decoration: none;
+                position: relative;
+                display: inline-block;
+            }
+
+            // underline
+            ::before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                background-color: $text-light;
+                width: 0%;
+                bottom: -5px;
+                left: 0;
+                transition: width 0.25s ease-in-out;
+            }
+
+            // activate underline
+            a:hover::before {
+                width: 100%;
+            }
         }
     }
 
@@ -239,25 +289,9 @@ body {
             font-size: 28px;
         }
 
-        .line {
-            display: none;
-            width: 0;
-            height: 3px; // thickness
-            background-color: $text-light;
-            transform: rotate(45deg);
-            position: absolute;
-            top: 20%;
-            left: 20%;
-            transform-origin: left center;
-        }
-
-
         :hover {
             opacity: 0.7;
-
         }
-
-
     }
 }
 
@@ -268,7 +302,7 @@ body {
 
 @keyframes removeLine {
     0% {
-        width: 2em;
+        width: 3.25em;
     }
 
     100% {
@@ -287,13 +321,9 @@ body {
     }
 
     100% {
-        width: 2em;
+        width: 3.25em;
     }
 }
-
-
-
-
 
 .burger_button {
     display: none;
@@ -441,19 +471,34 @@ body {
 .about_me_container {
     width: 100%;
     background-color: $background-light;
-    padding: 40px 0px;
+    padding: 20px 0px;
+    text-align: center;
 
-    .about_me {
-        margin: auto;
+    .about_me_image{
+        position: relative;
+        display: inline-block;
+        width: 30%;
+        
+        img{
+            height: 550px;
+        }
+    }
+
+    .about_me_text {
+        position: relative;
+        display: inline-block;
+        width: 45%;
         padding: 0px 20px;
         text-align: center;
+        transform: translate(0%, -25%);
 
         a {
             text-decoration: underline;
         }
 
         p {
-            padding: 20px 0px;
+            width: 100%;
+            //padding: 20px 0px;
         }
     }
 }
@@ -757,7 +802,7 @@ body {
     .card_container {
         background-color: $card-background-light;
         border-radius: 16px;
-        box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84;
+        box-shadow: $box-shadow-light;
         overflow: hidden;
         transition: 600ms;
 

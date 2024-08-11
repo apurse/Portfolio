@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ensure the line remains visible
     function onAnimationEnd() {
         if (document.body.classList.contains("dark_mode")) {
-            line.style.width = '2em';
+            line.style.width = '3.25em';
         } else {
             line.style.width = '0';
         }
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userThemePreference = localStorage.getItem('theme');
     if (userThemePreference === 'dark') {
         document.body.classList.add('dark_mode');
-        line.style.width = '2em';
+        line.style.width = '3.25em';
     } else {
         line.style.width = '0';
     }

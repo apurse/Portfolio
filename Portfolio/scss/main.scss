@@ -2,7 +2,7 @@ $transition-speed: 800ms;
 
 // ------------ Light mode ------------
 $body-text-light: rgb(25, 42, 86);
-$body-background-light: rgb(180, 207, 230);
+$body-background-light: rgb(214, 242, 230);
 
 $header-text-light: white;
 $header-background-light: rgb(0, 98, 153);
@@ -16,8 +16,8 @@ $card-box-shadow-light: -10px -10px 20px rgba(220, 235, 255, 0.5), 10px 10px 20p
 $read-more-text-light: rgb(0, 85, 135);
 $read-more-background-light: rgb(0, 128, 200);
 
-$slide-dot-light: rgb(150, 200, 250);
-$slide-dot-active-light: rgb(0, 128, 200);
+$slide-dot-light: rgb(4, 37, 70);
+$slide-dot-active-light: rgb(22, 159, 238);
 
 $employment-timeline-light: rgb(0, 128, 200);
 $employment-timeline-dots-light: rgb(0, 98, 153);
@@ -115,6 +115,10 @@ $contact-input-background-dark: rgb(20, 45, 75);
         .projects_layout .card_container {
             background-color: $card-background-dark;
             box-shadow: $card-box-shadow-dark;
+
+            a {
+                color: $body-text-dark;
+            }
 
             .card_image_content figure img {
                 background-color: $body-background-dark;
@@ -611,6 +615,10 @@ body {
                 box-shadow: $card-box-shadow-light;
                 overflow: hidden;
                 transition: 600ms;
+
+                a {
+                    color: $body-text-light;
+                }
 
                 .card_image_content {
                     //display: flex;

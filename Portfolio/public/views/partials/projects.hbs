@@ -5,7 +5,7 @@
         <div class="projects_layout">
             {{#each projectData.projects as |project index|}}
             <div class="card_container">
-                <a onclick="ReadMore({{index}})">
+                <a href="/projects/{{index}}">
                     <div class="card_image_content" id="card_content">
                         <figure>
                             <img src="{{picture}}"></img>
@@ -17,7 +17,7 @@
                             <h2 class="card_date">{{endDate}}</h2>
                         </div>
                         <p class="card_info">{{information}}</p>
-                        <a class="readMore" onclick="ReadMore({{index}})">Read More</a>
+                        <a class="readMore" href="/projects/{{index}}">Read More</a>
                     </div>
                 </a>
             </div>
@@ -45,7 +45,6 @@
                 <p>{{information}}</p>
             </div>
             <h2>Link: <a class="link" href="{{link}}" target="_blank">{{link}}</a></h2>
-            <a class="readMore" onclick="CloseMore({{index}})">Close</a>
         </div>
     </div>
     {{/each}}

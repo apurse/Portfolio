@@ -123,6 +123,18 @@ app.get('/projects', (req, res) => {
     });
 })
 
+// project details page
+app.get('/projects/:projectID', (req, res) => {
+    const projectID = req.params.projectID; // take id input
+    const selectedProject = projectData.projects[projectID]; // select correct project
+    res.render('partials/projectDetails', {
+        layout: 'layouts/layout',
+        projectData: selectedProject,
+        title: selectedProject.title,
+        description: selectedProject.description,
+    });
+})
+
 
 // employment page
 app.get('/employment', (req, res) => {
@@ -147,7 +159,7 @@ app.get('/contact', (req, res) => {
 
 // cv download
 app.get('/cvDownload', (req, res) => {
-    const CV = path.join(__dirname, '/cv', 'Alex_Purser_CV_2024.pdf');
+    const CV = path.join(__dirname, '/cv', 'AlexPurserCV.pdf');
     res.download(CV);
 });
 

@@ -371,54 +371,6 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 10px;
         margin: 1%; } }
-  body .projectsPage .popup_box {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 75%;
-    padding: 20px;
-    border-radius: 16px;
-    background-color: #fafcff;
-    border-color: #fafcff;
-    box-shadow: -10px -10px 20px rgba(220, 235, 255, 0.5), 10px 10px 20px rgba(0, 0, 0, 0.05);
-    overflow: hidden; }
-    body .projectsPage .popup_box .popup_content {
-      overflow-y: auto;
-      height: 100%;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, 0.7) rgba(0, 0, 0, 0.2); }
-      body .projectsPage .popup_box .popup_content .slideshow_container {
-        width: 100%;
-        margin: auto;
-        border-radius: 16px;
-        padding: 0; }
-      body .projectsPage .popup_box .popup_content h2 {
-        width: 100%;
-        display: block;
-        float: left;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
-      body .projectsPage .popup_box .popup_content .popup_title {
-        font-size: 28px; }
-      body .projectsPage .popup_box .popup_content p {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        padding-left: 2.5%;
-        max-width: 95%;
-        font-size: 20px; }
-      body .projectsPage .popup_box .popup_content .link {
-        color: #192a56;
-        padding-bottom: 10px;
-        text-decoration: underline; }
-      body .projectsPage .popup_box .popup_content .link:hover {
-        opacity: 70%; }
-    @media only screen and (max-width: 1000px) {
-      body .projectsPage .popup_box {
-        width: 90%;
-        height: 60%; }
-        body .projectsPage .popup_box .popup_content p {
-          font-size: 16px; } }
   body .projectsPage .readMore {
     float: left;
     text-align: center;
@@ -428,37 +380,63 @@ body {
     border-radius: 4px;
     color: #005587;
     cursor: pointer; }
-  body .projectsPage .popup_box_active {
-    display: block; }
-  body .projectsPage .popup_pic {
-    display: block; }
-  body .projectsPage .blur {
-    filter: blur(5px);
-    pointer-events: none; }
-  body .projectsPage .slide {
-    display: none; }
-    body .projectsPage .slide img {
+  body .projectDetailsPage {
+    width: 80%;
+    margin: auto; }
+    body .projectDetailsPage .slideshow_container {
+      width: 45%;
+      margin: auto;
       border-radius: 16px;
-      transition: 600ms;
+      padding: 40px;
+      display: inline-block; }
+      body .projectDetailsPage .slideshow_container .popup_pic {
+        display: block; }
+      body .projectDetailsPage .slideshow_container .slide {
+        display: none; }
+        body .projectDetailsPage .slideshow_container .slide img {
+          border-radius: 16px;
+          transition: 600ms;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 16/9;
+          object-fit: contain;
+          background-color: lightgray; }
+      body .projectDetailsPage .slideshow_container .slide_dot {
+        display: inline-block;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #96c8fa;
+        border-radius: 50%; }
+      body .projectDetailsPage .slideshow_container .active_dot,
+      body .projectDetailsPage .slideshow_container .slide_dot:hover {
+        background-color: #0080c8; }
+      body .projectDetailsPage .slideshow_container .active_popup_pic {
+        display: block; }
+    body .projectDetailsPage .information_container {
       display: inline-block;
-      width: 100%;
-      height: 100%;
-      aspect-ratio: 16/9;
-      object-fit: contain;
-      background-color: lightgray; }
-  body .projectsPage .slide_dot {
-    display: inline-block;
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #96c8fa;
-    border-radius: 50%; }
-  body .projectsPage .active_dot,
-  body .projectsPage .slide_dot:hover {
-    background-color: #0080c8; }
-  body .projectsPage .active_popup_pic {
-    display: block; }
+      width: 40%;
+      padding: 40px; }
+      body .projectDetailsPage .information_container h2 {
+        width: 100%;
+        display: block;
+        float: left;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+      body .projectDetailsPage .information_container .popup_title {
+        font-size: 28px; }
+      body .projectDetailsPage .information_container p {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-left: 2.5%;
+        max-width: 95%;
+        font-size: 20px; }
+      body .projectDetailsPage .information_container .link {
+        color: #192a56;
+        padding-bottom: 10px;
+        text-decoration: underline; }
+      body .projectDetailsPage .information_container .link:hover {
+        opacity: 70%; }
   body .employmentPage .employment_container {
     width: 85%;
     margin: auto; }

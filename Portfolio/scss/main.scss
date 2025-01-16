@@ -690,79 +690,6 @@ body {
 
         }
 
-        .popup_box {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 75%;
-            padding: 20px;
-            border-radius: 16px;
-            background-color: $card-background-light;
-            border-color: $card-background-light;
-            box-shadow: $card-box-shadow-light;
-            overflow: hidden;
-
-
-            .popup_content {
-                overflow-y: auto;
-                height: 100%;
-                scrollbar-width: thin;
-                scrollbar-color: rgba(255, 255, 255, 0.7) rgba(0, 0, 0, 0.2);
-
-
-                .slideshow_container {
-                    width: 100%;
-                    margin: auto;
-                    border-radius: 16px;
-                    padding: 0;
-                }
-
-                h2 {
-                    width: 100%;
-                    display: block;
-                    float: left;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                }
-
-                .popup_title {
-                    font-size: 28px;
-                }
-
-                p {
-                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                    padding-left: 2.5%;
-                    max-width: 95%;
-                    font-size: 20px;
-                }
-
-                .link {
-                    color: $body-text-light;
-                    padding-bottom: 10px;
-                    text-decoration: underline;
-                }
-
-                .link:hover {
-                    opacity: 70%;
-                }
-
-
-            }
-
-            @media only screen and (max-width: 1000px) {
-                width: 90%;
-                height: 60%;
-
-                .popup_content {
-                    p {
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-
         .readMore {
             float: left;
             text-align: center;
@@ -773,55 +700,93 @@ body {
             color: $read-more-text-light;
             cursor: pointer;
         }
+    }
 
-        .popup_box_active {
-            display: block;
-        }
+    .projectDetailsPage {
+        width: 80%;
+        margin: auto;
 
-        .popup_pic {
-            display: block;
-        }
+        .slideshow_container {
+            width: 45%;
+            margin: auto;
+            border-radius: 16px;
+            padding: 40px;
+            display: inline-block;    
 
-        .blur {
-            filter: blur(5px);
-            pointer-events: none;
-        }
 
-        .slide {
-            display: none;
+            .popup_pic {
+                display: block;
+            }
 
-            img {
-                border-radius: 16px;
-                transition: 600ms;
+            .slide {
+                display: none;
+
+                img {
+                    border-radius: 16px;
+                    transition: 600ms;
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 16/9;
+                    object-fit: contain;
+                    background-color: lightgray;
+
+                }
+            }
+
+            .slide_dot {
                 display: inline-block;
-                width: 100%;
-                height: 100%;
-                aspect-ratio: 16/9;
-                object-fit: contain;
-                background-color: lightgray;
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: $slide-dot-light;
+                border-radius: 50%;
+            }
 
+            .active_dot,
+            .slide_dot:hover {
+                background-color: $slide-dot-active-light;
+            }
+
+            .active_popup_pic {
+                display: block;
             }
         }
 
-        .slide_dot {
+
+        .information_container {
             display: inline-block;
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: $slide-dot-light;
-            border-radius: 50%;
-        }
+            width: 40%;
+            padding: 40px;
+            h2 {
+                width: 100%;
+                display: block;
+                float: left;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
 
-        .active_dot,
-        .slide_dot:hover {
-            background-color: $slide-dot-active-light;
-        }
+            .popup_title {
+                font-size: 28px;
+            }
 
-        .active_popup_pic {
-            display: block;
-        }
+            p {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                padding-left: 2.5%;
+                max-width: 95%;
+                font-size: 20px;
+            }
 
+            .link {
+                color: $body-text-light;
+                padding-bottom: 10px;
+                text-decoration: underline;
+            }
+
+            .link:hover {
+                opacity: 70%;
+            }
+        }
     }
 
     .employmentPage {

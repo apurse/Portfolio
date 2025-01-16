@@ -1,49 +1,52 @@
-<div class="page_content" id="page_content">
-    <h1 class="page_title">Projects</h1>
-    <div class="projects_layout">
-        {{#each projectData.projects as |project index|}}
-        <div class="card_container">
-            <a onclick="ReadMore({{index}})">
-                <div class="card_image_content" id="card_content">
-                    <figure>
-                        <img src="{{picture}}"></img>
-                    </figure>
-                </div>
-                <div class="card_content" id="card_content">
-                    <div class="card_header">
-                        <h2 class="card_title">{{project.title}}</h2>
-                        <h2 class="card_date">{{endDate}}</h2>
+<div class="projectsPage">
+
+    <div class="page_content" id="page_content">
+        <h1 class="page_title">Projects</h1>
+        <div class="projects_layout">
+            {{#each projectData.projects as |project index|}}
+            <div class="card_container">
+                <a onclick="ReadMore({{index}})">
+                    <div class="card_image_content" id="card_content">
+                        <figure>
+                            <img src="{{picture}}"></img>
+                        </figure>
                     </div>
-                    <p class="card_info">{{information}}</p>
-                    <a class="readMore" onclick="ReadMore({{index}})">Read More</a>
-                </div>
-            </a>
-        </div>
-        {{/each}}
-    </div>
-</div>
-{{#each projectData.projects as |project index|}}
-<div class="popup_box" id="popup_box{{index}}">
-    <div class="popup_content">
-        <div class="slideshow_container">
-            {{#each popup_pics as |pic pic_index|}}
-            <div class="slide" id="slide{{index}}{{pic_index}}">
-                <img class="card_pic" src="{{pic}}"></img>
+                    <div class="card_content" id="card_content">
+                        <div class="card_header">
+                            <h2 class="card_title">{{project.title}}</h2>
+                            <h2 class="card_date">{{endDate}}</h2>
+                        </div>
+                        <p class="card_info">{{information}}</p>
+                        <a class="readMore" onclick="ReadMore({{index}})">Read More</a>
+                    </div>
+                </a>
             </div>
             {{/each}}
-            {{#each popup_pics as |pic pic_index|}}
-            <span class="slide_dot" id="slide_dot{{index}}{{pic_index}}"
-                onclick="showSlide({{index}},{{pic_index}})"></span>
-            {{/each}}
         </div>
-        <h2 class="popup_title">{{title}}</h2>
-        <h2>{{startDate}} - {{endDate}}</h2>
-        <div>
-            <h2>Information:</h2>
-            <p>{{information}}</p>
-        </div>
-        <h2>Link: <a class="link" href="{{link}}" target="_blank">{{link}}</a></h2>
-        <a class="readMore" onclick="CloseMore({{index}})">Close</a>
     </div>
+    {{#each projectData.projects as |project index|}}
+    <div class="popup_box" id="popup_box{{index}}">
+        <div class="popup_content">
+            <div class="slideshow_container">
+                {{#each popup_pics as |pic pic_index|}}
+                <div class="slide" id="slide{{index}}{{pic_index}}">
+                    <img class="card_pic" src="{{pic}}"></img>
+                </div>
+                {{/each}}
+                {{#each popup_pics as |pic pic_index|}}
+                <span class="slide_dot" id="slide_dot{{index}}{{pic_index}}"
+                    onclick="showSlide({{index}},{{pic_index}})"></span>
+                {{/each}}
+            </div>
+            <h2 class="popup_title">{{title}}</h2>
+            <h2>{{startDate}} - {{endDate}}</h2>
+            <div>
+                <h2>Information:</h2>
+                <p>{{information}}</p>
+            </div>
+            <h2>Link: <a class="link" href="{{link}}" target="_blank">{{link}}</a></h2>
+            <a class="readMore" onclick="CloseMore({{index}})">Close</a>
+        </div>
+    </div>
+    {{/each}}
 </div>
-{{/each}}

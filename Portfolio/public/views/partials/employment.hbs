@@ -1,42 +1,44 @@
-<h1 class="page_title">Employment History</h1>
-<div class="employment_container">
-  <div class="timeline_container">
-    <div class="guide">
-      <h2>Click on an image below to view more</h2>
-      <h1><i>&larr;</i> Time</h1>
+<div class="employmentPage">
+  <h1 class="page_title">Employment History</h1>
+  <div class="employment_container">
+    <div class="timeline_container">
+      <div class="guide">
+        <h2>Click on an image below to view more</h2>
+        <h1><i>&larr;</i> Time</h1>
+      </div>
+      <ul>
+        {{#each jobsData.jobs as |job pic_index|}}
+        <li id="event{{pic_index}}">
+          <span>
+            <a onclick="select_event({{pic_index}})">
+              <img src="{{logo}}">
+            </a>
+          </span>
+        </li>
+        {{/each}}
+      </ul>
     </div>
-    <ul>
-      {{#each jobsData.jobs as |job pic_index|}}
-      <li id="event{{pic_index}}">
-        <span>
-          <a onclick="select_event({{pic_index}})">
-            <img src="{{logo}}">
-          </a>
-        </span>
-      </li>
+    <div class="event_info_container">
+      <div class="event_info event_active" id="event_info_demo">
+        <h2>Title: </h2>
+        <h2>Company: </h2>
+        <h2>Date: </h2>
+        <h2>Info: </h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni odio veniam facere provident ab
+          nostrum delectus eum ea aperiam, hic soluta quam natus cum, quisquam pariatur et minus officiis. Accusantium?
+        </p>
+      </div>
+      {{#each jobsData.jobs as |job index|}}
+      <div class="event_info " id="event_info{{index}}">
+        <h2>{{title}}</h2>
+        <h2>{{company}}</h2>
+        <h2>{{startDate}} - {{endDate}}</h2>
+        <h2>Info: </h2>
+        <hr>
+        <p>{{information}}</p>
+      </div>
       {{/each}}
-    </ul>
-  </div>
-  <div class="event_info_container">
-    <div class="event_info event_active" id="event_info_demo">
-      <h2>Title: </h2>
-      <h2>Company: </h2>
-      <h2>Date: </h2>
-      <h2>Info: </h2>
-      <hr>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni odio veniam facere provident ab
-        nostrum delectus eum ea aperiam, hic soluta quam natus cum, quisquam pariatur et minus officiis. Accusantium?
-      </p>
     </div>
-    {{#each jobsData.jobs as |job index|}}
-    <div class="event_info " id="event_info{{index}}">
-      <h2>{{title}}</h2>
-      <h2>{{company}}</h2>
-      <h2>{{startDate}} - {{endDate}}</h2>
-      <h2>Info: </h2>
-      <hr>
-      <p>{{information}}</p>
-    </div>
-    {{/each}}
   </div>
 </div>

@@ -30,7 +30,7 @@
             ]
         },
         {
-            "title": "Delivery Drone Robot Simulation",
+            "title": "Delivery Drone Robot Education Simulation",
             "startDate": "2022",
             "endDate": "2023",
             "information": "This was one of my first year projects. I was tasked with integrating an Arduino system into Unity, and creating an educational piece of software that works alongside a custom built controller. For this project, I based my idea off of the company Zipline and their delivery drones. My Controller was a gyroscopic input that reacted to 2 axes of rotation. Up and down rotation affects the falling speed of the delivery, while left and right affects the position of the delivery. As the user progresses through the story, text popups appear, explaining the process and benefits. The user was challenged with placing the delivery on a cross outside the recipients door.",
@@ -44,7 +44,7 @@
             ]
         },
         {
-            "title": "AI Face Detection Paper",
+            "title": "AI Face Detection Performance Analysis",
             "startDate": "2024",
             "endDate": "2024",
             "information": "This project was a comparison of five face detection algorithms against the effects of lighting quality. This project was implemented in Python using five different libraries for face detection. To test these algorithms, a dataset was used with each subject exposed to three lighting angles: left, right, and central, then these images were dimmed or brightened for a more accurate test.",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "title": "Optimised multi-file word counter",
+            "title": "Optimised Multi-file Word Occurrence Counter",
             "startDate": "2024",
             "endDate": "2024",
             "information": "For a module at University, I undertook the challenge of implementing and optimising a multi-file word occurrence counter. This project is a C++ implementation using optimisations such as multithreading and text parsing through memory management. The end result was an optimised program which counts for a certain word / phrase across multiple files.",
@@ -76,6 +76,34 @@
             "endDate": "2024",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
             "link": "https://github.com/apurse/Environment-Monitoring-System",
+            "picture": "../../pics/plant/hardware.png",
+            "popup_pics": [
+                "../../pics/plant/hardware.png",
+                "../../pics/plant/api.png",
+                "../../pics/plant/Circuit_diagram_horizontal.png",
+                "../../pics/plant/poster.png"
+            ]
+        },
+        {
+            "title": "Portfolio Website",
+            "startDate": "2024",
+            "endDate": "",
+            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
+            "link": "https://github.com/apurse/Portfolio",
+            "picture": "../../pics/plant/hardware.png",
+            "popup_pics": [
+                "../../pics/plant/hardware.png",
+                "../../pics/plant/api.png",
+                "../../pics/plant/Circuit_diagram_horizontal.png",
+                "../../pics/plant/poster.png"
+            ]
+        },
+        {
+            "title": "Halwill Baptist Church Website",
+            "startDate": "2024",
+            "endDate": "",
+            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
+            "link": "https://github.com/apurse/Portfolio",
             "picture": "../../pics/plant/hardware.png",
             "popup_pics": [
                 "../../pics/plant/hardware.png",

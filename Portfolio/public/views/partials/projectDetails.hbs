@@ -12,7 +12,7 @@
         {{!-- Small pictures --}}
         <div class="small_slide_container">
             {{#each projectData.popup_pics as |pic pic_index|}}
-            <div class="small_slide" id="small_slide{{pic_index}}" style="width: calc(90% / {{projectDataLength}});">
+            <div class="small_slide" id="small_slide{{pic_index}}">
                 <img src="{{pic}}" onclick="showSlide({{pic_index}})">
             </div>
             {{/each}}

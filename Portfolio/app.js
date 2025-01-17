@@ -107,7 +107,7 @@ app.post('/', (req, res) => {
 app.get('/', (req, res) => {
     res.render('partials/index', {
         layout: 'layouts/layout',
-        title: 'Alex Purser Portfolio',
+        title: 'Alex Purser | Portfolio',
         description: 'Computer Science student at Falmouth University. Explore my portfolio for exciting projects. Contact me today!'
     });
 })

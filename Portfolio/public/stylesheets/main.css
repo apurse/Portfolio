@@ -44,12 +44,15 @@
   .dark_mode .projectsPage .slide_dot:hover {
     background-color: #0078d7; }
   .dark_mode .employmentPage .employment_container .event_info_container {
-    background-color: #0f2341; }
+    background-color: #0f2341;
+    box-shadow: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2); }
   .dark_mode .employmentPage .employment_container .timeline_container ul:after {
     background-color: #3399ff; }
-  li .dark_mode .employmentPage .employment_container .timeline_container ul:after {
+  .dark_mode .employmentPage .employment_container .timeline_container ul li:after {
     background-color: #3399ff;
     border-color: #3399ff; }
+  .dark_mode .employmentPage .employment_container .timeline_container ul li span img {
+    box-shadow: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2); }
   .dark_mode .contactPage .contact_form_container {
     background-color: #0f2341;
     color: #ecf4ff; }
@@ -385,7 +388,7 @@ body {
     color: #005587;
     cursor: pointer; }
   body .projectDetailsPage {
-    width: 80%;
+    width: 90%;
     margin: auto; }
     body .projectDetailsPage .slideshow_container {
       width: 45%;
@@ -406,11 +409,12 @@ body {
           aspect-ratio: 16/9;
           object-fit: contain; }
       body .projectDetailsPage .slideshow_container .small_slide_container {
-        width: 100%;
-        position: relative; }
+        display: grid;
+        margin-inline: auto;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px; }
         body .projectDetailsPage .slideshow_container .small_slide_container .small_slide {
-          display: inline-block;
-          max-width: 24%; }
+          display: inline-block; }
           body .projectDetailsPage .slideshow_container .small_slide_container .small_slide img {
             border-radius: 4px;
             transition: 600ms;
@@ -418,7 +422,8 @@ body {
             height: 100%;
             display: inline-block;
             aspect-ratio: 16/9;
-            object-fit: contain; }
+            object-fit: contain;
+            background-color: black; }
         body .projectDetailsPage .slideshow_container .small_slide_container .small_slide:hover {
           opacity: 0.7;
           cursor: pointer; }
@@ -428,7 +433,7 @@ body {
         display: none; }
     body .projectDetailsPage .information_container {
       display: inline-block;
-      width: 40%;
+      width: 45%;
       padding: 40px; }
       body .projectDetailsPage .information_container h2 {
         width: 100%;
@@ -459,7 +464,7 @@ body {
       width: 35%;
       overflow: hidden;
       min-height: 600px;
-      box-shadow: -12px -12px 22px #072045, 12px 12px 22px #0e3d84; }
+      box-shadow: -10px -10px 20px rgba(220, 235, 255, 0.5), 10px 10px 20px rgba(0, 0, 0, 0.05); }
       body .employmentPage .employment_container .event_info_container .event_info {
         display: none;
         list-style: none;
@@ -543,7 +548,7 @@ body {
               aspect-ratio: 1;
               overflow: hidden;
               transform-origin: center;
-              box-shadow: -11px -11px 16px #051a3b, 11px 11px 21px #1c4788; }
+              box-shadow: -10px -10px 20px rgba(220, 235, 255, 0.5), 10px 10px 20px rgba(0, 0, 0, 0.05); }
             body .employmentPage .employment_container .timeline_container ul li span :hover {
               cursor: pointer;
               transform: scale(1.2, 1.2); }

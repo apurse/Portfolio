@@ -1,17 +1,25 @@
 <div class="projectDetailsPage">
-
     <div class="slideshow_container">
+
+        {{!-- Big pictures --}}
         {{#each projectData.popup_pics as |pic pic_index|}}
-        <div class="slide" id="slide{{pic_index}}">
-            <img class="card_pic" src="{{pic}}">
+        <div class="big_slide" id="big_slide{{pic_index}}">
+            <img src="{{pic}}">
         </div>
         {{/each}}
-        {{#each projectData.popup_pics as |pic pic_index|}}
-        <span class="slide_dot" id="slide_dot{{pic_index}}"
-            onclick="showSlide({{pic_index}})"></span>
-        {{/each}}
+
+
+        {{!-- Small pictures --}}
+        <div class="small_slide_container">
+            {{#each projectData.popup_pics as |pic pic_index|}}
+            <div class="small_slide" id="small_slide{{pic_index}}" style="width: calc(90% / {{projectDataLength}});">
+                <img src="{{pic}}" onclick="showSlide({{pic_index}})">
+            </div>
+            {{/each}}
+        </div>
+
     </div>
-    
+
     <div class="information_container">
         <h1>{{{projectData.title}}}</h1>
         <h2>{{projectData.startDate}} - {{projectData.endDate}}</h2>

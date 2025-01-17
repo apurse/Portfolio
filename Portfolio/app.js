@@ -89,7 +89,7 @@ app.post('/', (req, res) => {
                 db.all(sql_queryall, [], (err, rows) => {
                     if (err) return console.log(err.message);
                     console.log(rows)
-                    res.render('partials/thanks', { 
+                    res.render('partials/thanks', {
                         layout: 'layouts/layout',
                         title: 'Thank you!',
                         description: 'Thank you for sending a message! I will be sure to respond to this asap!'
@@ -130,6 +130,7 @@ app.get('/projects/:projectID', (req, res) => {
     res.render('partials/projectDetails', {
         layout: 'layouts/layout',
         projectData: selectedProject,
+        projectDataLength: selectedProject.popup_pics.length,
         title: selectedProject.title,
         description: selectedProject.description,
     });

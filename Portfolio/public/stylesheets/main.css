@@ -26,6 +26,8 @@
   .dark_mode .projectsPage .projects_layout .card_container {
     background-color: #0f2341;
     box-shadow: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2); }
+    .dark_mode .projectsPage .projects_layout .card_container a {
+      color: #ecf4ff; }
     .dark_mode .projectsPage .projects_layout .card_container .card_image_content figure img {
       background-color: #0a192f; }
   .dark_mode .projectsPage .readMore {
@@ -227,7 +229,7 @@ body {
   overflow-y: auto;
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #b4cfe6;
+  background-color: #d6f2e6;
   color: #192a56;
   transition: 800ms; }
   body a {
@@ -290,7 +292,7 @@ body {
       font-size: 28px; }
   body .indexPage .about_me_container {
     width: 100%;
-    background-color: #b4cfe6;
+    background-color: #d6f2e6;
     padding: 20px 0px;
     text-align: center; }
     body .indexPage .about_me_container .about_me_image {
@@ -323,6 +325,8 @@ body {
       box-shadow: -10px -10px 20px rgba(220, 235, 255, 0.5), 10px 10px 20px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       transition: 600ms; }
+      body .projectsPage .projects_layout .card_container a {
+        color: #192a56; }
       body .projectsPage .projects_layout .card_container .card_image_content figure {
         margin: 0;
         padding: 0;
@@ -335,7 +339,7 @@ body {
           height: 100%;
           object-fit: cover;
           display: block;
-          background-color: #b4cfe6; }
+          background-color: #d6f2e6; }
       body .projectsPage .projects_layout .card_container .card_content {
         padding: 0px 12px; }
         body .projectsPage .projects_layout .card_container .card_content .card_header {
@@ -391,30 +395,37 @@ body {
       display: inline-block; }
       body .projectDetailsPage .slideshow_container .popup_pic {
         display: block; }
-      body .projectDetailsPage .slideshow_container .slide {
+      body .projectDetailsPage .slideshow_container .big_slide {
         display: none; }
-        body .projectDetailsPage .slideshow_container .slide img {
-          border-radius: 16px;
+        body .projectDetailsPage .slideshow_container .big_slide img {
+          border-radius: 4px;
           transition: 600ms;
           display: inline-block;
           width: 100%;
           height: 100%;
           aspect-ratio: 16/9;
-          object-fit: contain;
-          background-color: lightgray; }
-      body .projectDetailsPage .slideshow_container .slide_dot {
-        display: inline-block;
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #96c8fa;
-        border-radius: 50%; }
-      body .projectDetailsPage .slideshow_container .active_dot,
-      body .projectDetailsPage .slideshow_container .slide_dot:hover {
-        background-color: #0080c8; }
-      body .projectDetailsPage .slideshow_container .active_popup_pic {
+          object-fit: contain; }
+      body .projectDetailsPage .slideshow_container .small_slide_container {
+        width: 100%;
+        position: relative; }
+        body .projectDetailsPage .slideshow_container .small_slide_container .small_slide {
+          display: inline-block;
+          max-width: 24%; }
+          body .projectDetailsPage .slideshow_container .small_slide_container .small_slide img {
+            border-radius: 4px;
+            transition: 600ms;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            aspect-ratio: 16/9;
+            object-fit: contain; }
+        body .projectDetailsPage .slideshow_container .small_slide_container .small_slide:hover {
+          opacity: 0.7;
+          cursor: pointer; }
+      body .projectDetailsPage .slideshow_container .active_big_slide {
         display: block; }
+      body .projectDetailsPage .slideshow_container .inactive_small_slide {
+        display: none; }
     body .projectDetailsPage .information_container {
       display: inline-block;
       width: 40%;

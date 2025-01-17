@@ -1,6 +1,6 @@
 
 // when window loads, show first slide
-window.onload = function() {
+window.onload = function () {
     showSlide(0);
 };
 
@@ -8,20 +8,20 @@ window.onload = function() {
 // show slide in the carousel
 function showSlide(pic_index) {
 
-    // Disable already active slide and dot
-    var active_slide = document.querySelector('.active_popup_pic');
-    var active_dot = document.querySelector('.active_dot');
-    if (active_slide || active_dot) {
-        active_slide.classList.remove('active_popup_pic');
-        active_dot.classList.remove('active_dot');
+    // Disable active big slide and enable small slide
+    var selected_small_slide = document.querySelector('.inactive_small_slide');
+    var active_slide = document.querySelector('.active_big_slide');
+    if (active_slide){
+        active_slide.classList.remove('active_big_slide');
+        selected_small_slide.classList.remove('inactive_small_slide');   
     }
 
-    // Enable selected slide
-    var selected_slide = document.getElementById('slide' + pic_index);
-    selected_slide.classList.add('active_popup_pic'); 
+    // Enable selected big slide
+    var selected_big_slide = document.getElementById('big_slide' + pic_index);
+    selected_big_slide.classList.add('active_big_slide');
 
-    
-    // Enable selected dot
-    var selected_dot = document.getElementById('slide_dot'+ pic_index)
-    selected_dot.classList.add('active_dot');
+
+    // Enable selected small slide
+    var selected_small_slide = document.getElementById('small_slide' + pic_index);
+    selected_small_slide.classList.add('inactive_small_slide');
 }

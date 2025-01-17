@@ -719,46 +719,60 @@ body {
             margin: auto;
             border-radius: 16px;
             padding: 40px;
-            display: inline-block;    
-
+            display: inline-block;
 
             .popup_pic {
                 display: block;
             }
 
-            .slide {
+            .big_slide {
                 display: none;
 
                 img {
-                    border-radius: 16px;
+                    border-radius: 4px;
                     transition: 600ms;
                     display: inline-block;
                     width: 100%;
                     height: 100%;
                     aspect-ratio: 16/9;
                     object-fit: contain;
-                    background-color: lightgray;
-
+                    // background-color: black;
                 }
             }
 
-            .slide_dot {
-                display: inline-block;
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: $slide-dot-light;
-                border-radius: 50%;
+
+            .small_slide_container {
+                width: 100%;
+                position: relative;
+
+                .small_slide {
+                    display: inline-block;
+                    max-width: 24%;
+
+                    img {
+                        border-radius: 4px;
+                        transition: 600ms;
+                        width: 100%;
+                        height: 100%;
+                        display: inline-block;
+                        aspect-ratio: 16/9;
+                        object-fit: contain;
+                        // background-color: black;
+                    }
+                }
+
+                .small_slide:hover {
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
             }
 
-            .active_dot,
-            .slide_dot:hover {
-                background-color: $slide-dot-active-light;
-            }
-
-            .active_popup_pic {
+            .active_big_slide {
                 display: block;
+            }
+
+            .inactive_small_slide {
+                display: none;
             }
         }
 
@@ -767,6 +781,7 @@ body {
             display: inline-block;
             width: 40%;
             padding: 40px;
+
             h2 {
                 width: 100%;
                 display: block;

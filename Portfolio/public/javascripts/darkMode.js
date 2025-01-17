@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bulbIcon = document.getElementById("bulb");
+    const burgerBulbIcon = document.getElementById("burgerBulb");
     const line = document.querySelector(".line");
 
     bulbIcon.addEventListener("click", function () {
+        darkMode();
+    });
+    burgerBulbIcon.addEventListener("click", function () {
         darkMode();
     });
 

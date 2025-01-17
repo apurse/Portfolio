@@ -226,7 +226,7 @@ body {
   overflow-y: auto;
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #d6f2e6;
+  background-color: #8fdcf3;
   color: #192a56;
   transition: 800ms; }
   body a {
@@ -289,7 +289,7 @@ body {
       font-size: 28px; }
   body .indexPage .about_me_container {
     width: 100%;
-    background-color: #d6f2e6;
+    background-color: #8fdcf3;
     padding: 20px 0px;
     text-align: center; }
     body .indexPage .about_me_container .about_me_image {
@@ -336,7 +336,7 @@ body {
           height: 100%;
           object-fit: cover;
           display: block;
-          background-color: #d6f2e6; }
+          background-color: #8fdcf3; }
       body .projectsPage .projects_layout .card_container .card_content {
         padding: 0px 12px; }
         body .projectsPage .projects_layout .card_container .card_content .card_header {

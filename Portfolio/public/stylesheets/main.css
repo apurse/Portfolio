@@ -3,6 +3,8 @@
   background-color: #0a192f; }
   .dark_mode .page_title {
     color: #ecf4ff; }
+  .dark_mode .page_paragraph {
+    color: #ecf4ff; }
   .dark_mode .Header {
     background-color: #00497d; }
     .dark_mode .Header .Logo_container .Logo a {
@@ -62,22 +64,14 @@
         background-color: #142d4b; }
       .dark_mode .contactPage .contact_form_container .contact_form textarea {
         background-color: #142d4b; }
+      .dark_mode .contactPage .contact_form_container .contact_form .submit_button {
+        background-color: #0a192f;
+        border: #0a192f;
+        color: #ecf4ff; }
   .dark_mode .thanksPage .return a {
     color: #ecf4ff; }
   .dark_mode .thanksPage .return:hover a {
     color: #ecf4ff; }
-  .dark_mode .event_form_container {
-    background-color: #0f2341;
-    color: #ecf4ff; }
-  .dark_mode .event_form {
-    color: #ecf4ff; }
-    .dark_mode .event_form .input_field input,
-    .dark_mode .event_form .input_field textarea {
-      color: #ecf4ff; }
-    .dark_mode .event_form .input_field .submit_button {
-      background-color: #0a192f;
-      border: #0a192f;
-      color: #ecf4ff; }
   .dark_mode .socials_container .icon i {
     color: #ecf4ff; }
 
@@ -110,7 +104,7 @@
       display: block;
       float: left;
       position: relative;
-      padding: 8px 16px; }
+      padding: 4px 16px; }
       .Header .Nav_buttons .lightbulb .line {
         display: none;
         width: 0;
@@ -122,9 +116,9 @@
         left: 20%;
         transform-origin: left center; }
     .Header .Nav_buttons .nav-button {
-      padding: 12px;
+      padding: 6px 12px;
       font-size: 18px;
-      line-height: 25px;
+      line-height: 32px;
       border-radius: 4px;
       float: left; }
       .Header .Nav_buttons .nav-button a {
@@ -210,7 +204,7 @@
   100% {
     width: 3.25em; } }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1000px) {
   .Header .socials_container {
     display: inline-block; }
   .Header .Nav_buttons {
@@ -218,7 +212,7 @@
   .Header .burger_button {
     display: inline-block; } }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 520px) {
   .Header .socials_container {
     display: none; }
   .Header .burger_contents .burger_socials {
@@ -320,8 +314,8 @@ body {
     display: grid;
     margin-inline: auto;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 48px;
-    margin: 5%; }
+    gap: 56px;
+    margin: 8%; }
     body .projectsPage .projects_layout .card_container {
       background-color: #fafcff;
       border-radius: 16px;
@@ -371,13 +365,17 @@ body {
       transform: scale(1.08, 1.08); }
     @media only screen and (max-width: 1100px) {
       body .projectsPage .projects_layout {
-        gap: 20px;
-        margin: 3%; } }
-    @media only screen and (max-width: 400px) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 40px;
+        margin: 8%; } }
+    @media only screen and (max-width: 765px) {
       body .projectsPage .projects_layout {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 10px;
-        margin: 1%; } }
+        gap: 40px;
+        margin: 12%; } }
+    @media only screen and (max-width: 450px) {
+      body .projectsPage .projects_layout {
+        gap: 40px;
+        margin: 6%; } }
   body .projectsPage .readMore {
     float: left;
     text-align: center;
@@ -453,6 +451,22 @@ body {
         text-decoration: underline; }
       body .projectDetailsPage .information_container .link:hover {
         opacity: 70%; }
+    @media only screen and (max-width: 1850px) {
+      body .projectDetailsPage .slideshow_container {
+        padding: 2%; }
+      body .projectDetailsPage .information_container {
+        padding: 2%; } }
+    @media only screen and (max-width: 750px) {
+      body .projectDetailsPage .slideshow_container {
+        display: block;
+        width: 60%;
+        margin: auto; }
+      body .projectDetailsPage .small_slide_container {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
+      body .projectDetailsPage .information_container {
+        display: block;
+        width: 90%;
+        margin: auto; } }
   body .employmentPage .employment_container {
     width: 85%;
     margin: auto; }
@@ -554,6 +568,20 @@ body {
               transform: scale(1.2, 1.2); }
       body .employmentPage .employment_container .timeline_container li:hover:after {
         background-color: #0b0b0b; }
+  @media only screen and (max-width: 1000px) {
+    body .employmentPage .employment_container .event_info_container {
+      display: block;
+      width: 100%;
+      margin: 1%;
+      margin-right: 0;
+      padding: 5px; }
+    body .employmentPage .employment_container .timeline_container {
+      display: block;
+      width: 90%;
+      margin: auto; } }
+  @media only screen and (max-width: 600px) {
+    body .employmentPage .timeline_container ul li span img {
+      width: 60px; } }
   body .contactPage .contact_form_container {
     max-width: 1000px;
     width: 90%;
@@ -603,6 +631,9 @@ body {
         body .contactPage .contact_form_container .contact_form .input_field .submit_button:hover {
           cursor: pointer;
           opacity: 0.9; }
+  @media only screen and (max-width: 1333px) {
+    body .contactPage {
+      margin: 7%; } }
   body .thanksPage .return {
     width: 15%;
     margin: auto;
@@ -619,22 +650,6 @@ body {
     background-color: #B3B3B3; }
     body .thanksPage .return:hover a {
       color: #ecf4ff; }
-
-@media only screen and (max-width: 1000px) {
-  .employmentPage .employment_container .event_info_container {
-    display: block;
-    width: 90%;
-    margin: auto; }
-  .employmentPage .employment_container .timeline_container {
-    display: block;
-    width: 90%;
-    margin: auto; } }
-
-@media only screen and (max-width: 600px) {
-  .employmentPage .employment_container .timeline_container ul li span img {
-    width: 60px; }
-  .projects_layout {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); } }
 
 @keyframes slide {
   0% {

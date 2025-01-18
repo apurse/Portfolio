@@ -98,14 +98,12 @@
     margin: auto;
     width: 50%;
     text-align: center; }
-  .Header .Nav_buttons {
+  .Header .Header_right {
     float: right; }
-    .Header .Nav_buttons .lightbulb {
-      display: block;
-      float: left;
-      position: relative;
+    .Header .Header_right .lightbulb {
+      display: inline-block;
       padding: 4px 16px; }
-      .Header .Nav_buttons .lightbulb .line {
+      .Header .Header_right .lightbulb .line {
         display: none;
         width: 0;
         height: 3px;
@@ -115,29 +113,31 @@
         top: 15%;
         left: 20%;
         transform-origin: left center; }
-    .Header .Nav_buttons .nav-button {
-      padding: 6px 12px;
-      font-size: 18px;
-      line-height: 32px;
-      border-radius: 4px;
-      float: left; }
-      .Header .Nav_buttons .nav-button a {
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        position: relative;
-        display: inline-block; }
-      .Header .Nav_buttons .nav-button ::before {
-        content: '';
-        position: absolute;
-        height: 2px;
-        background-color: white;
-        width: 0%;
-        bottom: -5px;
-        left: 0;
-        transition: width 0.25s ease-in-out; }
-      .Header .Nav_buttons .nav-button a:hover::before {
-        width: 100%; }
+    .Header .Header_right .Nav_buttons {
+      display: inline-block; }
+      .Header .Header_right .Nav_buttons .nav-button {
+        padding: 6px 12px;
+        font-size: 18px;
+        line-height: 32px;
+        border-radius: 4px;
+        float: left; }
+        .Header .Header_right .Nav_buttons .nav-button a {
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          position: relative;
+          display: inline-block; }
+        .Header .Header_right .Nav_buttons .nav-button ::before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          background-color: white;
+          width: 0%;
+          bottom: -5px;
+          left: 0;
+          transition: width 0.25s ease-in-out; }
+        .Header .Header_right .Nav_buttons .nav-button a:hover::before {
+          width: 100%; }
   .Header .icon {
     position: relative;
     display: inline-block; }
@@ -156,18 +156,31 @@
       color: white; }
   .Header .burger_contents {
     display: none;
-    position: absolute;
-    top: 68px;
-    right: 0px;
-    width: 25%;
-    min-width: 200px;
+    margin-top: 10px;
+    width: 100%;
     z-index: 1000;
-    background-color: #006299; }
+    background-color: #006299;
+    animation: slide_down 1s ease forwards; }
+    .Header .burger_contents .burger_nav_buttons {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%; }
+      .Header .burger_contents .burger_nav_buttons .burger_nav_button {
+        flex: 1;
+        text-align: center;
+        min-width: none;
+        box-sizing: border-box;
+        padding-right: 50px;
+        animation: slide_down_text 0.5s ease forwards; }
+        .Header .burger_contents .burger_nav_buttons .burger_nav_button a {
+          color: white; }
     .Header .burger_contents .burger_socials {
-      display: none; }
+      display: none;
+      width: 100%;
+      padding-top: 10px; }
       .Header .burger_contents .burger_socials a {
-        width: 10%;
-        margin: auto;
+        flex: 1;
+        text-align: center;
         font-size: 28px;
         padding: 5px;
         color: white; }
@@ -183,6 +196,11 @@
     display: inline-block; }
     .Header .burger_active .burger_contents {
       display: block; }
+  @media only screen and (max-width: 670px) {
+    .Header .burger_contents .burger_nav_buttons .burger_nav_button {
+      flex: 1 1 50%;
+      padding-left: 0;
+      margin: 0; } }
 
 .remove_line {
   display: block;
@@ -207,16 +225,16 @@
 @media only screen and (max-width: 1000px) {
   .Header .socials_container {
     display: inline-block; }
-  .Header .Nav_buttons {
+  .Header .Header_right .Nav_buttons {
     display: none; }
   .Header .burger_button {
     display: inline-block; } }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 560px) {
   .Header .socials_container {
     display: none; }
   .Header .burger_contents .burger_socials {
-    display: block; } }
+    display: flex; } }
 
 @media only screen and (min-width: 870px) {
   .burger_contents {
@@ -275,7 +293,7 @@ body {
       margin-top: -10%;
       width: 12%;
       max-width: 500px;
-      min-width: 140px;
+      min-width: 180px;
       height: auto;
       aspect-ratio: 1;
       border-radius: 50%; }
@@ -310,6 +328,9 @@ body {
         text-decoration: underline; }
       body .indexPage .about_me_container .about_me_text p {
         width: 100%; }
+  @media only screen and (max-width: 1000px) {
+    body .indexPage .intro {
+      margin-top: -20px; } }
   body .projectsPage .projects_layout {
     display: grid;
     margin-inline: auto;
@@ -526,13 +547,13 @@ body {
         body .employmentPage .employment_container .timeline_container ul:after {
           content: '';
           display: block;
-          width: calc(100% - 50px);
+          width: calc(100% - 60px);
           height: 5px;
           background-color: #0080c8;
           position: absolute;
           top: 50%;
-          left: 0;
-          transform: translate(7%, -50%);
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
           z-index: -1; }
         body .employmentPage .employment_container .timeline_container ul li {
           list-style-type: none;
@@ -547,7 +568,8 @@ body {
             background-color: #006299;
             border: 4px solid;
             border-color: #006299;
-            transition: background-color .2s ease; }
+            transition: background-color .2s ease;
+            transform: translateX(-100%); }
           body .employmentPage .employment_container .timeline_container ul li span {
             position: absolute;
             top: calc(100% + 20px);
@@ -568,7 +590,7 @@ body {
               transform: scale(1.2, 1.2); }
       body .employmentPage .employment_container .timeline_container li:hover:after {
         background-color: #0b0b0b; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1200px) {
     body .employmentPage .employment_container .event_info_container {
       display: block;
       width: 100%;
@@ -578,10 +600,13 @@ body {
     body .employmentPage .employment_container .timeline_container {
       display: block;
       width: 90%;
-      margin: auto; } }
+      margin: auto;
+      margin-top: -100px; } }
   @media only screen and (max-width: 600px) {
-    body .employmentPage .timeline_container ul li span img {
-      width: 60px; } }
+    body .employmentPage .employment_container .timeline_container ul li span {
+      left: 12.5%; }
+      body .employmentPage .employment_container .timeline_container ul li span img {
+        width: 60px; } }
   body .contactPage .contact_form_container {
     max-width: 1000px;
     width: 90%;
@@ -656,6 +681,22 @@ body {
     transform: translateX(-25%); }
   100% {
     transform: translateX(25%); } }
+
+@keyframes slide_down {
+  0% {
+    height: 0;
+    opacity: 0; }
+  100% {
+    height: auto;
+    opacity: 1; } }
+
+@keyframes slide_down_text {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
 
 @keyframes slide_in {
   from {

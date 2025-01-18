@@ -1,41 +1,42 @@
 $transition-speed: 800ms;
 
 // ------------ Light mode ------------
-$body-text-light: rgb(25, 42, 86);
-$body-background-light: rgb(143, 220, 243);
+$body-text-light: rgb(33, 33, 33);
+$body-background-light: rgb(188, 223, 255);
 
 $header-text-light: white;
-$header-background-light: rgb(0, 98, 153);
-$header-hover-light: rgb(0, 148, 255);
+$header-background-light: rgb(28, 40, 60);
+$header-hover-light: rgb(0, 123, 255);
 
-$background-anim-light: linear-gradient(-60deg, rgb(0, 148, 255) 50%, rgb(69, 166, 223) 50%);
+$background-anim-light: linear-gradient(-60deg, rgb(51, 153, 255) 50%, rgb(0, 123, 255) 50%);
 
-$card-background-light: rgb(250, 252, 255);
-$card-box-shadow-light: -10px -10px 20px rgba(220, 235, 255, 0.5), 10px 10px 20px rgba(0, 0, 0, 0.05);
+$card-background-light: rgb(255, 255, 255);
+$card-box-shadow-light: -8px -8px 15px rgba(230, 230, 255, 0.6), 8px 8px 20px rgba(0, 0, 0, 0.2);
 
-$read-more-text-light: rgb(0, 85, 135);
-$read-more-background-light: rgb(0, 128, 200);
+$read-more-text-light: rgb(0, 102, 204);
+$read-more-background-light: rgb(0, 140, 220);
 
-$slide-dot-light: rgb(4, 37, 70);
-$slide-dot-active-light: rgb(22, 159, 238);
+$slide-dot-light: rgb(70, 70, 120);
+$slide-dot-active-light: rgb(0, 140, 220);
 
-$employment-timeline-light: rgb(0, 128, 200);
-$employment-timeline-dots-light: rgb(0, 98, 153);
+$employment-timeline-light: rgb(0, 140, 220);
+$employment-timeline-dots-light: rgb(0, 120, 200);
 
-$contact-input-background-light: rgb(245, 250, 255);
+$contact-input-background-light: rgb(209, 216, 230);
+$contact-input-text-light: rgb(32, 32, 32);
 
 
 // Dark mode
 $body-text-dark: rgb(236, 244, 255);
 $body-background-dark: rgb(10, 25, 47);
 
-$header-text-dark: white;
-$header-background-dark: rgb(0, 73, 125);
+$header-text-dark: rgb(0, 0, 0);
+$header-background-dark: rgb(92, 171, 218);
 $header-hover-dark: rgb(0, 105, 165);
 
-$background-anim-dark: linear-gradient(-60deg, rgb(0, 73, 125) 50%, rgb(0, 105, 165) 50%);
+$background-anim-dark: linear-gradient(-60deg, rgb(6, 13, 75) 50%, rgb(33, 151, 197) 50%);
 
-$card-background-dark: rgb(15, 35, 65);
+$card-background-dark: rgb(18, 44, 82);
 $card-box-shadow-dark: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2);
 
 $read-more-text-dark: rgb(51, 153, 255);
@@ -47,7 +48,8 @@ $slide-dot-active-dark: rgb(0, 120, 215);
 $employment-timeline-dark: rgb(51, 153, 255);
 $employment-timeline-dots-dark: rgb(51, 153, 255);
 
-$contact-input-background-dark: rgb(20, 45, 75);
+$contact-input-background-dark: rgb(29, 29, 31);
+$contact-input-text-dark: rgb(215, 215, 228);
 
 
 // ---------------------- All pages ---------------------- //
@@ -67,9 +69,11 @@ $contact-input-background-dark: rgb(20, 45, 75);
     .Header {
         background-color: $header-background-dark;
 
-        .Logo_container .Logo {
+        .Logo {
             a {
-                color: $header-text-dark;
+                span {
+                    color: $header-text-dark;
+                }
             }
 
             ::before {
@@ -77,24 +81,54 @@ $contact-input-background-dark: rgb(20, 45, 75);
             }
         }
 
-        .Nav_buttons {
-            .nav-button {
-                a {
-                    color: $body-text-dark;
+        .socials_container {
+            color: $header-text-dark;
+        }
+
+        .Header_right {
+
+            .lightbulb {
+                i {
+                    color: $header-text-dark;
                 }
 
-                ::before {
+                .line {
                     background-color: $body-text-dark;
                 }
             }
 
-            .lightbulb .line {
-                background-color: $body-text-dark;
+            .Nav_buttons {
+                .nav-button {
+                    a {
+                        color: $body-text-dark;
+                    }
+
+                    ::before {
+                        background-color: $body-text-dark;
+                    }
+                }
+
+            }
+
+            .icon i {
+                color: $body-text-dark;
             }
         }
 
-        .icon i {
-            color: $body-text-dark;
+        .burger_button i {
+            color: $header-text-dark;
+        }
+
+        .burger_contents {
+            background-color: $header-background-dark;
+
+            .burger_nav_buttons .burger_nav_button a {
+                color: $header-text-dark;
+            }
+
+            .burger_socials a {
+                color: $header-text-dark;
+            }
         }
     }
 
@@ -134,23 +168,12 @@ $contact-input-background-dark: rgb(20, 45, 75);
             color: $read-more-text-dark;
         }
 
-        .popup_box {
-            background-color: $card-background-dark;
-            border-color: $card-background-dark;
-            box-shadow: $card-box-shadow-dark;
+    }
 
-            .popup_content .link {
-                color: $body-text-dark;
-            }
-        }
+    .projectDetailsPage {
 
-        .slide_dot {
-            background-color: $slide-dot-dark;
-        }
-
-        .active_dot,
-        .slide_dot:hover {
-            background-color: $slide-dot-active-dark;
+        .information_container .link {
+            color: $body-text-dark;
         }
 
     }
@@ -197,12 +220,21 @@ $contact-input-background-dark: rgb(20, 45, 75);
             .contact_form {
                 color: $body-text-dark;
 
-                input {
-                    background-color: $contact-input-background-dark;
-                }
+                .input_field {
 
-                textarea {
-                    background-color: $contact-input-background-dark;
+                    input {
+                        background-color: $contact-input-background-dark;
+                        color: $contact-input-text-dark;
+                    }
+
+                    textarea {
+                        background-color: $contact-input-background-dark;
+                        color: $contact-input-text-dark;
+                    }
+
+                    ::placeholder {
+                        color: $contact-input-text-dark;
+                    }
                 }
 
                 .submit_button {
@@ -236,10 +268,12 @@ $contact-input-background-dark: rgb(20, 45, 75);
     padding: 12px 10px;
     background-color: $header-background-light;
     transition: $transition-speed;
+    align-items: center;
 
     .Logo {
         float: left;
         padding: 10px;
+        align-items: center;
 
         a {
             span {
@@ -263,14 +297,21 @@ $contact-input-background-dark: rgb(20, 45, 75);
         margin: auto;
         width: 50%;
         text-align: center;
+        color: $header-text-light;
+        align-items: center;
     }
 
     .Header_right {
         float: right;
+        align-items: center;
 
         .lightbulb {
             display: inline-block;
-            padding: 4px 16px;
+            padding: 0px 10px;
+
+            i {
+                color: $header-text-light;
+            }
 
             .line {
                 display: none;
@@ -287,6 +328,7 @@ $contact-input-background-dark: rgb(20, 45, 75);
 
         .Nav_buttons {
             display: inline-block;
+            align-items: center;
 
             .nav-button {
                 padding: 6px 12px;
@@ -326,6 +368,7 @@ $contact-input-background-dark: rgb(20, 45, 75);
     .icon {
         position: relative;
         display: inline-block;
+        align-items: center;
 
         a {
             padding: 5px; // gap
@@ -365,15 +408,14 @@ $contact-input-background-dark: rgb(20, 45, 75);
             width: 100%;
 
             .burger_nav_button {
-                flex: 1;
-                text-align: center;
-                min-width: none;
+                flex: 1 1 auto;
+                display: flex;
                 box-sizing: border-box;
-                padding-right: 50px;
-                animation: slide_down_text 0.5s ease forwards;
 
                 a {
+                    text-align: center;
                     color: $header-text-light;
+                    animation: slide_down_text 1s ease forwards;
                 }
             }
         }
@@ -389,6 +431,7 @@ $contact-input-background-dark: rgb(20, 45, 75);
                 font-size: 28px;
                 padding: 5px;
                 color: $header-text-light;
+                animation: slide_down_text 1.5s ease forwards;
             }
         }
 
@@ -639,7 +682,7 @@ body {
 
             .card_container {
                 background-color: $card-background-light;
-                border-radius: 16px;
+                border-radius: 12px;
                 box-shadow: $card-box-shadow-light;
                 overflow: hidden;
                 transition: 600ms;
@@ -745,13 +788,18 @@ body {
     .projectDetailsPage {
         width: 90%;
         margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
 
         .slideshow_container {
-            width: 45%;
+            width: 55%;
             margin: auto;
             border-radius: 16px;
             padding: 40px;
             display: inline-block;
+            box-sizing: border-box;
 
             .popup_pic {
                 display: block;
@@ -765,10 +813,10 @@ body {
                     transition: 600ms;
                     display: inline-block;
                     width: 100%;
-                    height: 100%;
+                    height: auto;
                     aspect-ratio: 16/9;
                     object-fit: contain;
-                    // background-color: black;
+                    background-color: black;
                 }
             }
 
@@ -776,18 +824,19 @@ body {
             .small_slide_container {
                 display: grid;
                 margin-inline: auto;
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
                 gap: 10px;
-                //margin: 5%;
+                width: 100%;
 
                 .small_slide {
                     display: inline-block;
+                    width: 100%;
 
                     img {
                         border-radius: 4px;
                         transition: 600ms;
                         width: 100%;
-                        height: 100%;
+                        height: auto;
                         display: inline-block;
                         aspect-ratio: 16/9;
                         object-fit: contain;
@@ -815,6 +864,7 @@ body {
             display: inline-block;
             width: 45%;
             padding: 40px;
+            box-sizing: border-box;
 
             h2 {
                 width: 100%;
@@ -831,7 +881,7 @@ body {
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 padding-left: 2.5%;
                 max-width: 95%;
-                font-size: 20px;
+                font-size: clamp(16px, 1.5vw, 20px);
             }
 
             .link {
@@ -848,36 +898,37 @@ body {
         @media only screen and (max-width: 1850px) {
             .slideshow_container {
                 padding: 2%;
+                padding-top: 10%;
+                gap: 0;
+
+                .small_slide_container {
+                    gap: 2%;
+                }
             }
 
             .information_container {
                 padding: 2%;
             }
-
-
         }
 
 
-        @media only screen and (max-width: 750px) {
+        @media only screen and (max-width: 860px) {
             .slideshow_container {
                 display: block;
-                width: 60%;
+                width: 100%;
                 margin: auto;
             }
 
             .small_slide_container {
-                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
 
             .information_container {
                 display: block;
-                width: 90%;
+                width: 100%;
                 margin: auto;
             }
-
-
         }
-
     }
 
     .employmentPage {
@@ -890,7 +941,7 @@ body {
                 float: right;
                 background-color: $card-background-light;
                 padding: 24px;
-                border-radius: 16px;
+                border-radius: 12px;
                 width: 35%;
                 overflow: hidden;
                 min-height: 600px;
@@ -1076,7 +1127,7 @@ body {
             width: 90%;
             min-width: 50%;
             margin: auto;
-            border-radius: 16px;
+            border-radius: 12px;
             background-color: $card-background-light;
             padding: 30px 20px;
             color: $body-text-light;
@@ -1099,11 +1150,12 @@ body {
 
                     input {
                         border: none;
-                        border-radius: 12px;
+                        border-radius: 8px;
                         width: calc(100% - 20px); // 20px = 2 * padding
                         padding: 10px;
                         font-size: 20px;
                         background-color: $contact-input-background-light;
+                        color: $contact-input-text-light;
                     }
 
                     textarea {
@@ -1115,7 +1167,14 @@ body {
                         min-width: 100%;
                         max-width: 100%;
                         background-color: $contact-input-background-light;
+                        color: $contact-input-text-light;
+                        border-radius: 8px;
                     }
+
+                    ::placeholder {
+                        color: $contact-input-text-light;
+                    }
+
 
                     .submit_button {
                         background-color: #daa520;

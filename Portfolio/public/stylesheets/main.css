@@ -6,18 +6,18 @@
   .dark_mode .page_paragraph {
     color: #ecf4ff; }
   .dark_mode .Header {
-    background-color: #5cabda; }
+    background-color: #05435c; }
     .dark_mode .Header .Logo a span {
-      color: black; }
+      color: white; }
     .dark_mode .Header .Logo :hover {
-      background-color: #007bff;
-      color: #212121; }
+      background-color: #1991ff;
+      color: #232832; }
     .dark_mode .Header .socials_container {
-      color: black; }
+      color: white; }
       .dark_mode .Header .socials_container .icon i {
-        color: black; }
+        color: white; }
     .dark_mode .Header .Header_right .lightbulb i {
-      color: black; }
+      color: white; }
     .dark_mode .Header .Header_right .lightbulb .line {
       background-color: #ecf4ff; }
     .dark_mode .Header .Header_right .Nav_buttons .nav-button a {
@@ -27,17 +27,17 @@
     .dark_mode .Header .Header_right .icon i {
       color: #ecf4ff; }
     .dark_mode .Header .burger_button i {
-      color: black; }
+      color: white; }
     .dark_mode .Header .burger_contents .burger_nav_buttons .burger_nav_button a {
-      color: black; }
+      color: white; }
     .dark_mode .Header .burger_contents .burger_socials a {
-      color: black; }
+      color: white; }
   .dark_mode .indexPage .background .bg {
     background-image: linear-gradient(-60deg, #060d4b 50%, #2197c5 50%); }
   .dark_mode .indexPage .about_me_container {
     background-color: #0a192f; }
     .dark_mode .indexPage .about_me_container .about_me_text {
-      color: #212121; }
+      color: #232832; }
   .dark_mode .projectsPage .projects_layout .card_container {
     background-color: #122c52;
     box-shadow: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2); }
@@ -86,7 +86,7 @@
 .Header {
   overflow: hidden;
   padding: 12px 10px;
-  background-color: #1c283c;
+  background-color: #0d1c35;
   transition: 800ms;
   align-items: center; }
   .Header .Logo {
@@ -106,7 +106,7 @@
       color: #ecf4ff; }
   .Header .socials_container {
     display: block;
-    margin: auto;
+    margin: 8px auto;
     width: 50%;
     text-align: center;
     align-items: center; }
@@ -118,27 +118,43 @@
         padding: 5px; }
       .Header .socials_container .icon i {
         color: white;
+        vertical-align: middle;
         font-size: 28px; }
       .Header .socials_container .icon :hover {
         opacity: 0.7; }
   .Header .Header_right {
     float: right;
-    align-items: center; }
+    align-items: center;
+    display: flex; }
     .Header .Header_right .lightbulb {
-      display: inline-block;
-      padding: 0px 10px; }
+      display: flex;
+      justify-content: center;
+      padding: 0 10px;
+      position: relative; }
       .Header .Header_right .lightbulb i {
-        color: white; }
+        color: white;
+        font-size: 38px; }
       .Header .Header_right .lightbulb .line {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
         width: 0;
         height: 3px;
         background-color: white;
         transform: rotate(45deg);
         position: absolute;
-        top: 15%;
-        left: 20%;
+        top: 5%;
+        left: 15%;
         transform-origin: left center; }
+      .Header .Header_right .lightbulb .remove_line {
+        transition: opacity 4s ease, visibility 4s ease, width 2s ease;
+        opacity: 0;
+        visibility: hidden;
+        animation: removeLine 1s ease-out forwards; }
+      .Header .Header_right .lightbulb .add_line {
+        transition: opacity 1s ease, visibility 1s ease, width 2s ease;
+        opacity: 1;
+        visibility: visible;
+        animation: drawLine 1s ease-out forwards; }
     .Header .Header_right .Nav_buttons {
       display: inline-block;
       align-items: center; }
@@ -190,7 +206,7 @@
         .Header .burger_contents .burger_nav_buttons .burger_nav_button a {
           text-align: center;
           color: white;
-          animation: slide_down_text 3s ease forwards; }
+          animation: slide_down_text 1.5s ease forwards; }
     .Header .burger_contents .burger_socials {
       display: none;
       width: 100%;
@@ -201,7 +217,7 @@
         font-size: 28px;
         padding: 5px;
         color: white;
-        animation: slide_down_text 1.5s ease forwards; }
+        animation: slide_down_text 2s ease forwards; }
     .Header .burger_contents a {
       font-size: 20px;
       display: block;
@@ -211,7 +227,7 @@
     .Header .burger_contents a:hover {
       background-color: #3a3a3a; }
   .Header .burger_active {
-    max-height: 0px;
+    max-height: 500px;
     opacity: 1;
     display: block; }
   @media only screen and (min-width: 1000px) {
@@ -238,44 +254,36 @@
     .Header .burger_contents .burger_socials {
       display: flex; } }
 
-.remove_line {
-  display: block;
-  animation: removeLine 800ms ease-out forwards; }
-
 @keyframes removeLine {
   0% {
-    width: 3.25em; }
+    width: 3em; }
   100% {
     width: 0em; } }
-
-.add_line {
-  display: block;
-  animation: drawLine 800ms ease-out forwards; }
 
 @keyframes drawLine {
   0% {
     width: 0; }
   100% {
-    width: 3.25em; } }
+    width: 3em; } }
 
 body {
   overflow-y: auto;
   margin: 0;
   font-size: 14px;
   font-family: "Inter", sans-serif;
-  background-color: #81d7ec;
-  color: #212121;
+  background-color: #e6f2f8;
+  color: #232832;
   transition: 800ms; }
   body a {
     text-decoration: none;
     cursor: pointer; }
   body p h1 h2 h3 {
-    color: #212121; }
+    color: #232832; }
   body .page_title {
     font-size: 30px;
     text-align: center;
     padding: 20px 0px;
-    color: #212121; }
+    color: #232832; }
   body .page_paragraph {
     font-size: 18px;
     width: 80%;
@@ -283,10 +291,10 @@ body {
     text-align: center;
     padding-bottom: 60px;
     padding-top: 20px;
-    color: #212121; }
+    color: #232832; }
   body .indexPage .background .bg {
     animation: slide 5s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #00c3ff 50%, #35f8ff 50%);
+    background-image: linear-gradient(-60deg, #65d2fa 50%, #b0ebfa 50%);
     bottom: 0;
     left: -50%;
     opacity: .5;
@@ -326,7 +334,7 @@ body {
       font-size: 28px; }
   body .indexPage .about_me_container {
     width: 100%;
-    background-color: #81d7ec;
+    background-color: #e6f2f8;
     padding: 20px 0px;
     text-align: center; }
     body .indexPage .about_me_container .about_me_image {
@@ -339,7 +347,7 @@ body {
       position: relative;
       display: inline-block;
       width: 45%;
-      color: #212121;
+      color: #232832;
       padding: 0px 20px;
       text-align: center;
       transform: translate(0%, -25%); }
@@ -359,11 +367,11 @@ body {
     body .projectsPage .projects_layout .card_container {
       background-color: white;
       border-radius: 12px;
-      box-shadow: -8px -8px 15px rgba(230, 230, 255, 0.6), 8px 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2);
       overflow: hidden;
       transition: 600ms; }
       body .projectsPage .projects_layout .card_container a {
-        color: #212121; }
+        color: #232832; }
       body .projectsPage .projects_layout .card_container .card_image_content figure {
         margin: 0;
         padding: 0;
@@ -376,7 +384,7 @@ body {
           height: 100%;
           object-fit: cover;
           display: block;
-          background-color: #81d7ec; }
+          background-color: #e6f2f8; }
       body .projectsPage .projects_layout .card_container .card_content {
         padding: 0px 12px; }
         body .projectsPage .projects_layout .card_container .card_content .card_header {
@@ -410,11 +418,11 @@ body {
         margin: 8%; } }
     @media only screen and (max-width: 765px) {
       body .projectsPage .projects_layout {
-        gap: 40px;
+        gap: 60px;
         margin: 12%; } }
     @media only screen and (max-width: 450px) {
       body .projectsPage .projects_layout {
-        gap: 40px;
+        gap: 60px;
         margin: 6%; } }
   body .projectsPage .readMore {
     float: left;
@@ -424,7 +432,7 @@ body {
     font-family: "DM Sans", sans-serif;
     line-height: 25px;
     border-radius: 4px;
-    color: #0066cc;
+    color: #0052a1;
     cursor: pointer; }
   body .projectDetailsPage {
     width: 90%;
@@ -497,7 +505,7 @@ body {
         max-width: 95%;
         font-size: clamp(16px, 1.5vw, 20px); }
       body .projectDetailsPage .information_container .link {
-        color: #212121;
+        color: #232832;
         padding-bottom: 10px;
         text-decoration: underline; }
       body .projectDetailsPage .information_container .link:hover {
@@ -533,7 +541,7 @@ body {
       width: 35%;
       overflow: hidden;
       min-height: 600px;
-      box-shadow: -8px -8px 15px rgba(230, 230, 255, 0.6), 8px 8px 20px rgba(0, 0, 0, 0.2); }
+      box-shadow: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2); }
       body .employmentPage .employment_container .event_info_container .event_info {
         display: none;
         list-style: none;
@@ -587,7 +595,7 @@ body {
           display: block;
           width: calc(100% - 60px);
           height: 5px;
-          background-color: #008cdc;
+          background-color: #007ab4;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -603,9 +611,9 @@ body {
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background-color: #0078c8;
+            background-color: #0066a0;
             border: 4px solid;
-            border-color: #0078c8;
+            border-color: #0066a0;
             transition: background-color .2s ease;
             transform: translateX(-100%); }
           body .employmentPage .employment_container .timeline_container ul li span {
@@ -622,7 +630,7 @@ body {
               aspect-ratio: 1;
               overflow: hidden;
               transform-origin: center;
-              box-shadow: -8px -8px 15px rgba(230, 230, 255, 0.6), 8px 8px 20px rgba(0, 0, 0, 0.2); }
+              box-shadow: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2); }
             body .employmentPage .employment_container .timeline_container ul li span :hover {
               cursor: pointer;
               transform: scale(1.2, 1.2); }
@@ -653,9 +661,9 @@ body {
     border-radius: 12px;
     background-color: white;
     padding: 30px 20px;
-    color: #212121; }
+    color: #232832; }
     body .contactPage .contact_form_container .contact_form {
-      color: #212121; }
+      color: #232832; }
       body .contactPage .contact_form_container .contact_form .input_field {
         display: block;
         margin: 10px 0px;
@@ -673,8 +681,8 @@ body {
           padding: 10px;
           font-size: 20px;
           font-family: "Inter", sans-serif;
-          background-color: #d1d8e6;
-          color: #202020; }
+          background-color: aliceblue;
+          color: #323232; }
         body .contactPage .contact_form_container .contact_form .input_field textarea {
           border: none;
           margin-top: 10px;
@@ -684,11 +692,11 @@ body {
           max-height: 500px;
           min-width: 100%;
           max-width: 100%;
-          background-color: #d1d8e6;
-          color: #202020;
+          background-color: aliceblue;
+          color: #323232;
           border-radius: 8px; }
         body .contactPage .contact_form_container .contact_form .input_field ::placeholder {
-          color: #202020;
+          color: #323232;
           font-family: "Inter", sans-serif; }
         body .contactPage .contact_form_container .contact_form .input_field .submit_button {
           background-color: #daa520;
@@ -714,7 +722,7 @@ body {
     padding: 10px 30px; }
     body .thanksPage .return a {
       font-size: 18px;
-      color: #212121;
+      color: #232832;
       text-decoration: none; }
   body .thanksPage .return:hover {
     cursor: pointer;

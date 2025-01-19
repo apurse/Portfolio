@@ -5,37 +5,37 @@ $subtitle-font-family: 'DM Sans', sans-serif;
 $date-font-family: 'Work Sans', sans-serif;
 
 // ------------ Light mode ------------
-$body-text-light: rgb(33, 33, 33);
-$body-background-light: #81d7ec;
+$body-text-light: rgb(35, 40, 50);
+$body-background-light: #e6f2f8;
 
 $header-text-light: white;
-$header-background-light: rgb(28, 40, 60);
-$header-hover-light: rgb(0, 123, 255);
+$header-background-light: rgb(13, 28, 53);
+$header-hover-light: rgb(25, 145, 255);
 
-$background-anim-light: linear-gradient(-60deg, #00c3ff 50%, #35f8ff 50%);
+$background-anim-light: linear-gradient(-60deg, #65d2fa 50%, #b0ebfa 50%);
 
 $card-background-light: rgb(255, 255, 255);
-$card-box-shadow-light: -8px -8px 15px rgba(230, 230, 255, 0.6), 8px 8px 20px rgba(0, 0, 0, 0.2);
+$card-box-shadow-light: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2);
 
-$read-more-text-light: rgb(0, 102, 204);
-$read-more-background-light: rgb(0, 140, 220);
+$read-more-text-light: rgb(0, 82, 161);
+$read-more-background-light: rgb(0, 122, 180);
 
-$slide-dot-light: rgba(70, 70, 120, 0.062);
-$slide-dot-active-light: rgb(0, 140, 220);
+$slide-dot-light: rgba(150, 150, 180, 0.25);
+$slide-dot-active-light: rgb(0, 122, 180);
 
-$employment-timeline-light: rgb(0, 140, 220);
-$employment-timeline-dots-light: rgb(0, 120, 200);
+$employment-timeline-light: rgb(0, 122, 180);
+$employment-timeline-dots-light: rgb(0, 102, 160);
 
-$contact-input-background-light: rgb(209, 216, 230);
-$contact-input-text-light: rgb(32, 32, 32);
+$contact-input-background-light: rgb(240, 248, 255);
+$contact-input-text-light: rgb(50, 50, 50);
 
 
 // Dark mode
 $body-text-dark: rgb(236, 244, 255);
 $body-background-dark: rgb(10, 25, 47);
 
-$header-text-dark: black;
-$header-background-dark: rgb(92, 171, 218);
+$header-text-dark: white;
+$header-background-dark: rgb(5, 67, 92);
 $header-hover-dark: rgb(0, 105, 165);
 
 $background-anim-dark: linear-gradient(-60deg, rgb(6, 13, 75) 50%, rgb(33, 151, 197) 50%);
@@ -88,13 +88,13 @@ $contact-input-text-dark: rgb(215, 215, 228);
 
         .socials_container {
             color: $header-text-dark;
-            .icon i{
+
+            .icon i {
                 color: $header-text-dark;
             }
         }
 
         .Header_right {
-
             .lightbulb {
                 i {
                     color: $header-text-dark;
@@ -302,7 +302,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
 
     .socials_container {
         display: block;
-        margin: auto;
+        margin: 8px auto;
         width: 50%;
         text-align: center;
         align-items: center;
@@ -311,16 +311,17 @@ $contact-input-text-dark: rgb(215, 215, 228);
             position: relative;
             display: inline-block;
             align-items: center;
-    
+
             a {
                 padding: 5px; // gap
             }
-    
+
             i {
                 color: $header-text-light;
+                vertical-align: middle;
                 font-size: 28px;
             }
-    
+
             :hover {
                 opacity: 0.7;
             }
@@ -330,25 +331,45 @@ $contact-input-text-dark: rgb(215, 215, 228);
     .Header_right {
         float: right;
         align-items: center;
+        display: flex;
 
         .lightbulb {
-            display: inline-block;
-            padding: 0px 10px;
-
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+            position: relative;
+        
             i {
                 color: $header-text-light;
+                font-size: 38px;
             }
 
             .line {
-                display: none;
+                opacity: 0;
+                visibility: hidden;
                 width: 0;
                 height: 3px; // thickness
                 background-color: $header-text-light;
                 transform: rotate(45deg);
                 position: absolute;
-                top: 15%;
-                left: 20%;
+                top: 5%;
+                left: 15%;
                 transform-origin: left center;
+            }
+
+            .remove_line {
+                transition: opacity 4s ease, visibility 4s ease, width 2s ease;
+                opacity: 0;
+                visibility: hidden;
+                animation: removeLine 1s ease-out forwards;
+            }
+
+
+            .add_line {
+                transition: opacity 1s ease, visibility 1s ease, width 2s ease;
+                opacity: 1;
+                visibility: visible;
+                animation: drawLine 1s ease-out forwards;
             }
         }
 
@@ -424,7 +445,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
                 a {
                     text-align: center;
                     color: $header-text-light;
-                    animation: slide_down_text 3s ease forwards;
+                    animation: slide_down_text 1.5s ease forwards;
                 }
             }
         }
@@ -440,7 +461,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
                 font-size: 28px;
                 padding: 5px;
                 color: $header-text-light;
-                animation: slide_down_text 1.5s ease forwards;
+                animation: slide_down_text 2s ease forwards;
             }
         }
 
@@ -458,7 +479,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
     }
 
     .burger_active {
-        max-height: 0px;
+        max-height: 500px;
         opacity: 1;
         display: block;
     }
@@ -520,24 +541,14 @@ $contact-input-text-dark: rgb(215, 215, 228);
     }
 }
 
-.remove_line {
-    display: block;
-    animation: removeLine $transition-speed ease-out forwards;
-}
-
 @keyframes removeLine {
     0% {
-        width: 3.25em;
+        width: 3em;
     }
 
     100% {
         width: 0em;
     }
-}
-
-.add_line {
-    display: block;
-    animation: drawLine $transition-speed ease-out forwards;
 }
 
 @keyframes drawLine {
@@ -546,7 +557,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
     }
 
     100% {
-        width: 3.25em;
+        width: 3em;
     }
 }
 
@@ -775,13 +786,13 @@ body {
 
             @media only screen and (max-width: 765px) {
                 //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 40px;
+                gap: 60px;
                 margin: 12%;
             }
 
             @media only screen and (max-width: 450px) {
                 //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 40px;
+                gap: 60px;
                 margin: 6%;
             }
         }

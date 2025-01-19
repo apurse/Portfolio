@@ -1,4 +1,10 @@
 
+// when window loads, show first slide
+window.onload = function () {
+    select_event(0);
+};
+
+
 // show data for selected job
 function select_event(index) {
 

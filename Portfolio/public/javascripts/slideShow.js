@@ -1,4 +1,3 @@
-
 // when window loads, show first slide
 window.onload = function () {
     showSlide(0);

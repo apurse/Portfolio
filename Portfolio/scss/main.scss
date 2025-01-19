@@ -1,14 +1,18 @@
 $transition-speed: 800ms;
+$title-font-family: 'Poppins', sans-serif;
+$body-font-family: 'Inter', sans-serif;
+$subtitle-font-family: 'DM Sans', sans-serif;
+$date-font-family: 'Work Sans', sans-serif;
 
 // ------------ Light mode ------------
 $body-text-light: rgb(33, 33, 33);
-$body-background-light: rgb(188, 223, 255);
+$body-background-light: #81d7ec;
 
 $header-text-light: white;
 $header-background-light: rgb(28, 40, 60);
 $header-hover-light: rgb(0, 123, 255);
 
-$background-anim-light: linear-gradient(-60deg, rgb(51, 153, 255) 50%, rgb(0, 123, 255) 50%);
+$background-anim-light: linear-gradient(-60deg, #00c3ff 50%, #35f8ff 50%);
 
 $card-background-light: rgb(255, 255, 255);
 $card-box-shadow-light: -8px -8px 15px rgba(230, 230, 255, 0.6), 8px 8px 20px rgba(0, 0, 0, 0.2);
@@ -16,7 +20,7 @@ $card-box-shadow-light: -8px -8px 15px rgba(230, 230, 255, 0.6), 8px 8px 20px rg
 $read-more-text-light: rgb(0, 102, 204);
 $read-more-background-light: rgb(0, 140, 220);
 
-$slide-dot-light: rgb(70, 70, 120);
+$slide-dot-light: rgba(70, 70, 120, 0.062);
 $slide-dot-active-light: rgb(0, 140, 220);
 
 $employment-timeline-light: rgb(0, 140, 220);
@@ -30,7 +34,7 @@ $contact-input-text-light: rgb(32, 32, 32);
 $body-text-dark: rgb(236, 244, 255);
 $body-background-dark: rgb(10, 25, 47);
 
-$header-text-dark: rgb(0, 0, 0);
+$header-text-dark: black;
 $header-background-dark: rgb(92, 171, 218);
 $header-hover-dark: rgb(0, 105, 165);
 
@@ -76,13 +80,17 @@ $contact-input-text-dark: rgb(215, 215, 228);
                 }
             }
 
-            ::before {
-                background-color: $header-text-dark;
+            :hover {
+                background-color: $header-hover-light;
+                color: $body-text-light;
             }
         }
 
         .socials_container {
             color: $header-text-dark;
+            .icon i{
+                color: $header-text-dark;
+            }
         }
 
         .Header_right {
@@ -107,7 +115,6 @@ $contact-input-text-dark: rgb(215, 215, 228);
                         background-color: $body-text-dark;
                     }
                 }
-
             }
 
             .icon i {
@@ -120,7 +127,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
         }
 
         .burger_contents {
-            background-color: $header-background-dark;
+            //background-color: $header-background-dark;
 
             .burger_nav_buttons .burger_nav_button a {
                 color: $header-text-dark;
@@ -281,6 +288,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
                 text-align: center;
                 padding: 12px;
                 font-size: 25px;
+                font-family: $title-font-family;
                 line-height: 25px;
                 border-radius: 4px;
             }
@@ -297,8 +305,26 @@ $contact-input-text-dark: rgb(215, 215, 228);
         margin: auto;
         width: 50%;
         text-align: center;
-        color: $header-text-light;
         align-items: center;
+
+        .icon {
+            position: relative;
+            display: inline-block;
+            align-items: center;
+    
+            a {
+                padding: 5px; // gap
+            }
+    
+            i {
+                color: $header-text-light;
+                font-size: 28px;
+            }
+    
+            :hover {
+                opacity: 0.7;
+            }
+        }
     }
 
     .Header_right {
@@ -365,25 +391,6 @@ $contact-input-text-dark: rgb(215, 215, 228);
         }
     }
 
-    .icon {
-        position: relative;
-        display: inline-block;
-        align-items: center;
-
-        a {
-            padding: 5px; // gap
-        }
-
-        i {
-            color: $header-text-light;
-            font-size: 28px;
-        }
-
-        :hover {
-            opacity: 0.7;
-        }
-    }
-
     .burger_button {
         display: none;
         float: right;
@@ -395,12 +402,14 @@ $contact-input-text-dark: rgb(215, 215, 228);
     }
 
     .burger_contents {
-        display: none;
         margin-top: 10px;
         width: 100%;
-        z-index: 1000;
-        background-color: $header-background-light;
-        animation: slide_down 1s ease forwards;
+        //background-color: $header-background-light;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+        display: none;
 
         .burger_nav_buttons {
             display: flex;
@@ -415,7 +424,7 @@ $contact-input-text-dark: rgb(215, 215, 228);
                 a {
                     text-align: center;
                     color: $header-text-light;
-                    animation: slide_down_text 1s ease forwards;
+                    animation: slide_down_text 3s ease forwards;
                 }
             }
         }
@@ -449,13 +458,40 @@ $contact-input-text-dark: rgb(215, 215, 228);
     }
 
     .burger_active {
-        display: inline-block;
+        max-height: 0px;
+        opacity: 1;
+        display: block;
+    }
 
-        .burger_contents {
-            display: block;
+
+    @media only screen and (min-width: 1000px) {
+        .burger_active {
+            max-height: 0px;
+            display: none;
         }
     }
 
+    // header width, take out navigation
+    @media only screen and (max-width: 1000px) {
+
+        .socials_container {
+            display: inline-block;
+        }
+
+        .Header_right .Nav_buttons {
+            display: none;
+        }
+
+        .burger_button {
+            display: inline-block;
+        }
+
+        .burger_contents {
+            max-height: 200px;
+        }
+    }
+
+    // drop down splits into 2 rows
     @media only screen and (max-width: 670px) {
         .burger_contents {
             .burger_nav_buttons {
@@ -464,6 +500,21 @@ $contact-input-text-dark: rgb(215, 215, 228);
                     padding-left: 0;
                     margin: 0;
                 }
+            }
+        }
+    }
+
+
+    // move socials to drop down
+    @media only screen and (max-width: 560px) {
+
+        .socials_container {
+            display: none;
+        }
+
+        .burger_contents {
+            .burger_socials {
+                display: flex;
             }
         }
     }
@@ -499,49 +550,11 @@ $contact-input-text-dark: rgb(215, 215, 228);
     }
 }
 
-// header width, take out navigation
-@media only screen and (max-width: 1000px) {
-    .Header {
-        .socials_container {
-            display: inline-block;
-        }
-
-        .Header_right .Nav_buttons {
-            display: none;
-        }
-
-        .burger_button {
-            display: inline-block;
-        }
-    }
-}
-
-// header width, take out socials
-@media only screen and (max-width: 560px) {
-    .Header {
-        .socials_container {
-            display: none;
-        }
-
-        .burger_contents {
-            .burger_socials {
-                display: flex;
-            }
-        }
-    }
-}
-
-// header width, ensure when out of burger width, contents are disabled
-@media only screen and (min-width: 870px) {
-    .burger_contents {
-        display: none;
-    }
-}
-
 body {
     overflow-y: auto;
     margin: 0;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-family: $body-font-family;
     background-color: $body-background-light;
     color: $body-text-light;
     transition: $transition-speed;
@@ -722,14 +735,14 @@ body {
                         align-items: flex-start;
 
                         .card_title {
-                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            font-family: $subtitle-font-family;
                             font-size: 28px;
                             margin-right: 16px;
                             flex: 1;
                         }
 
                         .card_date {
-                            font-family: 'Courier New', Courier, monospace;
+                            font-family: $date-font-family;
                             font-size: 18px;
                             padding-top: 6px;
                             white-space: nowrap;
@@ -737,7 +750,7 @@ body {
                     }
 
                     .card_info {
-                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-family: $body-font-family;
                         font-size: 20px;
                         overflow: hidden;
                         width: 100%;
@@ -778,6 +791,7 @@ body {
             text-align: center;
             text-decoration: none;
             font-size: 18px;
+            font-family: $subtitle-font-family;
             line-height: 25px;
             border-radius: 4px;
             color: $read-more-text-light;
@@ -807,10 +821,10 @@ body {
 
             .big_slide {
                 display: none;
+                transition: 600ms;
 
                 img {
                     border-radius: 4px;
-                    transition: 600ms;
                     display: inline-block;
                     width: 100%;
                     height: auto;
@@ -851,6 +865,7 @@ body {
             }
 
             .active_big_slide {
+                transition: 1s;
                 display: block;
             }
 
@@ -870,15 +885,15 @@ body {
                 width: 100%;
                 display: block;
                 float: left;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-family: $subtitle-font-family;
             }
 
-            .popup_title {
-                font-size: 28px;
+            .project_date {
+                font-family: $date-font-family;
             }
 
             p {
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: $body-font-family;
                 padding-left: 2.5%;
                 max-width: 95%;
                 font-size: clamp(16px, 1.5vw, 20px);
@@ -955,16 +970,19 @@ body {
                     animation: slide_in 1s;
 
                     h2 {
-                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        font-family: $subtitle-font-family;
                         font-size: 28px;
                         width: 100%;
                         padding: 5px 0px;
                     }
 
+                    .employment_date {
+                        font-family: $date-font-family;
+                    }
+
                     p {
                         float: left;
-                        //display: block;
-                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-family: $body-font-family;
                         font-size: 20px;
                         width: 100%;
                     }
@@ -995,6 +1013,11 @@ body {
                 .guide {
                     transform: translate(5%, 0%);
 
+                    h2 {
+                        font-family: $subtitle-font-family;
+                    }
+
+                    // arrow
                     i {
                         font-style: bold;
                         position: relative;
@@ -1143,7 +1166,7 @@ body {
                     label {
                         float: left;
                         width: 100%;
-                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        font-family: $subtitle-font-family;
                         font-size: 24px;
                         padding: 10px 0px;
                     }
@@ -1154,6 +1177,7 @@ body {
                         width: calc(100% - 20px); // 20px = 2 * padding
                         padding: 10px;
                         font-size: 20px;
+                        font-family: $body-font-family;
                         background-color: $contact-input-background-light;
                         color: $contact-input-text-light;
                     }
@@ -1162,6 +1186,7 @@ body {
                         border: none;
                         margin-top: 10px;
                         font-size: 16px;
+                        font-family: $body-font-family;
                         min-height: 200px;
                         max-height: 500px;
                         min-width: 100%;
@@ -1173,13 +1198,14 @@ body {
 
                     ::placeholder {
                         color: $contact-input-text-light;
+                        font-family: $body-font-family;
                     }
 
 
                     .submit_button {
                         background-color: #daa520;
                         border-color: goldenrod;
-                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        font-family: $subtitle-font-family;
                         width: 100%;
                         font-size: 24px;
                         text-align: center;
@@ -1202,7 +1228,7 @@ body {
 
     .thanksPage {
         .return {
-            width: 15%;
+            width: 50%;
             margin: auto;
             border-radius: 5px;
             border: 2px solid #81ecec;
@@ -1236,19 +1262,6 @@ body {
 
     100% {
         transform: translateX(25%);
-    }
-}
-
-
-@keyframes slide_down {
-    0% {
-        height: 0;
-        opacity: 0;
-    }
-
-    100% {
-        height: auto;
-        opacity: 1;
     }
 }
 

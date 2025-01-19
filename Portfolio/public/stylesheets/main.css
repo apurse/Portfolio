@@ -9,10 +9,13 @@
     background-color: #5cabda; }
     .dark_mode .Header .Logo a span {
       color: black; }
-    .dark_mode .Header .Logo ::before {
-      background-color: black; }
+    .dark_mode .Header .Logo :hover {
+      background-color: #007bff;
+      color: #212121; }
     .dark_mode .Header .socials_container {
       color: black; }
+      .dark_mode .Header .socials_container .icon i {
+        color: black; }
     .dark_mode .Header .Header_right .lightbulb i {
       color: black; }
     .dark_mode .Header .Header_right .lightbulb .line {
@@ -25,12 +28,10 @@
       color: #ecf4ff; }
     .dark_mode .Header .burger_button i {
       color: black; }
-    .dark_mode .Header .burger_contents {
-      background-color: #5cabda; }
-      .dark_mode .Header .burger_contents .burger_nav_buttons .burger_nav_button a {
-        color: black; }
-      .dark_mode .Header .burger_contents .burger_socials a {
-        color: black; }
+    .dark_mode .Header .burger_contents .burger_nav_buttons .burger_nav_button a {
+      color: black; }
+    .dark_mode .Header .burger_contents .burger_socials a {
+      color: black; }
   .dark_mode .indexPage .background .bg {
     background-image: linear-gradient(-60deg, #060d4b 50%, #2197c5 50%); }
   .dark_mode .indexPage .about_me_container {
@@ -97,6 +98,7 @@
       text-align: center;
       padding: 12px;
       font-size: 25px;
+      font-family: "Poppins", sans-serif;
       line-height: 25px;
       border-radius: 4px; }
     .Header .Logo :hover {
@@ -107,8 +109,18 @@
     margin: auto;
     width: 50%;
     text-align: center;
-    color: white;
     align-items: center; }
+    .Header .socials_container .icon {
+      position: relative;
+      display: inline-block;
+      align-items: center; }
+      .Header .socials_container .icon a {
+        padding: 5px; }
+      .Header .socials_container .icon i {
+        color: white;
+        font-size: 28px; }
+      .Header .socials_container .icon :hover {
+        opacity: 0.7; }
   .Header .Header_right {
     float: right;
     align-items: center; }
@@ -153,17 +165,6 @@
           transition: width 0.25s ease-in-out; }
         .Header .Header_right .Nav_buttons .nav-button a:hover::before {
           width: 100%; }
-  .Header .icon {
-    position: relative;
-    display: inline-block;
-    align-items: center; }
-    .Header .icon a {
-      padding: 5px; }
-    .Header .icon i {
-      color: white;
-      font-size: 28px; }
-    .Header .icon :hover {
-      opacity: 0.7; }
   .Header .burger_button {
     display: none;
     float: right; }
@@ -171,12 +172,13 @@
       font-size: 40px;
       color: white; }
   .Header .burger_contents {
-    display: none;
     margin-top: 10px;
     width: 100%;
-    z-index: 1000;
-    background-color: #1c283c;
-    animation: slide_down 1s ease forwards; }
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+    display: none; }
     .Header .burger_contents .burger_nav_buttons {
       display: flex;
       flex-wrap: wrap;
@@ -188,7 +190,7 @@
         .Header .burger_contents .burger_nav_buttons .burger_nav_button a {
           text-align: center;
           color: white;
-          animation: slide_down_text 1s ease forwards; }
+          animation: slide_down_text 3s ease forwards; }
     .Header .burger_contents .burger_socials {
       display: none;
       width: 100%;
@@ -209,14 +211,32 @@
     .Header .burger_contents a:hover {
       background-color: #3a3a3a; }
   .Header .burger_active {
-    display: inline-block; }
-    .Header .burger_active .burger_contents {
-      display: block; }
+    max-height: 0px;
+    opacity: 1;
+    display: block; }
+  @media only screen and (min-width: 1000px) {
+    .Header .burger_active {
+      max-height: 0px;
+      display: none; } }
+  @media only screen and (max-width: 1000px) {
+    .Header .socials_container {
+      display: inline-block; }
+    .Header .Header_right .Nav_buttons {
+      display: none; }
+    .Header .burger_button {
+      display: inline-block; }
+    .Header .burger_contents {
+      max-height: 200px; } }
   @media only screen and (max-width: 670px) {
     .Header .burger_contents .burger_nav_buttons .burger_nav_button {
       flex: 1 1 50%;
       padding-left: 0;
       margin: 0; } }
+  @media only screen and (max-width: 560px) {
+    .Header .socials_container {
+      display: none; }
+    .Header .burger_contents .burger_socials {
+      display: flex; } }
 
 .remove_line {
   display: block;
@@ -238,29 +258,12 @@
   100% {
     width: 3.25em; } }
 
-@media only screen and (max-width: 1000px) {
-  .Header .socials_container {
-    display: inline-block; }
-  .Header .Header_right .Nav_buttons {
-    display: none; }
-  .Header .burger_button {
-    display: inline-block; } }
-
-@media only screen and (max-width: 560px) {
-  .Header .socials_container {
-    display: none; }
-  .Header .burger_contents .burger_socials {
-    display: flex; } }
-
-@media only screen and (min-width: 870px) {
-  .burger_contents {
-    display: none; } }
-
 body {
   overflow-y: auto;
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #bcdfff;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  background-color: #81d7ec;
   color: #212121;
   transition: 800ms; }
   body a {
@@ -283,7 +286,7 @@ body {
     color: #212121; }
   body .indexPage .background .bg {
     animation: slide 5s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #3399ff 50%, #007bff 50%);
+    background-image: linear-gradient(-60deg, #00c3ff 50%, #35f8ff 50%);
     bottom: 0;
     left: -50%;
     opacity: .5;
@@ -323,7 +326,7 @@ body {
       font-size: 28px; }
   body .indexPage .about_me_container {
     width: 100%;
-    background-color: #bcdfff;
+    background-color: #81d7ec;
     padding: 20px 0px;
     text-align: center; }
     body .indexPage .about_me_container .about_me_image {
@@ -373,7 +376,7 @@ body {
           height: 100%;
           object-fit: cover;
           display: block;
-          background-color: #bcdfff; }
+          background-color: #81d7ec; }
       body .projectsPage .projects_layout .card_container .card_content {
         padding: 0px 12px; }
         body .projectsPage .projects_layout .card_container .card_content .card_header {
@@ -381,17 +384,17 @@ body {
           justify-content: space-between;
           align-items: flex-start; }
           body .projectsPage .projects_layout .card_container .card_content .card_header .card_title {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: "DM Sans", sans-serif;
             font-size: 28px;
             margin-right: 16px;
             flex: 1; }
           body .projectsPage .projects_layout .card_container .card_content .card_header .card_date {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: "Work Sans", sans-serif;
             font-size: 18px;
             padding-top: 6px;
             white-space: nowrap; }
         body .projectsPage .projects_layout .card_container .card_content .card_info {
-          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-family: "Inter", sans-serif;
           font-size: 20px;
           overflow: hidden;
           width: 100%;
@@ -418,6 +421,7 @@ body {
     text-align: center;
     text-decoration: none;
     font-size: 18px;
+    font-family: "DM Sans", sans-serif;
     line-height: 25px;
     border-radius: 4px;
     color: #0066cc;
@@ -439,10 +443,10 @@ body {
       body .projectDetailsPage .slideshow_container .popup_pic {
         display: block; }
       body .projectDetailsPage .slideshow_container .big_slide {
-        display: none; }
+        display: none;
+        transition: 600ms; }
         body .projectDetailsPage .slideshow_container .big_slide img {
           border-radius: 4px;
-          transition: 600ms;
           display: inline-block;
           width: 100%;
           height: auto;
@@ -471,6 +475,7 @@ body {
           opacity: 0.7;
           cursor: pointer; }
       body .projectDetailsPage .slideshow_container .active_big_slide {
+        transition: 1s;
         display: block; }
       body .projectDetailsPage .slideshow_container .inactive_small_slide {
         display: none; }
@@ -483,11 +488,11 @@ body {
         width: 100%;
         display: block;
         float: left;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
-      body .projectDetailsPage .information_container .popup_title {
-        font-size: 28px; }
+        font-family: "DM Sans", sans-serif; }
+      body .projectDetailsPage .information_container .project_date {
+        font-family: "Work Sans", sans-serif; }
       body .projectDetailsPage .information_container p {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: "Inter", sans-serif;
         padding-left: 2.5%;
         max-width: 95%;
         font-size: clamp(16px, 1.5vw, 20px); }
@@ -536,13 +541,15 @@ body {
         position: relative;
         animation: slide_in 1s; }
         body .employmentPage .employment_container .event_info_container .event_info h2 {
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-family: "DM Sans", sans-serif;
           font-size: 28px;
           width: 100%;
           padding: 5px 0px; }
+        body .employmentPage .employment_container .event_info_container .event_info .employment_date {
+          font-family: "Work Sans", sans-serif; }
         body .employmentPage .employment_container .event_info_container .event_info p {
           float: left;
-          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-family: "Inter", sans-serif;
           font-size: 20px;
           width: 100%; }
       body .employmentPage .employment_container .event_info_container .event_active {
@@ -561,6 +568,8 @@ body {
       transform: translate(-5%, 25%); }
       body .employmentPage .employment_container .timeline_container .guide {
         transform: translate(5%, 0%); }
+        body .employmentPage .employment_container .timeline_container .guide h2 {
+          font-family: "DM Sans", sans-serif; }
         body .employmentPage .employment_container .timeline_container .guide i {
           font-style: bold;
           position: relative;
@@ -654,7 +663,7 @@ body {
         body .contactPage .contact_form_container .contact_form .input_field label {
           float: left;
           width: 100%;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-family: "DM Sans", sans-serif;
           font-size: 24px;
           padding: 10px 0px; }
         body .contactPage .contact_form_container .contact_form .input_field input {
@@ -663,12 +672,14 @@ body {
           width: calc(100% - 20px);
           padding: 10px;
           font-size: 20px;
+          font-family: "Inter", sans-serif;
           background-color: #d1d8e6;
           color: #202020; }
         body .contactPage .contact_form_container .contact_form .input_field textarea {
           border: none;
           margin-top: 10px;
           font-size: 16px;
+          font-family: "Inter", sans-serif;
           min-height: 200px;
           max-height: 500px;
           min-width: 100%;
@@ -677,11 +688,12 @@ body {
           color: #202020;
           border-radius: 8px; }
         body .contactPage .contact_form_container .contact_form .input_field ::placeholder {
-          color: #202020; }
+          color: #202020;
+          font-family: "Inter", sans-serif; }
         body .contactPage .contact_form_container .contact_form .input_field .submit_button {
           background-color: #daa520;
           border-color: goldenrod;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-family: "DM Sans", sans-serif;
           width: 100%;
           font-size: 24px;
           text-align: center;
@@ -694,7 +706,7 @@ body {
     body .contactPage {
       margin: 7%; } }
   body .thanksPage .return {
-    width: 15%;
+    width: 50%;
     margin: auto;
     border-radius: 5px;
     border: 2px solid #81ecec;
@@ -715,14 +727,6 @@ body {
     transform: translateX(-25%); }
   100% {
     transform: translateX(25%); } }
-
-@keyframes slide_down {
-  0% {
-    height: 0;
-    opacity: 0; }
-  100% {
-    height: auto;
-    opacity: 1; } }
 
 @keyframes slide_down_text {
   0% {

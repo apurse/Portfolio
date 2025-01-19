@@ -4,7 +4,7 @@
         {{!-- Big pictures --}}
         {{#each projectData.popup_pics as |pic pic_index|}}
         <div class="big_slide" id="big_slide{{pic_index}}">
-            <img src="{{pic}}">
+            <img src="{{pic.src}}" alt="{{pic.alt}}">
         </div>
         {{/each}}
 
@@ -13,7 +13,7 @@
         <div class="small_slide_container">
             {{#each projectData.popup_pics as |pic pic_index|}}
             <div class="small_slide" id="small_slide{{pic_index}}">
-                <img src="{{pic}}" onclick="showSlide({{pic_index}})">
+                <img src="{{pic.src}}" onclick="showSlide({{pic_index}})" alt="{{pic.alt}}">
             </div>
             {{/each}}
         </div>

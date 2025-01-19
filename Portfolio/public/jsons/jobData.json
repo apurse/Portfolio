@@ -6,8 +6,8 @@
             "startDate": "06/2022",
             "endDate": "08/2022",
             "information": "In this job, I was tasked quality testing products for clients. Typically these products were VR video games. These products would be tested throughout the week by a team, each member filling in part of a form on Jira and communicating through Microsoft Teams. This job taught me how to be organised and communicate effectively, having to fill out a checklist while cooperating with multiple others.",
-            "logo": "../../pics/logos/universally_logo.png"
-            
+            "logo": "../../pics/Jobs/logos/universally_logo.png",
+            "alt": "Universally Speaking Logo"
         },
     
         {
@@ -16,7 +16,8 @@
             "startDate": "01/2022",
             "endDate": "07/2022",
             "information": "For over half of my year 13 in education, I was employed by MASS Consultants Ltd. This was one of my favourite jobs as it was very tech heavy and gave me insight into a day in the life of IT workers. In this job, I was tasked with taking on client requests (tickets) and working in a team or individually to solve them. Some of the jobs I was tasked with was building computer systems / setups, repairing / upgrading computer systems, and learning how to use the IT management system.",
-            "logo": "../../pics/logos/mass_logo.png"
+            "logo": "../../pics/Jobs/logos/mass_logo.png",
+            "alt": "MASS Consultants Ltd Logo"
         },
 
         {
@@ -25,7 +26,8 @@
             "startDate": "09/2021",
             "endDate": "12/2021",
             "information": "The next job I had was with the Co-operative. Here I was tasked with working the produce aisle. Each shift I would be tasked with reducing products that are near their expiry, then sort out the back and stock the shelves as needed.",
-            "logo": "../../pics/logos/coop_logo.png"
+            "logo": "../../pics/Jobs/logos/coop_logo.png",
+            "alt": "Co-operative Logo"
         },
 
         {
@@ -34,7 +36,8 @@
             "startDate": "11/2020",
             "endDate": "12/2020",
             "information": "For a large chunk of November through to December of 2020 I worked at Tesco as a festive worker. This job required me to be an effective team worker.",
-            "logo": "../../pics/logos/tesco_logo.png"
+            "logo": "../../pics/Jobs/logos/tesco_logo.png",
+            "alt": "Tesco Logo"
         }
     ]
 }

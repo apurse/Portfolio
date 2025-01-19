@@ -6,16 +6,16 @@ $date-font-family: 'Work Sans', sans-serif;
 
 // ------------ Light mode ------------
 $body-text-light: rgb(35, 40, 50);
-$body-background-light: #e6f2f8;
+$body-background-light: #d1e1e9;
 
 $header-text-light: white;
-$header-background-light: rgb(13, 28, 53);
+$header-background-light: rgb(6, 84, 148);
 $header-hover-light: rgb(25, 145, 255);
 
-$background-anim-light: linear-gradient(-60deg, #65d2fa 50%, #b0ebfa 50%);
+$background-anim-light: linear-gradient(-60deg, #45c1ee 50%, #b0ebfa 50%);
 
 $card-background-light: rgb(255, 255, 255);
-$card-box-shadow-light: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2);
+$card-box-shadow-light: 0px 15px 30px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.2);
 
 $read-more-text-light: rgb(0, 82, 161);
 $read-more-background-light: rgb(0, 122, 180);
@@ -32,16 +32,16 @@ $contact-input-text-light: rgb(50, 50, 50);
 
 // Dark mode
 $body-text-dark: rgb(236, 244, 255);
-$body-background-dark: rgb(10, 25, 47);
+$body-background-dark: #03080f;
 
 $header-text-dark: white;
-$header-background-dark: rgb(5, 67, 92);
+$header-background-dark: rgb(15, 34, 66);
 $header-hover-dark: rgb(0, 105, 165);
 
-$background-anim-dark: linear-gradient(-60deg, rgb(6, 13, 75) 50%, rgb(33, 151, 197) 50%);
+$background-anim-dark: linear-gradient(-60deg, rgb(6, 13, 75) 50%, rgb(29, 110, 163) 50%);
 
 $card-background-dark: rgb(18, 44, 82);
-$card-box-shadow-dark: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2);
+$card-box-shadow-dark: 0px 15px 30px rgba(0, 0, 0, 0.5), 0px 10px 15px rgba(0, 0, 0, 0.3);
 
 $read-more-text-dark: rgb(51, 153, 255);
 $read-more-background-dark: rgb(0, 73, 125);

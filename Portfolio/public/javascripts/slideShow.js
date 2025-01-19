@@ -1,8 +1,7 @@
-
 // when window loads, show first slide
-window.onload = function () {
+window.addEventListener('load', function () {
     showSlide(0);
-};
+});
 
 
 // show slide in the carousel

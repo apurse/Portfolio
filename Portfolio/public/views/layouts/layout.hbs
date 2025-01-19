@@ -33,42 +33,47 @@
   <link rel='stylesheet' href='/stylesheets/main.css' type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
 <body>
   <script>
     const userThemePreference = localStorage.getItem('theme');
     if (userThemePreference === 'dark') document.body.classList.add('dark_mode');
   </script>
-  <div class="Header">
+  <div class="Header" id="Header">
     <div class="Logo">
       <a href="/">
         <span>Alex Purser</span>
       </a>
     </div>
-    <div class="Nav_buttons">
-      <a id="burgerBulb" class="lightbulb icon">
+    <div class="Header_right">
+      <a id="bulb" class="lightbulb icon">
         <i class="fa fa-lightbulb-o" style="font-size: 38px;" aria-hidden="true"></i>
-        <span class="line"></span>
+        <span class="line" id="bulbLine"></span>
       </a>
-      <div class="nav-button">
-        <a href="/projects">Projects</a>
+      <div class="Nav_buttons">
+        <div class="nav-button">
+          <a href="/projects">Projects</a>
+        </div>
+        <div class="nav-button">
+          <a href="/employment">Employment</a>
+        </div>
+        <div class="nav-button">
+          <a href="/cvDownload" download="Alex_Purser_CV.pdf">CV</a>
+        </div>
+        <div class="nav-button">
+          <a href="/contact">Contact Me</a>
+        </div>
       </div>
-      <div class="nav-button">
-        <a href="/employment">Employment</a>
-      </div>
-      <div class="nav-button">
-        <a href="/cvDownload" download="Alex_Purser_CV.pdf">CV</a>
-      </div>
-      <div class="nav-button">
-        <a href="/contact">Contact Me</a>
-      </div>
-
     </div>
     <div class="socials_container">
       <div class="icon">
         <a href="https://www.facebook.com/alex.purser.796/" target="_blank" aria-label="Facebook">
-          <i class="fa fa-facebook-official"></i>
+          <i class="fa fa-facebook-official" style="padding-top: -10px;"></i>
         </a>
         <a href="mailto:ajpurser32@gmail.com" target="_blank" aria-label="Gmail">
           <i class="material-icons">contact_mail</i>
@@ -91,15 +96,21 @@
     <div class="burger_button">
       <i class="fa fa-bars" onclick="burgerToggle()"></i>
     </div>
-    <div class="burger_contents" id="burger_menu">
-      <a id="bulb" class="lightbulb icon">
-        <i class="fa fa-lightbulb-o" style="font-size: 38px;" aria-hidden="true"></i>
-        <span class="line"></span>
-      </a>
-      <a href="/projects">Projects</a>
-      <a href="/employment">Employment</a>
-      <a href="/cvDownload" download="Alex_Purser_CV.pdf">CV</a>
-      <a href="/contact">Contact Me</a>
+    <div class="burger_contents" id="burger_contents">
+      <div class="burger_nav_buttons">
+        <div class="burger_nav_button">
+          <a href="/projects">Projects</a>
+        </div>
+        <div class="burger_nav_button">
+          <a href="/employment">Employment</a>
+        </div>
+        <div class="burger_nav_button">
+          <a href="/cvDownload" download="Alex_Purser_CV.pdf">CV</a>
+        </div>
+        <div class="burger_nav_button">
+          <a href="/contact">Contact Me</a>
+        </div>
+      </div>
       <div class="burger_socials">
         <a href="https://www.facebook.com/alex.purser.796/" target="_blank" class="fa fa-facebook-official"
           aria-label="facebook"></a>

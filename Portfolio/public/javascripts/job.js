@@ -1,4 +1,10 @@
 
+// when window loads, show first job
+window.addEventListener('load', function () {
+    select_event(0);
+});
+
+
 // show data for selected job
 function select_event(index) {
 

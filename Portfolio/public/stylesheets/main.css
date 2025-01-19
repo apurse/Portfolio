@@ -1,12 +1,12 @@
 .dark_mode {
   color: #ecf4ff;
-  background-color: #0a192f; }
+  background-color: #03080f; }
   .dark_mode .page_title {
     color: #ecf4ff; }
   .dark_mode .page_paragraph {
     color: #ecf4ff; }
   .dark_mode .Header {
-    background-color: #05435c; }
+    background-color: #0f2242; }
     .dark_mode .Header .Logo a span {
       color: white; }
     .dark_mode .Header .Logo :hover {
@@ -33,32 +33,32 @@
     .dark_mode .Header .burger_contents .burger_socials a {
       color: white; }
   .dark_mode .indexPage .background .bg {
-    background-image: linear-gradient(-60deg, #060d4b 50%, #2197c5 50%); }
+    background-image: linear-gradient(-60deg, #060d4b 50%, #1d6ea3 50%); }
   .dark_mode .indexPage .about_me_container {
-    background-color: #0a192f; }
+    background-color: #03080f; }
     .dark_mode .indexPage .about_me_container .about_me_text {
       color: #232832; }
   .dark_mode .projectsPage .projects_layout .card_container {
     background-color: #122c52;
-    box-shadow: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5), 0px 10px 15px rgba(0, 0, 0, 0.3); }
     .dark_mode .projectsPage .projects_layout .card_container a {
       color: #ecf4ff; }
     .dark_mode .projectsPage .projects_layout .card_container .card_image_content figure img {
-      background-color: #0a192f; }
+      background-color: #03080f; }
   .dark_mode .projectsPage .readMore {
     color: #3399ff; }
   .dark_mode .projectDetailsPage .information_container .link {
     color: #ecf4ff; }
   .dark_mode .employmentPage .employment_container .event_info_container {
     background-color: #122c52;
-    box-shadow: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5), 0px 10px 15px rgba(0, 0, 0, 0.3); }
   .dark_mode .employmentPage .employment_container .timeline_container ul:after {
     background-color: #3399ff; }
   .dark_mode .employmentPage .employment_container .timeline_container ul li:after {
     background-color: #3399ff;
     border-color: #3399ff; }
   .dark_mode .employmentPage .employment_container .timeline_container ul li span img {
-    box-shadow: -12px -12px 22px rgba(0, 0, 0, 0.6), 12px 12px 22px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5), 0px 10px 15px rgba(0, 0, 0, 0.3); }
   .dark_mode .contactPage .contact_form_container {
     background-color: #122c52;
     color: #ecf4ff; }
@@ -73,8 +73,8 @@
       .dark_mode .contactPage .contact_form_container .contact_form .input_field ::placeholder {
         color: #d7d7e4; }
       .dark_mode .contactPage .contact_form_container .contact_form .submit_button {
-        background-color: #0a192f;
-        border: #0a192f;
+        background-color: #03080f;
+        border: #03080f;
         color: #ecf4ff; }
   .dark_mode .thanksPage .return a {
     color: #ecf4ff; }
@@ -86,7 +86,7 @@
 .Header {
   overflow: hidden;
   padding: 12px 10px;
-  background-color: #0d1c35;
+  background-color: #065494;
   transition: 800ms;
   align-items: center; }
   .Header .Logo {
@@ -102,7 +102,7 @@
       line-height: 25px;
       border-radius: 4px; }
     .Header .Logo :hover {
-      background-color: #0069a5;
+      background-color: #aab6bd;
       color: #ecf4ff; }
   .Header .socials_container {
     display: block;
@@ -271,7 +271,7 @@ body {
   margin: 0;
   font-size: 14px;
   font-family: "Inter", sans-serif;
-  background-color: #e6f2f8;
+  background-color: #d1e1e9;
   color: #232832;
   transition: 800ms; }
   body a {
@@ -294,7 +294,7 @@ body {
     color: #232832; }
   body .indexPage .background .bg {
     animation: slide 5s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #65d2fa 50%, #b0ebfa 50%);
+    background-image: linear-gradient(-60deg, #45c1ee 50%, #b0ebfa 50%);
     bottom: 0;
     left: -50%;
     opacity: .5;
@@ -334,7 +334,7 @@ body {
       font-size: 28px; }
   body .indexPage .about_me_container {
     width: 100%;
-    background-color: #e6f2f8;
+    background-color: #d1e1e9;
     padding: 20px 0px;
     text-align: center; }
     body .indexPage .about_me_container .about_me_image {
@@ -367,7 +367,7 @@ body {
     body .projectsPage .projects_layout .card_container {
       background-color: white;
       border-radius: 12px;
-      box-shadow: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.2);
       overflow: hidden;
       transition: 600ms; }
       body .projectsPage .projects_layout .card_container a {
@@ -384,7 +384,7 @@ body {
           height: 100%;
           object-fit: cover;
           display: block;
-          background-color: #e6f2f8; }
+          background-color: #d1e1e9; }
       body .projectsPage .projects_layout .card_container .card_content {
         padding: 0px 12px; }
         body .projectsPage .projects_layout .card_container .card_content .card_header {
@@ -541,7 +541,7 @@ body {
       width: 35%;
       overflow: hidden;
       min-height: 600px;
-      box-shadow: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2); }
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.2); }
       body .employmentPage .employment_container .event_info_container .event_info {
         display: none;
         list-style: none;
@@ -630,7 +630,7 @@ body {
               aspect-ratio: 1;
               overflow: hidden;
               transform-origin: center;
-              box-shadow: -8px -8px 20px rgba(255, 254, 254, 0.781), 8px 8px 20px rgba(0, 0, 0, 0.2); }
+              box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.2); }
             body .employmentPage .employment_container .timeline_container ul li span :hover {
               cursor: pointer;
               transform: scale(1.2, 1.2); }

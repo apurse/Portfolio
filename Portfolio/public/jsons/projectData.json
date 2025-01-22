@@ -1,47 +1,17 @@
 {
     "projects": [
         {
-            "title": "Cormoran",
-            "description": "Cormoran: a video game I helped develop in Unity.",
-            "startDate": "2022",
-            "endDate": "2023",
-            "information": "Cormoran is the title of one of the video games I helped produce in my first year of university. In GAM190, the name given to this module, we as a team were tasked with creating a video game with the constraint: Local history. Cormoran is a game based on the legend of Jack the Giant Slayer, a Cornish legend turned global. The premise for this game is that the player (Jack) needs to find a way to kill Cormoran, seeking revenge for his father. The player navigates around St Micheals Mount, locating objects and eventually digging a hole for Cormoran to fall into, all while avoiding him. For this project, I was the developer behind the AI for the giant. This included navMesh pathfinding, raycasting, waypoint management, and player tracking. This was a very enjoyable game to work on and I would love to continue with it at some point later on.",
-            "link": "https://fugii.itch.io/cormoran",
+            "title": "Plant Environment Monitoring System",
+            "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
+            "startDate": "2024",
+            "endDate": "2024",
+            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
+            "link": "https://github.com/apurse/Environment-Monitoring-System",
             "popup_pics": [
-                { "src": "../../pics/Projects/Cormoran/Cormoran.png", "alt": "Cormoran Banner with logo central" },
-                { "src": "../../pics/Projects/Cormoran/Cormoran_popup1.png", "alt": "Foggy castle scene from within the game" },
-                { "src": "../../pics/Projects/Cormoran/Cormoran_popup2.png", "alt": "A code snippet covering enemy pathfinding" },
-                { "src": "../../pics/Projects/Cormoran/Cormoran_popup3.png", "alt": "Interactive doors with key requirements from within the game" },
-                { "src": "../../pics/Projects/Cormoran/Cormoran_popup4.png", "alt": "Giant and his torch shining through a section of the map with pillars" }
-            ]
-        },
-        {
-            "title": "Data Analysis of VR Medical Training",
-            "description": "An analysis of the use of VR when training medical professionals.",
-            "startDate": "2023",
-            "endDate": "2023",
-            "information": "Another project from my first year of University was data analysis of the effectiveness and uses of VR for training within the healthcare industry. In this project, I interpreted multiple datasets from Kaggle.com and utilised multiple python libraries such as Pandas to generate graphs and visuals. From this, I generated a html based report covering and evaluating my findings, documenting them in an accessible and organised manner.",
-            "link": "https://github.com/apurse/Medical-VR-Data-Analysis",
-            "popup_pics": [
-                { "src": "../pics/Projects/data_analysis/graph1.png", "alt": "Graph of Forecast Distribution of the Augmented and Mixed Reality Market Worldwide 2022" },
-                { "src": "../pics/Projects/data_analysis/paper.png", "alt": "HTML file showcasing the content covered and report" },
-                { "src": "../pics/Projects/data_analysis/graph2.png", "alt": "Graph of Global healthcare AR and VR market in 2018 and 2025 by region (Billions USD)" },
-                { "src": "../pics/Projects/data_analysis/graph3.png", "alt": "Graph of Forecast size of the augmented and virtual reality (VR/AR) market worldwide in 2020 and 2025 by segment (Billions USD)" },
-                { "src": "../pics/Projects/data_analysis/data_code.png", "alt": "Code snippet from the project" }
-            ]
-        },
-        {
-            "title": "Delivery Drone Robot Education Simulation",
-            "description": "An educational simulation for Delivery Drones paired with a hand-made controller.",
-            "startDate": "2022",
-            "endDate": "2023",
-            "information": "This was one of my first year projects. I was tasked with integrating an Arduino system into Unity, and creating an educational piece of software that works alongside a custom built controller. For this project, I based my idea off of the company Zipline and their delivery drones. My Controller was a gyroscopic input that reacted to 2 axes of rotation. Up and down rotation affects the falling speed of the delivery, while left and right affects the position of the delivery. As the user progresses through the story, text popups appear, explaining the process and benefits. The user was challenged with placing the delivery on a cross outside the recipients door.",
-            "link": "",
-            "popup_pics": [
-                { "src": "../../pics/Projects/Drone/Drone.png", "alt": "Project start up screen" },
-                { "src": "../../pics/Projects/Drone/Drone_popup_1.png", "alt": "View of Unity scene showing the drone and houses" },
-                { "src": "../../pics/Projects/Drone/Drone_popup_2.png", "alt": "View of drone model" },
-                { "src": "../../pics/Projects/Drone/Drone_popup_3.png", "alt": "Snippet of code" }
+                { "src": "../../pics/Projects/plant/hardware.png", "alt": "Visual of the plant and monitoring hardware" },
+                { "src": "../../pics/Projects/plant/api.png", "alt": "API used for plant monitoring system" },
+                { "src": "../../pics/Projects/plant/Circuit_diagram_horizontal.png", "alt": "Circuit diagram for the monitoring system" },
+                { "src": "../../pics/Projects/plant/poster.png", "alt": "Project poster for plant monitoring system" }
             ]
         },
         {
@@ -72,17 +42,18 @@
             ]
         },
         {
-            "title": "Plant Environment Monitoring System",
-            "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
-            "startDate": "2024",
-            "endDate": "2024",
-            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
-            "link": "https://github.com/apurse/Environment-Monitoring-System",
-            "picture": "../../pics/Projects/plant/hardware.png",
+            "title": "Data Analysis of VR Medical Training",
+            "description": "An analysis of the use of VR when training medical professionals.",
+            "startDate": "2023",
+            "endDate": "2023",
+            "information": "Another project from my first year of University was data analysis of the effectiveness and uses of VR for training within the healthcare industry. In this project, I interpreted multiple datasets from Kaggle.com and utilised multiple python libraries such as Pandas to generate graphs and visuals. From this, I generated a html based report covering and evaluating my findings, documenting them in an accessible and organised manner.",
+            "link": "https://github.com/apurse/Medical-VR-Data-Analysis",
             "popup_pics": [
-                { "src": "../../pics/Projects/plant/api.png", "alt": "API used for plant monitoring system" },
-                { "src": "../../pics/Projects/plant/Circuit_diagram_horizontal.png", "alt": "Circuit diagram for the monitoring system" },
-                { "src": "../../pics/Projects/plant/poster.png", "alt": "Project poster for plant monitoring system" }
+                { "src": "../pics/Projects/data_analysis/graph1.png", "alt": "Graph of Forecast Distribution of the Augmented and Mixed Reality Market Worldwide 2022" },
+                { "src": "../pics/Projects/data_analysis/paper.png", "alt": "HTML file showcasing the content covered and report" },
+                { "src": "../pics/Projects/data_analysis/graph2.png", "alt": "Graph of Global healthcare AR and VR market in 2018 and 2025 by region (Billions USD)" },
+                { "src": "../pics/Projects/data_analysis/graph3.png", "alt": "Graph of Forecast size of the augmented and virtual reality (VR/AR) market worldwide in 2020 and 2025 by segment (Billions USD)" },
+                { "src": "../pics/Projects/data_analysis/data_code.png", "alt": "Code snippet from the project" }
             ]
         },
         {
@@ -111,6 +82,35 @@
                 { "src": "../../pics/Projects/plant/api.png", "alt": "API used in Halwill Baptist Church website" },
                 { "src": "../../pics/Projects/plant/Circuit_diagram_horizontal.png", "alt": "Circuit diagram for Halwill Baptist Church website" },
                 { "src": "../../pics/Projects/plant/poster.png", "alt": "Poster for Halwill Baptist Church website" }
+            ]
+        },
+        {
+            "title": "Cormoran",
+            "description": "Cormoran: a video game I helped develop in Unity.",
+            "startDate": "2022",
+            "endDate": "2023",
+            "information": "Cormoran is the title of one of the video games I helped produce in my first year of university. In GAM190, the name given to this module, we as a team were tasked with creating a video game with the constraint: Local history. Cormoran is a game based on the legend of Jack the Giant Slayer, a Cornish legend turned global. The premise for this game is that the player (Jack) needs to find a way to kill Cormoran, seeking revenge for his father. The player navigates around St Micheals Mount, locating objects and eventually digging a hole for Cormoran to fall into, all while avoiding him. For this project, I was the developer behind the AI for the giant. This included navMesh pathfinding, raycasting, waypoint management, and player tracking. This was a very enjoyable game to work on and I would love to continue with it at some point later on.",
+            "link": "https://fugii.itch.io/cormoran",
+            "popup_pics": [
+                { "src": "../../pics/Projects/Cormoran/Cormoran.png", "alt": "Cormoran Banner with logo central" },
+                { "src": "../../pics/Projects/Cormoran/Cormoran_popup1.png", "alt": "Foggy castle scene from within the game" },
+                { "src": "../../pics/Projects/Cormoran/Cormoran_popup2.png", "alt": "A code snippet covering enemy pathfinding" },
+                { "src": "../../pics/Projects/Cormoran/Cormoran_popup3.png", "alt": "Interactive doors with key requirements from within the game" },
+                { "src": "../../pics/Projects/Cormoran/Cormoran_popup4.png", "alt": "Giant and his torch shining through a section of the map with pillars" }
+            ]
+        },
+        {
+            "title": "Delivery Drone Robot Education Simulation",
+            "description": "An educational simulation for Delivery Drones paired with a hand-made controller.",
+            "startDate": "2022",
+            "endDate": "2023",
+            "information": "This was one of my first year projects. I was tasked with integrating an Arduino system into Unity, and creating an educational piece of software that works alongside a custom built controller. For this project, I based my idea off of the company Zipline and their delivery drones. My Controller was a gyroscopic input that reacted to 2 axes of rotation. Up and down rotation affects the falling speed of the delivery, while left and right affects the position of the delivery. As the user progresses through the story, text popups appear, explaining the process and benefits. The user was challenged with placing the delivery on a cross outside the recipients door.",
+            "link": "",
+            "popup_pics": [
+                { "src": "../../pics/Projects/Drone/Drone.png", "alt": "Project start up screen" },
+                { "src": "../../pics/Projects/Drone/Drone_popup_1.png", "alt": "View of Unity scene showing the drone and houses" },
+                { "src": "../../pics/Projects/Drone/Drone_popup_2.png", "alt": "View of drone model" },
+                { "src": "../../pics/Projects/Drone/Drone_popup_3.png", "alt": "Snippet of code" }
             ]
         }
     ]

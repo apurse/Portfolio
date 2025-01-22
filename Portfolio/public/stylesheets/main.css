@@ -7,11 +7,8 @@
     color: #ecf4ff; }
   .dark_mode .Header {
     background-color: #0f2242; }
-    .dark_mode .Header .Logo a span {
+    .dark_mode .Header .Logo a {
       color: white; }
-    .dark_mode .Header .Logo :hover {
-      background-color: #1991ff;
-      color: #232832; }
     .dark_mode .Header .socials_container {
       color: white; }
       .dark_mode .Header .socials_container .icon i {
@@ -93,17 +90,26 @@
     float: left;
     padding: 10px;
     align-items: center; }
-    .Header .Logo a span {
+    .Header .Logo a {
+      position: relative;
       color: white;
       text-align: center;
-      padding: 12px;
-      font-size: 25px;
+      padding: 6px 12px;
+      font-size: 28px;
       font-family: "Poppins", sans-serif;
-      line-height: 25px;
-      border-radius: 4px; }
-    .Header .Logo :hover {
-      background-color: #aab6bd;
-      color: #ecf4ff; }
+      line-height: 22px; }
+    .Header .Logo ::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      background-color: white;
+      width: 0%;
+      bottom: 3px;
+      left: 8px;
+      transition: width 0.25s ease-in-out; }
+    .Header .Logo a:hover::before {
+      width: 90%;
+      text-align: center; }
   .Header .socials_container {
     display: block;
     margin: 8px auto;
@@ -157,7 +163,8 @@
         animation: drawLine 1s ease-out forwards; }
     .Header .Header_right .Nav_buttons {
       display: inline-block;
-      align-items: center; }
+      align-items: center;
+      font-family: "Poppins", sans-serif; }
       .Header .Header_right .Nav_buttons .nav-button {
         padding: 6px 12px;
         font-size: 18px;

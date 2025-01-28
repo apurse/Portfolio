@@ -1,6 +1,48 @@
 {
     "projects": [
         {
+            "title": "Academic evaluation of WebRTC and LLHLS",
+            "description": "My 3rd year dissertation project covering the research and development of a seminar hosting platform and the testing of two streaming technologies.",
+            "startDate": "2024",
+            "endDate": "2024",
+            "information": "This project is my 3rd year dissertation project, covering the proposal before the implementation. This module is designed for us to plan, analyse, and prepare for the dissertation. The reason I chose this topic is because of the interesting recent developments with streaming technologies such as Apple introducing Low-Latency HLS, a more real-time optimised version of HLS. From analysing literature and previous works, among the streaming technologies LLHLS and WebRTC are commonly seen to be the most optimised and fastest streaming technologies, however, each has a different specialty; WebRTC for few-to-few and LLHLS for one-to-many. The end result from this paper should provide valuable research into the theory of dynamic protocol switching; switching between LLHLS and WebRTC based on client numbers. The paper covers an in-depth literature review, proposed methodology, research philosophy, and an analysis of expected results. The data analysis section of the paper utilises G*Power, hypothesis testing, ANOVA analysis, tukey testing, and the outputting of graphs all completed in R.",
+            "link": "https://github.com/apurse/Environment-Monitoring-System",
+            "popup_pics": [
+                { "src": "../../pics/Projects/proposal/title.png", "alt": "The title for the research project" },
+                { "src": "../../pics/Projects/proposal/network.png", "alt": "A diagram of the networking required" },
+                { "src": "../../pics/Projects/proposal/diagrams.png", "alt": "UML diagrams showcasing workflow and classes" },
+                { "src": "../../pics/Projects/proposal/results.png", "alt": "Predicted results for the final project" }
+            ]
+        },
+        {
+            "title": "WebSocket performance Analysis against Distance and packet Size",
+            "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
+            "startDate": "2024",
+            "endDate": "2024",
+            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
+            "link": "https://github.com/apurse/Environment-Monitoring-System",
+            "popup_pics": [
+                { "src": "../../pics/Projects/plant/hardware.png", "alt": "Visual of the plant and monitoring hardware" },
+                { "src": "../../pics/Projects/plant/api.png", "alt": "API used for plant monitoring system" },
+                { "src": "../../pics/Projects/plant/Circuit_diagram_horizontal.png", "alt": "Circuit diagram for the monitoring system" },
+                { "src": "../../pics/Projects/plant/poster.png", "alt": "Project poster for plant monitoring system" }
+            ]
+        },
+        {
+            "title": "Re-Space",
+            "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
+            "startDate": "2024",
+            "endDate": "2024",
+            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
+            "link": "https://github.com/apurse/Environment-Monitoring-System",
+            "popup_pics": [
+                { "src": "../../pics/Projects/plant/hardware.png", "alt": "Visual of the plant and monitoring hardware" },
+                { "src": "../../pics/Projects/plant/api.png", "alt": "API used for plant monitoring system" },
+                { "src": "../../pics/Projects/plant/Circuit_diagram_horizontal.png", "alt": "Circuit diagram for the monitoring system" },
+                { "src": "../../pics/Projects/plant/poster.png", "alt": "Project poster for plant monitoring system" }
+            ]
+        },
+        {
             "title": "Plant Environment Monitoring System",
             "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
             "startDate": "2024",
@@ -75,13 +117,16 @@
             "description": "A project designed for a local church based on my portfolio website.",
             "startDate": "2024",
             "endDate": "",
-            "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
+            "information": "This project is a free uncommissioned request from my GrandFathers church, tasked with creating an informative and friendly website for the church. The system is designed to be as friendly as possible, with clear buttons and tabs with informative names. The website features a front-end admin login, requiring username and password for authorisation. This system is salted, peppered, hashed, and encrypted, providing very strong security. However, this will be improved on in the future, applying DDoS prevention. The admin page allows the church admin to edit and add new events or news, updating, deleting, and archiving as needed. The admin can upload pictures, links, locations and information to provide as much detail as possible. Unfortunately the website is missing the content which has been requested multiple times but has not been provided. The website is not currently live but on receiving and updating the content it will be.",
             "link": "https://github.com/apurse/Portfolio",
             "popup_pics": [
-                { "src": "../../pics/Projects/plant/hardware.png", "alt": "Hardware for Halwill Baptist Church website" },
-                { "src": "../../pics/Projects/plant/api.png", "alt": "API used in Halwill Baptist Church website" },
-                { "src": "../../pics/Projects/plant/Circuit_diagram_horizontal.png", "alt": "Circuit diagram for Halwill Baptist Church website" },
-                { "src": "../../pics/Projects/plant/poster.png", "alt": "Poster for Halwill Baptist Church website" }
+                { "src": "../../pics/Projects/halwill/index2.png", "alt": "Light mode index page for Halwill Baptist Church website" },
+                { "src": "../../pics/Projects/halwill/index1.png", "alt": "Dark mode index page used in Halwill Baptist Church website" },
+                { "src": "../../pics/Projects/halwill/login.png", "alt": "Login page for Halwill Baptist Church website" },
+                { "src": "../../pics/Projects/halwill/adminpage.png", "alt": "Admin page for Halwill Baptist Church website" },
+                { "src": "../../pics/Projects/halwill/archive.png", "alt": "Event and news archive for Halwill Baptist Church website" },
+                { "src": "../../pics/Projects/halwill/addEvent.png", "alt": "Add event page for Halwill Baptist Church website" },
+                { "src": "../../pics/Projects/halwill/code.png", "alt": "Code snippet for Halwill Baptist Church website" }
             ]
         },
         {

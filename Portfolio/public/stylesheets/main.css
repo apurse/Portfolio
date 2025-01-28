@@ -85,7 +85,8 @@
   padding: 12px 10px;
   background-color: #065494;
   transition: 800ms;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
   .Header .Logo {
     float: left;
     padding: 10px;
@@ -112,9 +113,9 @@
       text-align: center; }
   .Header .socials_container {
     display: block;
-    margin: 8px auto;
-    width: 50%;
+    margin-top: 8px;
     text-align: center;
+    margin-left: 450px;
     align-items: center; }
     .Header .socials_container .icon {
       position: relative;
@@ -237,13 +238,14 @@
     max-height: 500px;
     opacity: 1;
     display: block; }
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 1200px) {
     .Header .burger_active {
       max-height: 0px;
       display: none; } }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1200px) {
     .Header .socials_container {
-      display: inline-block; }
+      display: inline-block;
+      margin-left: -120px; }
     .Header .Header_right .Nav_buttons {
       display: none; }
     .Header .burger_button {
@@ -251,13 +253,12 @@
     .Header .burger_contents {
       max-height: 200px; } }
   @media only screen and (max-width: 670px) {
+    .Header .socials_container {
+      display: none; }
     .Header .burger_contents .burger_nav_buttons .burger_nav_button {
       flex: 1 1 50%;
       padding-left: 0;
-      margin: 0; } }
-  @media only screen and (max-width: 560px) {
-    .Header .socials_container {
-      display: none; }
+      margin: 0; }
     .Header .burger_contents .burger_socials {
       display: flex; } }
 

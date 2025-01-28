@@ -1,12 +1,12 @@
 {
     "projects": [
         {
-            "title": "Academic evaluation of WebRTC and LLHLS",
-            "description": "My 3rd year dissertation project covering the research and development of a seminar hosting platform and the testing of two streaming technologies.",
+            "title": "Dissertation proposal for comparing WebRTC and LLHLS",
+            "description": "My 3rd year dissertation proposal project covering the research and development of a seminar hosting platform and the testing of two streaming technologies.",
             "startDate": "2024",
-            "endDate": "2024",
+            "endDate": "2025",
             "information": "This project is my 3rd year dissertation project, covering the proposal before the implementation. This module is designed for us to plan, analyse, and prepare for the dissertation. The reason I chose this topic is because of the interesting recent developments with streaming technologies such as Apple introducing Low-Latency HLS, a more real-time optimised version of HLS. From analysing literature and previous works, among the streaming technologies LLHLS and WebRTC are commonly seen to be the most optimised and fastest streaming technologies, however, each has a different specialty; WebRTC for few-to-few and LLHLS for one-to-many. The end result from this paper should provide valuable research into the theory of dynamic protocol switching; switching between LLHLS and WebRTC based on client numbers. The paper covers an in-depth literature review, proposed methodology, research philosophy, and an analysis of expected results. The data analysis section of the paper utilises G*Power, hypothesis testing, ANOVA analysis, tukey testing, and the outputting of graphs all completed in R.",
-            "link": "https://github.com/apurse/Environment-Monitoring-System",
+            "link": "https://github.com/apurse/Dissertation-Proposal",
             "popup_pics": [
                 { "src": "../../pics/Projects/proposal/title.png", "alt": "The title for the research project" },
                 { "src": "../../pics/Projects/proposal/network.png", "alt": "A diagram of the networking required" },
@@ -18,7 +18,7 @@
             "title": "WebSocket performance Analysis against Distance and packet Size",
             "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
             "startDate": "2024",
-            "endDate": "2024",
+            "endDate": "2025",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
             "link": "https://github.com/apurse/Environment-Monitoring-System",
             "popup_pics": [
@@ -32,7 +32,7 @@
             "title": "Re-Space",
             "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
             "startDate": "2024",
-            "endDate": "2024",
+            "endDate": "2025",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
             "link": "https://github.com/apurse/Environment-Monitoring-System",
             "popup_pics": [

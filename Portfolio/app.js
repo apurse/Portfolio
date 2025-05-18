@@ -1,14 +1,3 @@
-//   ***************************************************************************************/
-//   *    Title: Database management
-//   *    Author: Warwick New
-//   *    Date: 2023
-//   *    Code version: n/a
-//   *    Availability: 
-//   *    Changes: Changed database table, insertion, and the partials loaded.
-//   *
-//   ***************************************************************************************/
-
-
 const express = require('express')
 const app = express()
 var path = require('path');
@@ -118,7 +107,7 @@ app.get('/projects', (req, res) => {
     res.render('partials/projects', {
         layout: 'layouts/layout',
         projectData: projectData,
-        title: 'Projects',
+        title: `Alex Purser | Projects`,
         description: 'Exciting and logic-heavy computing projects including hardware, software, and game development. Have a look now!'
     });
 })
@@ -131,7 +120,7 @@ app.get('/projects/:projectID', (req, res) => {
         layout: 'layouts/layout',
         projectData: selectedProject,
         projectDataLength: selectedProject.popup_pics.length,
-        title: selectedProject.title,
+        title: `Alex Purser | ${selectedProject.title}`,
         description: selectedProject.description,
     });
 })
@@ -142,7 +131,7 @@ app.get('/employment', (req, res) => {
     res.render('partials/employment', {
         layout: 'layouts/layout',
         jobsData: jobData,
-        title: 'Employment History',
+        title: 'Alex Purser | Employment History',
         description: 'Intriguing insight into my industry experience. From IT Student Placement to Games Tester at large firms. Contact me today!'
     });
 })
@@ -152,7 +141,7 @@ app.get('/employment', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('partials/contact', {
         layout: 'layouts/layout',
-        title: 'Contact Me',
+        title: 'Alex Purser | Contact Me',
         description: 'Want to communicate further? Fill in the contact form to reach me with any enquiry you have! I would love to hear from you!'
     })
 })

@@ -3,29 +3,21 @@
         {
             "title": "An Academic Study Comparing WebRTC and LLHLS Streaming Protocols",
             "description": "My 3rd year dissertation proposal project covering the research and development of a seminar hosting platform and the testing of two streaming technologies.",
-            "startDate": "2024",
+            "startDate": "2025",
             "endDate": "2025",
-            "information": "This project is my 3rd year dissertation project, covering the proposal before the implementation. This module is designed for us to plan, analyse, and prepare for the dissertation. The reason I chose this topic is because of the interesting recent developments with streaming technologies such as Apple introducing Low-Latency HLS, a more real-time optimised version of HLS. From analysing literature and previous works, among the streaming technologies LLHLS and WebRTC are commonly seen to be the most optimised and fastest streaming technologies, however, each has a different specialty; WebRTC for few-to-few and LLHLS for one-to-many. The end result from this paper should provide valuable research into the theory of dynamic protocol switching; switching between LLHLS and WebRTC based on client numbers. The paper covers an in-depth literature review, proposed methodology, research philosophy, and an analysis of expected results. The data analysis section of the paper utilises G*Power, hypothesis testing, ANOVA analysis, tukey testing, and the outputting of graphs all completed in R.",
-            "link": "https://github.com/apurse/Dissertation-Proposal",
+            "information": "This project is a Seminar-Hosting web application designed with the purpose of testing two of the most-known streaming technologies WebRTC and LLHLS. This project is my 3rd year dissertation submission under the module COMP303-Research & Development: Dissertation. The aim of this module was to undertake a project that provides insight into an industry of our choice, attempting to add to the existing body of knowledge. This project covers my research, development, and analysis of the streaming technologies: WebRTC and LL-HLS.",
+            "link": "https://github.com/apurse/Dissertation",
             "popup_pics": [
-                { "src": "../../pics/Projects/proposal/title.png", "alt": "The title for the research project" },
-                { "src": "../../pics/Projects/proposal/network.png", "alt": "A diagram of the networking required" },
-                { "src": "../../pics/Projects/proposal/diagrams.png", "alt": "UML diagrams showcasing workflow and classes" },
-                { "src": "../../pics/Projects/proposal/results.png", "alt": "Predicted results for the final project" }
-            ]
-        },
-        {
-            "title": "Dissertation proposal for comparing WebRTC and LLHLS",
-            "description": "My 3rd year dissertation proposal project covering the research and development of a seminar hosting platform and the testing of two streaming technologies.",
-            "startDate": "2024",
-            "endDate": "2025",
-            "information": "This project is my 3rd year dissertation project, covering the proposal before the implementation. This module is designed for us to plan, analyse, and prepare for the dissertation. The reason I chose this topic is because of the interesting recent developments with streaming technologies such as Apple introducing Low-Latency HLS, a more real-time optimised version of HLS. From analysing literature and previous works, among the streaming technologies LLHLS and WebRTC are commonly seen to be the most optimised and fastest streaming technologies, however, each has a different specialty; WebRTC for few-to-few and LLHLS for one-to-many. The end result from this paper should provide valuable research into the theory of dynamic protocol switching; switching between LLHLS and WebRTC based on client numbers. The paper covers an in-depth literature review, proposed methodology, research philosophy, and an analysis of expected results. The data analysis section of the paper utilises G*Power, hypothesis testing, ANOVA analysis, tukey testing, and the outputting of graphs all completed in R.",
-            "link": "https://github.com/apurse/Dissertation-Proposal",
-            "popup_pics": [
-                { "src": "../../pics/Projects/proposal/title.png", "alt": "The title for the research project" },
-                { "src": "../../pics/Projects/proposal/network.png", "alt": "A diagram of the networking required" },
-                { "src": "../../pics/Projects/proposal/diagrams.png", "alt": "UML diagrams showcasing workflow and classes" },
-                { "src": "../../pics/Projects/proposal/results.png", "alt": "Predicted results for the final project" }
+                { "src": "../../pics/Projects/Dissertation/webrtc-working (1).png", "alt": "WebRTC functionality demonstration screenshot" },
+                { "src": "../../pics/Projects/Dissertation/LLHLS-working (2).png", "alt": "Screenshot of LLHLS video streaming in operation" },
+                { "src": "../../pics/Projects/Dissertation/diss_cover.png", "alt": "Cover page of the dissertation project" },
+                { "src": "../../pics/Projects/Dissertation/boxplot_actual (1).png", "alt": "Boxplot showing actual results from testing" },
+                { "src": "../../pics/Projects/Dissertation/diss_cisco.png", "alt": "Cisco network diagram used in system architecture" },
+                { "src": "../../pics/Projects/Dissertation/diss_diagram1.png", "alt": "First diagram illustrating component structure" },
+                { "src": "../../pics/Projects/Dissertation/diss_graph1.png", "alt": "Graph displaying performance data or trends" },
+                { "src": "../../pics/Projects/Dissertation/diss_uml.png", "alt": "UML diagram illustrating classes and workflow" },
+                { "src": "../../pics/Projects/Dissertation/lighthouse.png", "alt": "Lighthouse report showing web performance metrics" },
+                { "src": "../../pics/Projects/Dissertation/Obs-Video-Image.png", "alt": "OBS video or image capture used for testing" }
             ]
         },
         {

@@ -401,17 +401,17 @@ body {
           align-items: flex-start; }
           body .projectsPage .projects_layout .card_container .card_content .card_header .card_title {
             font-family: "DM Sans", sans-serif;
-            font-size: 28px;
+            font-size: 26px;
             margin-right: 16px;
             flex: 1; }
           body .projectsPage .projects_layout .card_container .card_content .card_header .card_date {
             font-family: "Work Sans", sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             padding-top: 6px;
             white-space: nowrap; }
         body .projectsPage .projects_layout .card_container .card_content .card_info {
           font-family: "Inter", sans-serif;
-          font-size: 20px;
+          font-size: 18px;
           overflow: hidden;
           width: 100%;
           display: -webkit-box;

@@ -1,8 +1,8 @@
 {
     "projects": [
         {
-            "title": "An Academic Study Comparing WebRTC and LLHLS Streaming Protocols",
-            "description": "My 3rd year dissertation proposal project covering the research and development of a seminar hosting platform and the testing of two streaming technologies.",
+            "title": "A Study Comparing WebRTC and LLHLS Streaming Protocols",
+            "description": "A seminar-hosting platform implementing and testing WebRTC and LLHLS streaming protocols for my third-year dissertation.",
             "startDate": "2025",
             "endDate": "2025",
             "information": "This project is a Seminar-Hosting web application designed with the purpose of testing two of the most-known streaming technologies WebRTC and LLHLS. This project is my 3rd year dissertation submission under the module COMP303-Research & Development: Dissertation. The aim of this module was to undertake a project that provides insight into an industry of our choice, attempting to add to the existing body of knowledge. This project covers my research, development, and analysis of the streaming technologies: WebRTC and LL-HLS.",
@@ -22,7 +22,7 @@
         },
         {
             "title": "Evaluating WebSocket Performance against Geographic Distance",
-            "description": "A performance analysis of the effect of geographical distance on WebSockets using a JavaScript client-server setup to evaluate latency and throughput using a VPN with varying packet sizes, analysing the results in R.",
+            "description": "A JavaScript client-server setup measuring WebSocket latency and throughput over VPN-simulated geographic distances, analysed with R.",
             "startDate": "2024",
             "endDate": "2025",
             "information": "This project evaluates and measures the effect geographical distance has on WebSocket performance. The inspiration behind this project was to investigate the latency experienced by long-distance communication and if it had any correlation to the geographical distance between them. This project uses NordVPN to simulate a client being present within a different country, sending text packets across to a server and retrieving them, calculating the Round Trip Time (RTT). Once recorded, the data was analysed in R and generated into graphs.",
@@ -36,8 +36,26 @@
             ]
         },
         {
-            "title": "Re-Space",
-            "description": "A plant enivronment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
+            "title": "GCReplay: A Regex-based WhatsApp Chat History Analyser",
+            "description": "A Blazor web app using regex to analyse WhatsApp chat histories, showing interactive charts and shareable stat tiles.",
+            "startDate": "2025",
+            "endDate": "2025",
+            "information": "A month-long side project exploring WhatsApp message history using regex and data analysis in a Blazor web app. It focuses on uncovering messaging patterns and trends, with results shown through interactive graphs and charts, and includes a share button for sending tiles made up of a stat title and its graph or table.",
+            "link": "https://github.com/apurse/GCReplay",
+            "popup_pics": [
+                { "src": "../../pics/Projects/GCReplay/image3.png", "alt": "Tiles screen showing graphs and charts from an analysed Whatsapp chat." },
+                { "src": "../../pics/Projects/GCReplay/indexpage.png", "alt": "Main index page of the Blazor app showing input options and analysis buttons" },
+                { "src": "../../pics/Projects/GCReplay/graph1.png", "alt": "Example of a graph visualising messaging frequency over time" },
+                { "src": "../../pics/Projects/GCReplay/overview1.png", "alt": "Overview section with multiple statistics and charts summarising chat behaviour" },
+                { "src": "../../pics/Projects/GCReplay/month.png", "alt": "Monthly breakdown of WhatsApp message activity displayed as a chart" },
+                { "src": "../../pics/Projects/GCReplay/codebehind1.png", "alt": "Code-behind logic for processing and analysing WhatsApp messages in Blazor" },
+                { "src": "../../pics/Projects/GCReplay/codebehind2.png", "alt": "Additional code-behind showing data parsing and chart generation" },
+                { "src": "../../pics/Projects/GCReplay/overview2.png", "alt": "Continuation of the overview section highlighting detailed metrics and visualisations" }
+            ]
+        },
+        {
+            "title": "Re-Space: ",
+            "description": "A plant monitoring system with React Native app, sensor hardware, dockerised API, tracking light, temperature, and moisture.",
             "startDate": "2024",
             "endDate": "2025",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
@@ -50,8 +68,8 @@
             ]
         },
         {
-            "title": "Plant Environment Monitoring System",
-            "description": "A plant environment monitor comprised of a developed API, hardware system, react native application, and a dockerised server.",
+            "title": "API & Application Plant Environment Monitoring System",
+            "description": "A miniature greenhouse monitoring system with hardware, mobile app, and dockerised API tracking plant environment metrics.",
             "startDate": "2024",
             "endDate": "2024",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
@@ -64,8 +82,8 @@
             ]
         },
         {
-            "title": "AI Face Detection Performance Analysis",
-            "description": "An academic analysis of the performance of AI Face Detection algorithms.",
+            "title": "AI Face Detection Algorithms Performance Analysis",
+            "description": "A Python project comparing five face detection algorithms under varied lighting using a custom dataset and statistical analysis.",
             "startDate": "2023",
             "endDate": "2024",
             "information": "This project was a comparison of five face detection algorithms against the effects of lighting quality. This project was implemented in Python using five different libraries for face detection. To test these algorithms, a dataset was used with each subject exposed to three lighting angles: left, right, and central, then these images were dimmed or brightened for a more accurate test.",
@@ -78,7 +96,7 @@
         },
         {
             "title": "Optimised Multi-file Word Occurrence Counter",
-            "description": "A multi-file word occurrence counting system optimised through memory management and multithreading.",
+            "description": "A multithreaded, memory-efficient C++ program for counting word occurrences across multiple large files.",
             "startDate": "2024",
             "endDate": "2024",
             "information": "For a module at University, I undertook the challenge of implementing and optimising a multi-file word occurrence counter. This project is a C++ implementation using optimisations such as multithreading and text parsing through memory management. The end result was an optimised program which counts for a certain word/phrase across multiple files.",
@@ -93,7 +111,7 @@
         },
         {
             "title": "Data Analysis of VR Medical Training",
-            "description": "An analysis of the use of VR when training medical professionals.",
+            "description": "An analysis of VR's effectiveness in medical training using Kaggle datasets, visuals, and market trend reports.",
             "startDate": "2023",
             "endDate": "2023",
             "information": "Another project from my first year of University was data analysis of the effectiveness and uses of VR for training within the healthcare industry. In this project, I interpreted multiple datasets from Kaggle.com and utilised multiple python libraries such as Pandas to generate graphs and visuals. From this, I generated a html based report covering and evaluating my findings, documenting them in an accessible and organised manner.",
@@ -108,7 +126,7 @@
         },
         {
             "title": "Portfolio Website",
-            "description": "Behind the scenes of my portfolio website.",
+            "description": "A personal portfolio site showcasing academic and side projects with easy backend content management.",
             "startDate": "2023",
             "endDate": "2025",
             "information": "This project is a multi-component system that works as a proof-of-concept for a plant environment monitoring system. This project outlines the process for implementing a miniature greenhouse that can monitor plants and their environment, improving their lifespan. Currently this system works as a plant pot monitor, which monitors lighting, temperature, and moisture, sending these values to a dockerised API and then to a mobile application that the user can download.",
@@ -122,7 +140,7 @@
         },
         {
             "title": "Halwill Baptist Church Website",
-            "description": "A project designed for a local church based on my portfolio website.",
+            "description": "A custom church website with admin login, secure password handling, and event/news management tools.",
             "startDate": "2024",
             "endDate": "",
             "information": "This project is a free uncommissioned request from my GrandFathers church, tasked with creating an informative and friendly website for the church. The system is designed to be as friendly as possible, with clear buttons and tabs with informative names. The website features a front-end admin login, requiring username and password for authorisation. This system is salted, peppered, hashed, and encrypted, providing very strong security. However, this will be improved on in the future, applying DDoS prevention. The admin page allows the church admin to edit and add new events or news, updating, deleting, and archiving as needed. The admin can upload pictures, links, locations and information to provide as much detail as possible. Unfortunately the website is missing the content which has been requested multiple times but has not been provided. The website is not currently live but on receiving and updating the content it will be.",
@@ -139,7 +157,7 @@
         },
         {
             "title": "Cormoran",
-            "description": "Cormoran: a video game I helped develop in Unity.",
+            "description": "A Unity game based on Jack the Giant Slayer featuring enemy AI, pathfinding, and player tracking using navMesh.",
             "startDate": "2022",
             "endDate": "2023",
             "information": "Cormoran is the title of one of the video games I helped produce in my first year of university. In GAM190, the name given to this module, we as a team were tasked with creating a video game with the constraint: Local history. Cormoran is a game based on the legend of Jack the Giant Slayer, a Cornish legend turned global. The premise for this game is that the player (Jack) needs to find a way to kill Cormoran, seeking revenge for his father. The player navigates around St Micheals Mount, locating objects and eventually digging a hole for Cormoran to fall into, all while avoiding him. For this project, I was the developer behind the AI for the giant. This included navMesh pathfinding, raycasting, waypoint management, and player tracking. This was a very enjoyable game to work on and I would love to continue with it at some point later on.",
@@ -154,7 +172,7 @@
         },
         {
             "title": "Delivery Drone Robot Education Simulation",
-            "description": "An educational simulation for Delivery Drones paired with a hand-made controller.",
+            "description": "A Unity-Arduino educational simulation of drone deliveries using gyroscopic input, inspired by Zipline.",
             "startDate": "2022",
             "endDate": "2023",
             "information": "This was one of my first year projects. I was tasked with integrating an Arduino system into Unity, and creating an educational piece of software that works alongside a custom built controller. For this project, I based my idea off of the company Zipline and their delivery drones. My Controller was a gyroscopic input that reacted to 2 axes of rotation. Up and down rotation affects the falling speed of the delivery, while left and right affects the position of the delivery. As the user progresses through the story, text popups appear, explaining the process and benefits. The user was challenged with placing the delivery on a cross outside the recipients door.",
